@@ -4,7 +4,7 @@
 This is the artifacts of part of open source projects that TSVD can automatically detect thread-safety violations. We will continue to add more example here. For more details, please check out paper "Efficient and Scalable Thread-Safety Violation Detection --- Finding thousands of concurrency bugs during testing" in SOSP2019.
 
 ## How to evaluate
-TSVD is under open source administration process. We are sorry for the inconvenience. Please contact us for a private link of TSVD. The following instructions only help to evaluate these examples.
+TSVD is under open source administration process. We are sorry for the inconvenience. Please contact us (cstjygpl@uchicago.edu) for a private link of TSVD. The following instructions only help to evaluate these examples.
 
 ### System Requirement
 Visual Studio Community Edition, and .Net Framework 4.5-4.7. Because the examples rely on a specific version of .Net, we need them.
