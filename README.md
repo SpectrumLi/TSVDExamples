@@ -30,7 +30,7 @@ When downloading it, there is be a "Configurations" directory of default configu
 
     & [path to TSVDInstrumenter.exe] [path to "TSVD.exe" in the buggy unit test] [path to Configurations\instrumentation-config.cfg] [path to Configurations\runtime-config.cfg]
 
-The expect result is
+ins.ps1 is a template. The expect result is
 
     Instrumetation result: OK
 
