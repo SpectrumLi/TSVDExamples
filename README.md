@@ -25,4 +25,19 @@ We will add more bugs explained in the paper. But these four already demostrate 
 The TSVD project is created by us, which contains the buggy unit test. To expose the bug, we only need this unit test.
 
 ### Instrucmentation
- 
+Supppose you can access the TSVD already, please download and compile it. The compiled result is TSVDInstrumenter.exe in the TSVDInstrumenter\bin\Debug.
+When downloading it, there is be a "Configurations" directory of default configuration. Then open a powershell:
+    & [path to TSVDInstrumenter.exe] [path to "TSVD.exe" in the buggy unit test] [path to Configurations\instrumentation-config.cfg] [path to Configurations\runtime-config.cfg]
+The expect result is
+    Instrumetation result: OK
+
+### Run the test
+Go to the unit test output directory ([TSVD]\bin\debug) and .\TSVD.exe. 
+
+### Results:
+Here are the bugs in the related examples.
+
++ [DataTimeExtensions](https://github.com/joaomatossilva/DateTimeExtensions/pull/86)
++ [Sequelocity](https://github.com/AmbitEnergyLabs/Sequelocity.NET/pull/23)
++ [Linq.Dynamic](https://github.com/kahanu/System.Linq.Dynamic/pull/48)
++ [Thunderstruck](https://github.com/19WAS85/Thunderstruck/issues/3)
