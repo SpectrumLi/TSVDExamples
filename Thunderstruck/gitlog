@@ -1,0 +1,578 @@
+commit 5ca2e9da0cf74b220bd3e8bd6b37bbea752a54e6
+Merge: d145ce8 84dcaec
+Author: Wagner Andrade <wagneras@live.com>
+Date:   Fri Jan 23 16:39:54 2015 -0800
+
+    Merge pull request #9 from bdemarzo/master
+    
+    Improved custom provider implementation, and support for dynamic objects
+
+commit 84dcaec6a62b67052ff3b0b343821bca61e5adf4
+Author: Brian DeMarzo <bdemarzo@innovatix.com>
+Date:   Fri Jan 23 10:58:47 2015 -0500
+
+    changed to spaces for indenting
+
+commit 25c913513145c6b9501b5b1c2a123067161a9dde
+Author: Brian DeMarzo <bdemarzo@innovatix.com>
+Date:   Mon Jan 12 17:08:36 2015 -0500
+
+    missed some files in my previous check-in, damn
+
+commit a4836d42572b3f48e39a1447c6d6980588c52ddd
+Author: Brian DeMarzo <bdemarzo@innovatix.com>
+Date:   Mon Jan 12 17:04:58 2015 -0500
+
+    added second unit test to prove it a bit more; added readme info, updated version to 0.2.4 (non-breaking changes in this release)
+
+commit 5ed032d5ba6d24b6aca8e4d30e6470a3dfc6f56c
+Author: Brian DeMarzo <bdemarzo@innovatix.com>
+Date:   Mon Jan 12 16:59:45 2015 -0500
+
+    Added support for dynamic objects (ExpandoObject and DynamicObject)
+
+commit a52120deec2ebe65b4529f49b2166613df76f6f7
+Author: Brian DeMarzo <bdemarzo@innovatix.com>
+Date:   Fri Jan 9 13:17:26 2015 -0500
+
+    you can now add the same custom provider more than once without throwing an error, as long as the provider name and type match
+
+commit ad7bbe1a99722fdf505712ab0b77812cc75e15e3
+Author: Brian DeMarzo <bdemarzo@innovatix.com>
+Date:   Fri Jan 9 13:16:56 2015 -0500
+
+    updated nuget package info to show 0.2.3 version
+
+commit 1e8905411cac64e7c215518c26137283092ce675
+Author: Brian DeMarzo <bdemarzo@innovatix.com>
+Date:   Fri Jan 9 12:42:44 2015 -0500
+
+    increased version to 0.2.3 (non-breaking changes)
+
+commit 32cb53216504592484f84447183c9b40cc8dfd94
+Author: Brian DeMarzo <bdemarzo@innovatix.com>
+Date:   Fri Jan 9 12:41:10 2015 -0500
+
+    added better custom provider support, AddProvider() method allows adding multiple provider types without a single custom provider
+
+commit ca9c04df1deeef597a7db9593c0326ebcb52b59d
+Author: Brian DeMarzo <bdemarzo@innovatix.com>
+Date:   Fri Jan 9 11:47:03 2015 -0500
+
+    cleaned up the readme file
+
+commit d145ce854b985744e935d2c391956df9ba31fc7a
+Merge: ba9124d 45f21e9
+Author: Wagner Andrade <wagneras@live.com>
+Date:   Wed Apr 23 19:56:31 2014 -0300
+
+    Merge pull request #5 from bdemarzo/master
+    
+    changed version to 0.2.2 for NuGet update
+
+commit 45f21e9ed66e8819389b926c5f188b372af1da8a
+Author: Brian DeMarzo <bdemarzo@innovatix.com>
+Date:   Mon Apr 14 10:16:11 2014 -0400
+
+    changed version to 0.2.2 for NuGet update
+
+commit ba9124dd52c604896f54c97fc6eda8f3fb5b7fba
+Merge: 4c69c82 816de95
+Author: Wagner Andrade <wagneras@live.com>
+Date:   Mon Mar 17 13:36:44 2014 -0300
+
+    Merge pull request #4 from bdemarzo/master
+    
+    fix possible race condition in singleton
+
+commit 816de9536d028b6dc2e8925ad8421a04132e1abf
+Author: Brian DeMarzo <bdemarzo@innovatix.com>
+Date:   Fri Mar 14 10:28:24 2014 -0400
+
+    fix possible race condition in singleton (see https://github.com/wagnerandrade/Thunderstruck/issues/3)
+
+commit 4c69c828ada68c36bb2e63665316c24426e4af41
+Author: Wagner Andrade <wagneras@live.com>
+Date:   Tue May 21 16:14:40 2013 -0300
+
+    Changing version to development 0.2.1.
+
+commit 847410289eb791904f533ebdb844057391fb0419
+Author: Wagner Andrade <wagneras@live.com>
+Date:   Tue May 21 16:05:08 2013 -0300
+
+    Changing version to 0.2.0.
+
+commit c01796ced6c234b639ef3068dd8fde12bc18dee0
+Author: Wagner Andrade <wagneras@live.com>
+Date:   Tue May 21 16:03:35 2013 -0300
+
+    Using IEnumerables.
+
+commit e48f919fd988ee14b894f5e726046b476ee1139a
+Author: Wagner Andrade <wagneras@live.com>
+Date:   Tue May 21 15:18:50 2013 -0300
+
+    Creating array parameters binding.
+
+commit f8e3826775e4a94e5ca9d4bf5d35fbe4ffc0c676
+Author: Wagner Andrade <wagneras@live.com>
+Date:   Tue May 21 13:46:52 2013 -0300
+
+    Adding readme to projectUrl of nuspec.
+
+commit 40b9ded61e9a7e904a57127595ef9c927baf3017
+Author: Wagner Andrade <wagneras@live.com>
+Date:   Fri Apr 12 11:06:19 2013 -0300
+
+    Creating a order on functional test.
+
+commit 74a6787d8b1652c1bbb20df246dcb9b062622a0c
+Author: Wagner Andrade <wagneras@live.com>
+Date:   Fri Apr 12 10:50:15 2013 -0300
+
+    Fixing provider tests.
+
+commit 848c9f3c58e3bafb5bc52565470ac20d46c9ff11
+Author: Wagner Andrade <wagneras@live.com>
+Date:   Sun Apr 7 22:13:30 2013 -0300
+
+    Creating nuget package configuration.
+
+commit f00f457cbf7555c8307702ab1bd88ea1456e9558
+Author: Wagner Andrade <wagneras@live.com>
+Date:   Sun Apr 7 20:14:54 2013 -0300
+
+    New development version, push to nuget!
+
+commit 858fcfa636d2fda7be9df20bce2d273ad6637873
+Author: Wagner Andrade <wagneras@live.com>
+Date:   Sun Apr 7 20:06:01 2013 -0300
+
+    README changes.
+
+commit f20001f4e3e18cae4be35ea4bd2764611b5aea2f
+Author: Wagner Andrade <wagneras@live.com>
+Date:   Sun Apr 7 12:56:12 2013 -0300
+
+    Converting readme textile to markdown.
+
+commit 146e0b5a35a36751d2bf3652d2a864d248533a44
+Author: Wagner Andrade <wagneras@live.com>
+Date:   Sun Apr 7 12:54:48 2013 -0300
+
+    Converting readme textile to markdown.
+
+commit 0594b587d8b0ad1a0a4ea9a22a9b9bb4fe606dde
+Author: Wagner Andrade <wagneras@live.com>
+Date:   Sun Apr 7 01:09:43 2013 -0300
+
+    Creating DataObject.
+
+commit 4cbf91c978a5bcb61be95048e5d91b0abb35c8a4
+Author: Wagner Andrade <wagneras@live.com>
+Date:   Sat Apr 6 23:28:01 2013 -0300
+
+    Fixing namespaces.
+
+commit 35e9f3ade5365b52729efa5f5009a3a32fff3921
+Author: Wagner Andrade <wagneras@live.com>
+Date:   Sat Apr 6 23:14:23 2013 -0300
+
+    Fixing database droping on functional tests.
+
+commit 64cecd2fe46088cc4dc75b5621e89c5fa57b34f0
+Author: Wagner Andrade <wagneras@live.com>
+Date:   Sat Apr 6 21:45:17 2013 -0300
+
+    Moving unit tests.
+
+commit 2d3faef7fd13f9f729599fdee8b46c1858b7acb4
+Author: Wagner Andrade <wagneras@live.com>
+Date:   Sat Apr 6 21:42:56 2013 -0300
+
+    Creating datacontexts functional tests.
+
+commit 964c9f3fc627f6e275166331f1ec5c9db952beb3
+Author: Wagner Andrade <wagneras@live.com>
+Date:   Thu Apr 4 14:22:36 2013 -0300
+
+    RunCodeAnalysis enabled.
+
+commit 561e3fae74d18c278c17781b2401317790152812
+Author: Wagner Andrade <wagneras@live.com>
+Date:   Tue Apr 2 00:57:08 2013 -0300
+
+    Updating version number to development functional tests.
+
+commit 29b6a533cd0d805b2fb5e7c8e2f96c278d4baac3
+Author: Wagner Andrade <wagneras@live.com>
+Date:   Tue Apr 2 00:55:19 2013 -0300
+
+    Removing old references directory.
+
+commit c0299097a69c343ecfbe90cc6e3fbb7adddd8086
+Author: Wagner Andrade <wagneras@live.com>
+Date:   Tue Apr 2 00:40:05 2013 -0300
+
+    Changing tests objects names to avoid collision with functional tests.
+
+commit bd60ad79fe757ec65eaee1505feec6d8f48661f8
+Author: Wagner Andrade <wagneras@live.com>
+Date:   Tue Apr 2 00:11:58 2013 -0300
+
+    Creating DataObjectQuery unit tests.
+
+commit 33c40f2f0c11f5e7e66a8583b175f1e0e4c48d6b
+Author: Wagner Andrade <wagneras@live.com>
+Date:   Mon Apr 1 22:22:50 2013 -0300
+
+    Adding custom table and primary key test.
+
+commit aa9111ceae8cbcfcd5b01fcce683d79532de8d9a
+Author: Wagner Andrade <wagneras@live.com>
+Date:   Mon Apr 1 21:56:51 2013 -0300
+
+    Creating DataObjectCommand unit tests.
+
+commit 4a128e696bd973df7247d24f2fe6f09ebabeb22d
+Author: Wagner Andrade <wagneras@live.com>
+Date:   Mon Apr 1 14:12:19 2013 -0300
+
+    Deleting old files.
+
+commit cbfa8ebcc15f3be9e3131974c234dbb974d1a56c
+Author: Wagner Andrade <wagneras@live.com>
+Date:   Mon Apr 1 14:07:57 2013 -0300
+
+    Creating DataContext tests.
+
+commit bd36c3aae2cdf544e767444429d5fe69e4d91716
+Author: Wagner Andrade <wagneras@live.com>
+Date:   Sat Mar 30 23:18:34 2013 -0300
+
+    Adding nuget.exe to resolve packages.
+
+commit 983b345dc0e8f2feb0186ba785da5c9481e2405c
+Author: Wagner Andrade <wagneras@live.com>
+Date:   Sat Mar 30 23:08:55 2013 -0300
+
+    Adding git config files and readme on solution.
+
+commit d3ac91373b2bdcf4be2a1b27e06b85ebebc20080
+Author: Wagner Andrade <wagneras@live.com>
+Date:   Sat Mar 30 23:04:56 2013 -0300
+
+    Fixing CustomProvider on README.
+
+commit b750fc01c0f62d2162c43107d4d3f37ca5b227e3
+Author: Wagner Andrade <wagneras@live.com>
+Date:   Sat Mar 30 23:01:48 2013 -0300
+
+    Creating unit tests with MSTest.
+
+commit 75aecbba79ff15882e3223eeb981ef03adc5b40a
+Author: Wagner Andrade <wagneras@live.com>
+Date:   Mon Jan 28 10:16:50 2013 -0200
+
+    Adding enum support (Roy W Bradley).
+
+commit 7823bd9b55b816d2c28af6ee6d18e93d5dfb1584
+Author: Wagner Andrade <wagneras@live.com>
+Date:   Wed Aug 22 15:44:37 2012 -0300
+
+    Adding MySqlProvider.
+
+commit 74416dd1bd9f8273604e4823d2e2f7ee5c8afa1b
+Author: Wagner Andrade <wagneras@live.com>
+Date:   Wed Aug 22 15:40:30 2012 -0300
+
+    Creating query defaults on providers.
+
+commit 51076fd6ea7a2718b1912fc0fa0b0206c1098952
+Author: Wagner Andrade <wagneras@live.com>
+Date:   Tue Jul 31 23:08:06 2012 -0300
+
+    Adding attributes file.
+
+commit 9c64215c93a0927d6f914e1f0780606fd63149ce
+Author: Wagner Andrade <wagner.andradesilva@gmail.com>
+Date:   Fri May 18 10:33:50 2012 -0300
+
+    Fix DataObjectQuery bug.
+
+commit 16e5c27b299af586647be263195caecb6e7544a0
+Author: Wagner Andrade <wagner.andradesilva@gmail.com>
+Date:   Thu May 3 12:09:57 2012 -0300
+
+    Fix README.
+
+commit 52270759a7503ef75ecc60b1e5d3419203e49633
+Author: Wagner Andrade <wagner.andradesilva@gmail.com>
+Date:   Thu May 3 12:01:28 2012 -0300
+
+    Fix README.
+
+commit 5a822b202eceb07bf9fbd9b580d1f0cbd3fe8ed0
+Author: Wagner Andrade <wagner.andradesilva@gmail.com>
+Date:   Thu May 3 11:59:53 2012 -0300
+
+    Custom primary key and updating version.
+
+commit 39ed4a03cb0769591f8978b9e8ea3df265888700
+Author: Wagner Andrade <wagner.andradesilva@gmail.com>
+Date:   Thu May 3 11:33:47 2012 -0300
+
+    Updating README.
+
+commit 13bbeb0f3e747b81bd845fa725017ab0e34c8122
+Author: Wagner Andrade <wagner.andradesilva@gmail.com>
+Date:   Thu May 3 11:15:03 2012 -0300
+
+    Using column delimiter on fields.
+
+commit 57c4dd5029f53cf692be94ae4d1d56885c2026ba
+Author: Wagner Andrade <wagner.andradesilva@gmail.com>
+Date:   Fri Apr 13 15:45:47 2012 -0300
+
+    Updating with quick guide.
+
+commit 32f62bec8acd04bd2d1dc2ec24487927e0f51ec6
+Author: Wagner Andrade <wagner.andradesilva@gmail.com>
+Date:   Wed Apr 11 09:18:03 2012 -0300
+
+    Download link.
+
+commit 141f47ea75bc83654ca97f2a00b9928e69a4deb9
+Author: Wagner Andrade <wagner.andradesilva@gmail.com>
+Date:   Wed Apr 11 01:18:29 2012 -0300
+
+    Fix README.
+
+commit b8cecc6ca57e1a8e73699ef6bef6255b9fac0f23
+Author: Wagner Andrade <wagner.andradesilva@gmail.com>
+Date:   Wed Apr 11 00:47:25 2012 -0300
+
+    Fix README.
+
+commit efa1216ddcff6239f360a2062fb0d8a31f4aab9b
+Author: Wagner Andrade <wagner.andradesilva@gmail.com>
+Date:   Wed Apr 11 00:04:42 2012 -0300
+
+    Include licence file.
+
+commit af866665f265607872d3a765b41800f0fad73668
+Author: Wagner Andrade <wagner.andradesilva@gmail.com>
+Date:   Wed Apr 11 00:02:38 2012 -0300
+
+    Adding xml doc on build.
+
+commit 47606217b69f5910f1b7b9e332833ead236633f4
+Author: Wagner Andrade <wagner.andradesilva@gmail.com>
+Date:   Mon Apr 9 16:49:29 2012 -0300
+
+    Fix config and updating AssemblyInfo.
+
+commit b216806c0c300e3a324df8225137708f2a984109
+Author: Wagner Andrade <wagner.andradesilva@gmail.com>
+Date:   Mon Apr 9 16:42:42 2012 -0300
+
+    Include test project.
+
+commit ce108f350eb362152d97917b730fca3bb6f21843
+Author: Wagner Andrade <wagner.andradesilva@gmail.com>
+Date:   Thu Apr 5 21:49:38 2012 -0300
+
+    Moving providers implementations to common namespace.
+
+commit 93fd0ad7a8b70bd4df333f9e283562da29484e65
+Author: Wagner Andrade <wagner.andradesilva@gmail.com>
+Date:   Thu Apr 5 21:41:44 2012 -0300
+
+    Some fixes to performance.
+
+commit b200378a53ea48794fe8b149a8bf6d01f109d15e
+Author: Wagner Andrade <wagner.andradesilva@gmail.com>
+Date:   Thu Apr 5 17:40:56 2012 -0300
+
+    Creating DataReader.
+
+commit f3fb4c1c070a34f4245bbb494c6f23406f2837b3
+Author: Wagner Andrade <wagner.andradesilva@gmail.com>
+Date:   Thu Apr 5 15:15:00 2012 -0300
+
+    Bug fixing.
+
+commit c23680029706719de5972300372cc62e0ecb8c08
+Author: Wagner Andrade <wagner.andradesilva@gmail.com>
+Date:   Thu Apr 5 14:56:22 2012 -0300
+
+    Creating DataRuntimeObject.
+
+commit 4b530ef1652a85301e6daa1aa3854d08e79ffd11
+Author: Wagner Andrade <wagner.andradesilva@gmail.com>
+Date:   Thu Apr 5 10:17:38 2012 -0300
+
+    Moving IDataProvider.
+
+commit a385e5218251ed2e4ce8e0e4344277956bec5795
+Author: Wagner Andrade <wagner.andradesilva@gmail.com>
+Date:   Tue Apr 3 18:43:07 2012 -0300
+
+    Creating GetValues and GetPrimaryKey bug fix.
+
+commit 6d796b68695f2996635fa970c29994e3357d4d01
+Author: Wagner Andrade <wagner.andradesilva@gmail.com>
+Date:   Tue Mar 27 16:33:08 2012 -0300
+
+    Include xml docs generation.
+
+commit 5a9387571dad5c9bf7dd833bd0809f979506f845
+Author: Wagner Andrade <wagner.andradesilva@gmail.com>
+Date:   Wed Mar 21 11:46:59 2012 -0300
+
+    Creating custom provider option.
+
+commit 729cf1cbb3522ae7f0cd8f3c0aa1d6dc539d938f
+Author: Wagner Andrade <wagner.andradesilva@gmail.com>
+Date:   Wed Mar 21 11:37:19 2012 -0300
+
+    Creating DataContext option on DataObjectQuery.
+
+commit bd881751c5b2674ec0610ddc68df45abb18eef64
+Author: Wagner Andrade <wagner.andradesilva@gmail.com>
+Date:   Wed Mar 21 11:26:09 2012 -0300
+
+    Creating providers.
+
+commit a21bfdd0df237ade2345c58b1c375ee0b6485239
+Author: Wagner Andrade <wagner.andradesilva@gmail.com>
+Date:   Tue Mar 20 18:53:56 2012 -0300
+
+    Renaming data objects.
+
+commit 08f950602c0e5873423af34e91c3dcfddc869251
+Author: Wagner Andrade <wagner.andradesilva@gmail.com>
+Date:   Tue Mar 20 18:51:13 2012 -0300
+
+    Renaming data objects.
+
+commit a152eef3c95480290415925c46e5396ac168620e
+Author: Wagner Andrade <wagner.andradesilva@gmail.com>
+Date:   Tue Mar 20 16:07:18 2012 -0300
+
+    Fixing identity bug.
+
+commit 41dd4fe941cae07a963c7137d536c2daef2de805
+Author: Wagner Andrade <wagner.andradesilva@gmail.com>
+Date:   Tue Mar 20 16:04:12 2012 -0300
+
+    Ignore case of property names on bindings.
+
+commit f24d44137e9d9868820c77195d55442f85fa53b2
+Author: Wagner Andrade <wagner.andradesilva@gmail.com>
+Date:   Tue Mar 20 14:26:05 2012 -0300
+
+    Removing SqlClient objects dependency.
+
+commit 84217a92158bdb8c97d3fb173bc883d2c3b2d117
+Author: Wagner Andrade <wagner.andradesilva@gmail.com>
+Date:   Tue Mar 20 12:26:57 2012 -0300
+
+    DataContext documentation.
+
+commit 380b40561fd698b8f6189aa5a60178d34c8ec018
+Author: Wagner Andrade <wagner.andradesilva@gmail.com>
+Date:   Thu Mar 15 18:03:02 2012 -0300
+
+    Insert puts identity value on primary key property.
+
+commit dc35953ad5f80deed5774c3a3b6edc1bb84d29ec
+Author: Wagner Andrade <wagner.andradesilva@gmail.com>
+Date:   Thu Mar 15 17:49:13 2012 -0300
+
+    Creating delete command and refactoring DataCommands.
+
+commit 9425065d14551ca61b04e63f1f6108bbbf35033d
+Author: Wagner Andrade <wagner.andradesilva@gmail.com>
+Date:   Thu Mar 15 14:21:38 2012 -0300
+
+    Creating update command.
+
+commit 778582c4cb6f1361042c642a61f6794e1e64f2d3
+Author: Wagner Andrade <wagner.andradesilva@gmail.com>
+Date:   Thu Mar 15 13:46:42 2012 -0300
+
+    Fixing ignore DataQueryObject and DataCommands objects.
+
+commit 9ddaf0f60c8c1262496c15cd6f87888dc468f552
+Author: Wagner Andrade <wagner.andradesilva@gmail.com>
+Date:   Thu Mar 15 10:34:57 2012 -0300
+
+    Creating custom table name on DataCommands.
+
+commit 3013ca1fd4ebebc3e89a9ca1bce35a85468bc466
+Author: Wagner Andrade <wagner.andradesilva@gmail.com>
+Date:   Thu Mar 15 10:17:47 2012 -0300
+
+    Fixing non values properties bug.
+
+commit 8bbecf7afd09ab87079ef724ce6b0b236fae9624
+Author: Wagner Andrade <wagner.andradesilva@gmail.com>
+Date:   Thu Mar 15 10:12:41 2012 -0300
+
+    Ignoring complex objects on GetValidPropertiesOf
+
+commit 4db68b4b845f471873e89e41084617942da74d57
+Author: Wagner Andrade <wagner.andradesilva@gmail.com>
+Date:   Thu Mar 15 09:59:36 2012 -0300
+
+    Creating projection alias to fields.
+
+commit b842ecdf1b22d10021195ff523e3e4de79862ca3
+Author: Wagner Andrade <wagner.andradesilva@gmail.com>
+Date:   Thu Mar 15 09:49:20 2012 -0300
+
+    Removing pluralization.
+
+commit 6620ca3b399e1509684eab7cac05d0236ded063a
+Author: Wagner Andrade <wagner.andradesilva@gmail.com>
+Date:   Wed Mar 14 15:09:56 2012 -0300
+
+    Some modifications!
+
+commit 9e1003dde888a06a86aa5e635bbbe728ca3dd935
+Author: Wagner Andrade <wagner.andradesilva@gmail.com>
+Date:   Tue Aug 23 18:58:42 2011 -0300
+
+    Renaming the project.
+
+commit e0d49c0241916d99d4c8afacd02848ad15d28d97
+Author: Wagner Andrade <wagner.andradesilva@gmail.com>
+Date:   Tue Aug 23 18:47:54 2011 -0300
+
+    Creating the transaction control.
+
+commit f432acb10ab337d5cffd7a5e35d267e9129178a4
+Author: Wagner Andrade <wagner.andradesilva@gmail.com>
+Date:   Tue Aug 23 18:24:32 2011 -0300
+
+    Dont opens transaction on readers.
+
+commit 683dad541088ee6b112121682421d832e27ce8de
+Author: Wagner Andrade <wagner.andradesilva@gmail.com>
+Date:   Tue Aug 16 11:26:31 2011 -0300
+
+    Fix readme.
+
+commit b8bf243e4b27faf22817a93da3cb5072a0693942
+Author: Wagner Andrade <wagner.andradesilva@gmail.com>
+Date:   Tue Aug 16 11:23:53 2011 -0300
+
+    Fix readme.
+
+commit 7a86114b1eb2edc92a01e8fdbef887c77f8dbd33
+Author: Wagner Andrade <wagner.andradesilva@gmail.com>
+Date:   Tue Aug 16 11:21:01 2011 -0300
+
+    First commit.

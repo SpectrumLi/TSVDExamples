@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>Sequelocity</id>
+    <version>$version$</version>
+    <title>Sequelocity.NET</title>
+    <authors>Randy Burden, David Whitlark and contributors</authors>
+    <owners>Randy Burden, David Whitlark and contributors</owners>
+    <licenseUrl>https://github.com/AmbitEnergyLabs/Sequelocity.NET/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/AmbitEnergyLabs/Sequelocity.NET</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Sequelocity.NET is a simple data access library for the Microsoft .NET Framework providing lightweight ADO.NET wrapper, object mapper, and helper functions.</description>
+	<summary>Sequelocity.NET is a simple data access library for the Microsoft .NET Framework providing lightweight ADO.NET wrapper, object mapper, and helper functions.</summary>
+    <releaseNotes> 
+* 0.5.0 - Added AddNullableParameter method.
+* 0.4.0 - Added application name injection for SQL Server.
+* 0.3.0 - Added MySql support.
+	</releaseNotes>
+    <copyright>Copyright 2015</copyright>
+    <language>en-US</language>
+    <tags>Sequelocity sqlocity micro-orm orm sql database data-access sqlserver sqlite mysql ado.net</tags>
+  </metadata>
+</package>

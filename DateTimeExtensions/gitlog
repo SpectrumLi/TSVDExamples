@@ -1,0 +1,2631 @@
+commit cef15833e8996a2649dd67b43cc40b2606860e8b
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Thu Mar 7 22:02:42 2019 +0000
+
+    bump to 5.4.1
+
+commit 41a17d43f6d026a0f7eae54a343f22203bcc941c
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Thu Mar 7 22:00:34 2019 +0000
+
+    Fixing #90
+
+commit 1189f62dfbc287496432f049a5f83589da4297ec
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Tue Jan 22 22:28:33 2019 +0000
+
+    Update Test Project
+
+commit 9c8c84f296bc34df66d09c89cf475d21594cc506
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Tue Jan 22 22:24:51 2019 +0000
+
+    bump version to 5.4
+
+commit 0e781aec210819d77f79a70b3ecbcf60c22859d2
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Tue Jan 22 22:06:53 2019 +0000
+
+    Adding support for DateTimeOffset
+    As a proxy to the DateTime Extensions
+
+commit ff677d21c4138f1f95ae90ba3a440ebcb5892a33
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Thu Jan 17 21:53:48 2019 +0000
+
+    Update DateTimeExtensions.csproj
+
+commit e4a054ada5aae709a1267ed75bb77049c1434cb4
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Thu Jan 17 17:18:48 2019 +0000
+
+    Update CHANGELOG.md
+
+commit b18fc90ce662b9740e8b350034d24bf1a7b745fe
+Merge: f0b0c29 40e375f
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Thu Jan 17 17:16:33 2019 +0000
+
+    Merge pull request #88 from canro91/same-day
+    
+    Handle two Colombian holidays in the same date
+
+commit 40e375f80740678bba2f422f80f2f49513230738
+Author: canro91 <canro91@hotmail.com>
+Date:   Mon Dec 31 09:22:13 2018 -0500
+
+    Handle two holidays in the same date
+
+commit f0b0c29f1ab9712835c4888a25744375a4d24727
+Merge: ebed236 b2619df
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Mon Dec 10 23:48:06 2018 +0000
+
+    Merge pull request #87 from joaomatossilva/fix/thread-safety
+    
+    Fixed thread safety issues
+
+commit b2619dfbef1330e12a721afdee22c0524bc9ff11
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Mon Dec 10 23:41:18 2018 +0000
+
+    Fixed thread safety issues
+
+commit ebed236f66a2919506bf7fbe7d6af823875ac955
+Author: Joao Matos Silva <joaomatos.silva@farfetch.com>
+Date:   Fri Oct 12 15:19:24 2018 +0100
+
+    bump version
+
+commit 7c5331af5c343054a0643c39dbca46f951e71b8c
+Author: Joao Matos Silva <joaomatos.silva@farfetch.com>
+Date:   Fri Oct 12 15:18:53 2018 +0100
+
+    Updated Changelog
+
+commit fd8962980d008f957fba23c4a9992e0d4b4bd321
+Author: Joao Matos Silva <joaomatos.silva@farfetch.com>
+Date:   Fri Oct 12 15:18:40 2018 +0100
+
+    Fix build
+
+commit 2a04bb2efc906752048a1985c91699329166bf0b
+Merge: 58c43d3 58d75aa
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Fri Oct 12 14:50:25 2018 +0100
+
+    Merge pull request #85 from canro91/es-co
+    
+    Add holidays for Colombia (es-CO)
+
+commit 58d75aabd2f2f4c481204e156d5511eaf6fdc256
+Author: canro91 <canro91@hotmail.com>
+Date:   Tue Oct 9 12:33:16 2018 -0500
+
+    Add holidays for Colombia (es-CO)
+
+commit 58c43d30ebc85f639bcd556d6fc59a1f907465b5
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Sun Jun 10 00:13:41 2018 +0100
+
+    Added 5.1 readme and changelog
+
+commit 7e951d85b73cbffba1da721e0b1391764f558d19
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Sat Jun 9 21:06:26 2018 +0100
+
+    Making the dependency of the SourceLink a private asset
+
+commit e0e93de6c95d794317a54b31cc4f9174dd4ee35b
+Author: João Matos Silva <joao.m.silva@vision-box.com>
+Date:   Wed Jun 6 14:32:14 2018 +0100
+
+    Fixing the build project
+
+commit 784120db88ba6e9493bbf1f353e2eb9cb9939d72
+Author: João Matos Silva <joao.m.silva@vision-box.com>
+Date:   Wed Jun 6 14:26:43 2018 +0100
+
+    Added Target netstandard2.0 and Source link for debugging tests
+
+commit 7f6312dff101e6ff211729a44d1c6b27ffa2c2d3
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Sun Jan 7 00:24:40 2018 +0000
+
+    bump version
+
+commit de272b4a8ff47fbbb2e45ec282d3964284e3148b
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Sun Jan 7 00:20:01 2018 +0000
+
+    Fixing some FR holidays logic. Fixes #82
+
+commit f39933d968d6c271f2c864b66fb7ccb3a7d58251
+Merge: 5556e02 9a36ff5
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Mon Dec 18 11:41:08 2017 +0000
+
+    Merge pull request #81 from Digital-Construction/master
+    
+     Fix typo for "Human Right's Day" in en-ZA locale
+
+commit 9a36ff527e56484edf325d66ae0d093ba7af560f
+Merge: 20bbc4f 5556e02
+Author: William Hurst <william@001.co.za>
+Date:   Fri Dec 15 08:25:07 2017 +0200
+
+    Merge branch 'master' of https://github.com/joaomatossilva/DateTimeExtensions
+
+commit 20bbc4ff039c2461e13cda91045d49ffc2a4add8
+Author: William Hurst <william@001.co.za>
+Date:   Fri Dec 15 08:20:51 2017 +0200
+
+    Fix type for "Human Right's Day" in en-ZA locale
+
+commit 5556e023962bcdc13045c76f9941e881305f7ed5
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Sat Nov 25 23:20:46 2017 +0000
+
+    bump version
+
+commit 4b643a29e5410a339079f71bf5c18e92056a4d40
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Sat Nov 25 23:15:10 2017 +0000
+
+    update readme
+
+commit f7baaf0d9f4b33c1baf156b7c7080e207c06508d
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Sat Nov 25 22:43:38 2017 +0000
+
+    title on new line
+
+commit 1ae196ef8ec02c660a53cde0947f36034321b056
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Sat Nov 25 22:41:27 2017 +0000
+
+    udpated logos urls
+
+commit 0d7ea507cb0caa64e73b21a2329881c544d897f9
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Sat Nov 25 15:50:53 2017 +0000
+
+    bump version to force a new publish
+
+commit 4cde6104fde7b9e8c0460609f910742adf28ba2a
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Sat Nov 25 15:40:24 2017 +0000
+
+    added new logo
+
+commit 5a43bedd6dfac6d316c3854a3131c40c73c3a887
+Merge: a17cab7 dd406aa
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Sat Nov 25 15:38:47 2017 +0000
+
+    Merge pull request #79 from joaomatossilva/feature/nuke-build-script
+    
+    build script changed to Nuke
+
+commit dd406aadd928a3bc9075052cbb906b10e3922a2c
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Tue Nov 14 15:09:11 2017 +0000
+
+    fixed target dependencies
+
+commit 85fdaba29b6f6a5dca5b03643cdf9d355fc05df3
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Fri Nov 10 15:37:50 2017 +0000
+
+    reviewed and added condicional revision
+
+commit 6de1d281368b4a19bfcf8dedde83a7856c8abfed
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Mon Nov 6 17:23:19 2017 +0000
+
+    set target as pack
+
+commit 8ea4e8d2e6df5d63a1f7aa4128535b0761704166
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Mon Nov 6 17:15:41 2017 +0000
+
+    build script to Nuke
+
+commit a17cab7b3d14a221bb662591bb834653eb802574
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Fri Oct 13 23:15:40 2017 +0100
+
+    removed duplicated file
+
+commit e5ea1b8f78f5b4b73d69694bd15ef766519e824f
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Fri Oct 13 23:11:47 2017 +0100
+
+    bump version to 5.0.1
+
+commit 272807d69a0f72eb4b3c0279acfc1ddd9cff0f6b
+Merge: 5b0c0e3 6f53165
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Fri Oct 13 23:07:18 2017 +0100
+
+    Merge pull request #78 from dalmuti509/master
+    
+    Fix when new years falls on a Saturday
+
+commit 6f53165a0dcb6d6fd71ead85cdb589172d32649e
+Author: Stephen Spates <stephen@tellwise.com>
+Date:   Tue Sep 12 13:54:00 2017 -0700
+
+    Fix when new years eve in US falls on a Friday
+
+commit 5b0c0e3358868950f1b9517f513a84bccf4b9ab2
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Mon Jun 19 23:49:04 2017 +0100
+
+    Create CODE_OF_CONDUCT.md
+
+commit a9b1aa91d77d10e59d2f949adaa54f01ed9a8785
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Mon Jun 19 23:46:52 2017 +0100
+
+    updated readme
+
+commit 2b46aa9f74dddcdab8e33b70d57206b48de7f00d
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Mon Jun 19 23:42:59 2017 +0100
+
+    updated changelog
+
+commit f8376e70cad4c37bece39bbb0e030ef28be09492
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Mon Jun 19 15:59:37 2017 +0100
+
+    Added test for unkown regions
+
+commit 518452c4fca48e7681315b1e9c58b54c5c7bd73a
+Merge: 0dcd01e f9a5740
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Mon Jun 19 15:47:48 2017 +0100
+
+    Merge pull request #77 from joaomatossilva/feature/regional-holidays-ctor-parameter
+    
+    Feature/regional holidays ctor parameter
+
+commit f9a5740b1dd4f85801261776310ce2fc4712ef94
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Fri Jun 16 00:07:16 2017 +0100
+
+    Adding identifiers, tests and case refactor
+
+commit 77a1c720edf15ae3d3c4055b89ceec2070745455
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Thu Jun 15 10:55:43 2017 +0100
+
+    Finished the region assign and making all tests pass
+
+commit 0dcd01e7ee526bd54aab878f559b54dbd97da748
+Merge: 43996b4 ddf5ebf
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Wed Jun 14 16:48:49 2017 +0100
+
+    Merge pull request #76 from mnakka9/feature/upgrade-vs2017-csproj
+    
+    Added Indian (en-IN) holiday strategy with vs2017
+
+commit ddf5ebfd7f836eea744429e78a24a5c6bfa12b67
+Author: Mahesh Nakka <mnakka9@gmail.com>
+Date:   Wed Jun 14 14:34:41 2017 +0530
+
+    Added Indian (en-IN) holiday strategy with vs2017
+
+commit 5d18d5ac2e215dd9de54f4c1ee727721b5fe8889
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Tue Jun 13 22:33:10 2017 +0100
+
+    check if strategy constructor has parameters
+
+commit 43996b407066d54b6a1d581983efad72a335add6
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Mon Jun 12 23:41:19 2017 +0100
+
+    Bump version to 5.0 and updated changelog
+
+commit df0213102911aa739f4c8b0341b9f77e4aeb1a97
+Merge: 8098a0d cd7808c
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Mon Jun 12 16:23:20 2017 +0100
+
+    Merge pull request #75 from scoutboy420/polish-culture
+    
+    Added Polish Natural Time Strategy and Polish Holiday Strategy
+
+commit cd7808c54b602df4da14f80aa5d69a14b97ec449
+Merge: ed06acc 5997e48
+Author: scoutboy <seba00767@gmail.com>
+Date:   Mon Jun 12 17:11:13 2017 +0200
+
+    Changed Pluralize method
+
+commit 5997e487cab5e8b13cc1c8648d713e9239ddf00b
+Author: scoutboy <seba00767@gmail.com>
+Date:   Mon Jun 12 17:09:55 2017 +0200
+
+    Changed Pluralize methods
+
+commit ed06acc195c2947b2319f17008e459ec56b8e7b0
+Merge: e356e3f 851df05
+Author: scoutboy <seba00767@gmail.com>
+Date:   Mon Jun 12 15:09:41 2017 +0200
+
+    Merge pull request #2 from scoutboy420/master
+    
+    Updated branch
+
+commit 851df05720d9727e70b76cd94704634348ef43d0
+Merge: 4f77256 8098a0d
+Author: scoutboy <seba00767@gmail.com>
+Date:   Mon Jun 12 15:06:33 2017 +0200
+
+    Merge pull request #1 from joaomatossilva/master
+    
+    Updated
+
+commit e356e3f738051fcf39bfd852ad1965410835ee65
+Merge: 554f178 126fc12
+Author: scoutboy <seba00767@gmail.com>
+Date:   Mon Jun 12 12:39:23 2017 +0200
+
+    Merged changes from test branch to final branch
+
+commit 126fc122741a355528030977c23cbc939b14dfb9
+Author: scoutboy <seba00767@gmail.com>
+Date:   Mon Jun 12 12:33:44 2017 +0200
+
+    Final fix of polish declination - own rules of pluralization
+
+commit 8098a0de5bf58e6bd5235026adb9e7d4cd609e04
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Mon Jun 12 10:50:28 2017 +0100
+
+    Updated Nunit to be able to run tests again
+
+commit b652debe3be48183c8e72c6a6a7abcf0bdc6dd4d
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Sun Jun 11 22:41:14 2017 +0100
+
+    Updated sln and gitignore
+
+commit f3b6ef973f9aca34571e95128d643135eaaced01
+Merge: 4f77256 73c72c5
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Sun Jun 11 22:17:52 2017 +0100
+
+    Merge pull request #64 from joaomatossilva/feature/upgrade-vs2017-csproj
+    
+    Conversion to new csproj format
+
+commit d5419fe41946bcfae124082a5f9157de1848c373
+Author: scoutboy <seba00767@gmail.com>
+Date:   Sun Jun 11 22:07:41 2017 +0200
+
+    Fixed polish declination
+
+commit 554f17831cf3c372899cfe4275602e83d2026d8c
+Author: scoutboy <seba00767@gmail.com>
+Date:   Sun Jun 11 16:18:42 2017 +0200
+
+    Added Polish (pl_PL) strategy
+
+commit 4f77256a8166883498717b80c1789518e581823a
+Merge: a8b8fb5 85692a3
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Fri Jun 9 10:53:09 2017 +0100
+
+    Merge pull request #74 from jzeferino/feature/add_license_to_readme
+    
+    Changed license to .md add it to readme.
+
+commit 85692a3f6d2d774b8d3e2b3f7a800fd340bbcc1f
+Author: jzeferino <jorgevalentzeferino@gmail.com>
+Date:   Fri Jun 9 10:39:17 2017 +0100
+
+    Changed readme to .md add it to readme.
+
+commit a8b8fb56aaa70b7a34bb30940b0f861d9853c2ae
+Merge: 1c8a523 f927637
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Thu Jun 8 11:12:47 2017 +0100
+
+    Merge pull request #69 from isepise/patch-1
+    
+    Fix german pluralize
+
+commit f927637c6834d54dc33e6987a747803bd2ecea5e
+Author: Bernd <isepise@gmail.com>
+Date:   Thu Jun 8 08:23:12 2017 +0200
+
+    Fix german pluralize
+    
+    Jahr - Jahre, Monat - Monate, Tag - Tage
+
+commit 1c8a523832d2f7d6c286364d488b0a8894801e41
+Merge: ea5c935 978a6c1
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Wed Jun 7 17:32:20 2017 +0100
+
+    Merge pull request #68 from jzeferino/feature/move_version_history_to_changelog
+    
+    Moved version history to changelog. #66
+
+commit 978a6c154a18e770650cc83435dc8f15f91f747e
+Author: jzeferino <jorgevalentzeferino@gmail.com>
+Date:   Wed Jun 7 15:58:39 2017 +0100
+
+    Moved version history to changelog. #66
+
+commit 73c72c5aec418328370f035fbd3b3bbff2d45ae8
+Author: Joao Matos Silva <j.silva@mindbus.nl>
+Date:   Fri May 5 00:44:27 2017 +0100
+
+    Fixing artifacts path
+
+commit d1c9289cefe8fe0e7d04092cf0bcbdfea13c1e5e
+Author: Joao Matos Silva <j.silva@mindbus.nl>
+Date:   Fri May 5 00:39:08 2017 +0100
+
+    another revision clear on tags try
+
+commit 6231f37be1cf132a430ca2742eeaf54ad349f43d
+Author: Joao Matos Silva <j.silva@mindbus.nl>
+Date:   Fri May 5 00:35:15 2017 +0100
+
+    try some adjustments on the revisions
+
+commit f8c44e0cd36c9decc89ddff2613a9e9b4b4938db
+Author: Joao Matos Silva <j.silva@mindbus.nl>
+Date:   Fri May 5 00:10:36 2017 +0100
+
+    testing out another build.ps1 borrowed from dapper
+
+commit c485aeaa2541b5fec9a7c7b35a51cee17d086ebb
+Author: Joao Matos Silva <j.silva@mindbus.nl>
+Date:   Thu May 4 23:58:01 2017 +0100
+
+    Added os to appveyour to target Visual Studio 2017
+
+commit 414bce2ebf668adb6385ebc7f41244389bd870c6
+Author: Joao Matos Silva <j.silva@mindbus.nl>
+Date:   Thu May 4 23:37:56 2017 +0100
+
+    performing auto update
+
+commit ea5c935f049d22b2b57cc87f49d786cd956d619b
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Wed Mar 8 16:48:23 2017 +0000
+
+    bump
+
+commit 4271f686e0d0f683eac7ff00441d370521d87c2b
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Wed Mar 8 16:39:56 2017 +0000
+
+    repack to 4.0.2
+
+commit c3f1508ae34f254625dfb3ea857c2244e27638ad
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Sun Mar 5 23:35:07 2017 +0000
+
+    updated readme
+
+commit 02d6cda52fef74871fe954529c83ace0af28e1a5
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Sun Mar 5 23:26:54 2017 +0000
+
+    Adjustements on tests project to make them pass
+
+commit 4a71f6e9cecda6ec055a50df721147af14458b2d
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Sun Mar 5 23:06:59 2017 +0000
+
+    Removing meta NetStandard Library and adding net45 for older nuget
+
+commit 548698f5633f53ef660f69acb353b36f1a004ae7
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Sun Mar 5 23:08:31 2017 +0000
+
+    removed lock files
+
+commit e98a65ab79d7238bf07d23b264b7ba473691f2d7
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Wed Feb 22 11:28:28 2017 +0000
+
+    bump release to v4.0
+
+commit b1d7ecc321655c06a5eb5b24022dfc1b5d6d911e
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Wed Feb 15 23:51:41 2017 +0000
+
+    removed dotnet framework 3.5 target
+
+commit 3763f0f8c7555dad6fed3c7b59e9d093a1723fdf
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Wed Feb 15 23:44:09 2017 +0000
+
+    clean up files
+
+commit e8cef3d451e74f4fa3610ccde4cb86e6b5215e97
+Merge: 1d40738 0d04f5c
+Author: João Matos Silva <j.silva@mindbus.nl>
+Date:   Fri Jan 20 13:40:46 2017 +0000
+
+    Merge branch 'slabarque-master'
+
+commit 0d04f5ccebf95ff8be88c1215b8749a7c24a05ba
+Merge: 1d40738 560a59c
+Author: João Matos Silva <j.silva@mindbus.nl>
+Date:   Fri Jan 20 13:39:32 2017 +0000
+
+    fixing merge conflitcs
+
+commit 560a59c65d6d88537fd069e247d037a99ef00bfb
+Author: LoqutusSl <slabarque@loqutus.be>
+Date:   Fri Jan 20 14:05:33 2017 +0100
+
+    Added country prefix for national holiday
+
+commit 7d5bcfd10a91f9ddc82427d68cdeb22cecedf63a
+Author: LoqutusSl <slabarque@loqutus.be>
+Date:   Fri Jan 20 13:58:19 2017 +0100
+
+    Added NL_BE holiday strategy
+
+commit 1d40738e02b84e4e814cf47d1aefbadc7087ae52
+Author: João Matos Silva <j.silva@mindbus.nl>
+Date:   Sat Jan 14 02:08:52 2017 +0000
+
+    updated README
+
+commit f94aa6c3193416d14d5a979ade5596f5c880eca9
+Author: João Matos Silva <j.silva@mindbus.nl>
+Date:   Sat Jan 14 02:04:30 2017 +0000
+
+    Allow providing custom strategies by overriding the location strategy and re-enabling the test
+
+commit a2abf928476e88c9a595b92e6b7f30f948921f7c
+Author: João Matos Silva <j.silva@mindbus.nl>
+Date:   Sat Jan 14 01:42:56 2017 +0000
+
+    Added Vanity shields
+
+commit c2b590908bb3b8a34f5962f1b20e34272e73d10d
+Author: João Matos Silva <j.silva@mindbus.nl>
+Date:   Sat Jan 14 00:40:25 2017 +0000
+
+    Adding net35 framework and tests (limited to 451)
+
+commit c2cf55ca35c30f23bc39f2b2259563fa009ba8e3
+Merge: 88aaac2 28291d7
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Fri Jan 13 23:17:21 2017 +0000
+
+    Merge pull request #61 from kappy/feature/corefx
+    
+    .Net Core support
+
+commit 28291d7fec48e294f33b016331c19f39f966a186
+Author: João Matos Silva <j.silva@mindbus.nl>
+Date:   Fri Jan 13 23:13:55 2017 +0000
+
+    fixing spaces on appveyour.yml
+
+commit 402216806f8481a7c7ac7896f047f3864e35f322
+Author: João Matos Silva <j.silva@mindbus.nl>
+Date:   Fri Jan 13 23:12:33 2017 +0000
+
+    Ci builds to Myget and adjusting build version on packages
+
+commit 457cbca5b53977a9978aa9b5c8fa28f2ab6b2c18
+Author: João Matos Silva <j.silva@mindbus.nl>
+Date:   Fri Jan 13 17:42:26 2017 +0000
+
+    updating build setup and packaging settings
+
+commit 5fd2a548a233c9527748085b41bf5421fb5d9e53
+Author: João Matos Silva <j.silva@mindbus.nl>
+Date:   Fri Jan 13 16:36:25 2017 +0000
+
+    Make it build and test pass with netstandard 1.1
+
+commit 4b8903cb7a370805be16f2273e0c60936cf02009
+Author: João Matos Silva <j.silva@mindbus.nl>
+Date:   Fri Jan 13 16:19:09 2017 +0000
+
+    Make all tests pass
+
+commit 5c4e54890c52fb9ffa24d9f6a654d7a14ad58f98
+Author: João Matos Silva <j.silva@mindbus.nl>
+Date:   Fri Jan 13 16:17:21 2017 +0000
+
+    Making tests run with dotnet test
+
+commit e548e4233ad1b96fc222dbd17e4c162b8b31411d
+Author: João Matos Silva <j.silva@mindbus.nl>
+Date:   Fri Jan 13 16:16:19 2017 +0000
+
+    Adding Test project and making it build
+
+commit 21d4b018c89655b35340c911edc18ef29a38497d
+Author: João Matos Silva <j.silva@mindbus.nl>
+Date:   Fri Jan 13 15:47:39 2017 +0000
+
+    added and converted DateTime to netstandart 1.6 Will improve later on
+
+commit 096974554be07b7e634f58cb130f7785055e0379
+Author: João Matos Silva <j.silva@mindbus.nl>
+Date:   Fri Jan 13 15:44:33 2017 +0000
+
+    Added global.json
+
+commit 88aaac211ce8624b315d933f597a88846d9cc42d
+Merge: 1c43c84 6ef142f
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Fri Dec 23 10:02:45 2016 +0000
+
+    Merge pull request #59 from kappy/GetWorkingDays
+    
+    Get working days
+
+commit 6ef142f9213c06fa1dc2721ddd0b54958b75974a
+Author: João Matos Silva <j.silva@mindbus.nl>
+Date:   Fri Dec 23 09:58:14 2016 +0000
+
+    Move the GetWorkingDays tests to it's proper test class
+
+commit 1c3b396e93bb103a7776742ce81b2189f9563d3f
+Author: João Matos Silva <j.silva@mindbus.nl>
+Date:   Fri Dec 23 09:55:24 2016 +0000
+
+    Make adjustements for the same day calculations
+
+commit c8101d29da156a2c2b07296b51b199feff0d023d
+Author: João Matos Silva <j.silva@mindbus.nl>
+Date:   Fri Dec 23 09:53:51 2016 +0000
+
+    Make tests pass
+
+commit 1c43c84eebf626942749a2ad397ec6e67edd4311
+Author: João Matos Silva <j.silva@mindbus.nl>
+Date:   Mon Dec 19 22:33:57 2016 +0000
+
+    send app veyour to restore packages manually
+
+commit 90b26b50294738ddf711ce8ab84084f3edd63be4
+Author: João Matos Silva <j.silva@mindbus.nl>
+Date:   Mon Dec 19 22:28:43 2016 +0000
+
+    cleanup solution
+
+commit 2479361de21c725539399137650de18e73e7611c
+Author: João Matos Silva <j.silva@mindbus.nl>
+Date:   Mon Dec 19 22:22:34 2016 +0000
+
+    bump version to 3.10
+
+commit 6a4b52fb4647e2db3a0127326753f9f37b2e64f0
+Merge: 26cf15b 6f2ab7a
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Mon Dec 19 22:10:46 2016 +0000
+
+    Merge pull request #58 from kappy/feature/appveyour-build
+    
+    adding app veyour build definition
+
+commit 6f2ab7a2aa5127ccb981589435c4ca6dac1fa816
+Author: João Matos Silva <j.silva@mindbus.nl>
+Date:   Mon Dec 19 22:07:33 2016 +0000
+
+    adding version and commit to informational_version
+
+commit 0646d69515d44bdae905e55f0d95fe1ef70b7469
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Mon Dec 19 21:19:58 2016 +0000
+
+    set nuspect tokens for nuget pack
+
+commit 26cf15b213a12a7c400e61534352a159c732900f
+Merge: 9adcd4c 5c05cc6
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Mon Dec 19 20:28:13 2016 +0000
+
+    Merge pull request #55 from schulz3000/Optimize_Time_Parse
+    
+    Optimize Time Parse
+
+commit 9adcd4c61365b623e563bddbead9831c7989203c
+Merge: 0c0ecc4 58185bf
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Mon Dec 19 20:27:18 2016 +0000
+
+    Merge pull request #52 from schulz3000/Add_German_Holiday_Names
+    
+    Add Holiday Names in German language
+
+commit 5c05cc6d17888dda56d9db8ebda16c4363cb3091
+Author: Xaver Schulz <schulz3000@gmx.de>
+Date:   Mon Dec 19 20:49:06 2016 +0100
+
+    make Regex readonly
+
+commit d70498576a62bb9a8aba5c28f6c7ac7255d21bc8
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Mon Dec 19 19:09:33 2016 +0000
+
+    add nuget packaging
+
+commit 33008f8d189b6e7a56d89f5a2cae88c30207f7ff
+Author: João Matos Silva <j.silva@mindbus.nl>
+Date:   Mon Dec 19 17:08:54 2016 +0000
+
+    adding app veyour build definition
+
+commit 0c0ecc43a519e655e19bab387fd36cad1250ab84
+Merge: 78c64b8 60915c8
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Mon Dec 19 01:25:18 2016 +0000
+
+    Merge pull request #53 from schulz3000/add_PentacostMonday_to_DE
+    
+    Add Pentacost Monday to German Holidays
+
+commit 78c64b832e1c888d7ef299c30a679831e85ad508
+Merge: 712a1e2 41cf8d5
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Mon Dec 19 01:24:20 2016 +0000
+
+    Merge pull request #54 from schulz3000/Fix_German_NaturalText
+    
+    Fix casing of German NaturalText
+
+commit 712a1e2c934e58f09909887cce9121ebc1d0a4e6
+Merge: ed509e9 0b3e3c6
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Mon Dec 19 01:21:37 2016 +0000
+
+    Merge pull request #56 from schulz3000/Add_Austrian_Holidays
+    
+    Add austrian holidays
+
+commit 58185bfeb7201703defa1b1034d632e887ac4aba
+Author: Xaver Schulz <schulz3000@gmx.de>
+Date:   Sun Dec 18 23:07:16 2016 +0100
+
+    Fix german three holy kings holiday name test
+
+commit 1a74b197854fbb048f3962faf94e1b2f5d5b6ee4
+Author: Xaver Schulz <schulz3000@gmx.de>
+Date:   Sun Dec 18 23:00:45 2016 +0100
+
+    Fix Tests
+
+commit 246bca6cb7d3304a00d27b7e61bc25bc6a3c2f05
+Author: Xaver Schulz <schulz3000@gmx.de>
+Date:   Sun Dec 18 22:53:58 2016 +0100
+
+    return early if from and to the same Dates
+
+commit 0b3e3c65fdf2e53772d08cb2289b09cd2f34e1a9
+Author: Xaver Schulz <schulz3000@gmx.de>
+Date:   Sun Dec 18 22:41:28 2016 +0100
+
+    Add missing change in csproj
+
+commit f37a37c73b398fce9753bcdbbd3bad62d7b833fb
+Author: Xaver Schulz <schulz3000@gmx.de>
+Date:   Sun Dec 18 22:40:09 2016 +0100
+
+    GetWorkingDays Implemantation
+
+commit def08d10a4a35201952b918f2008dd8c1c92b602
+Author: Xaver Schulz <schulz3000@gmx.de>
+Date:   Sun Dec 18 21:48:25 2016 +0100
+
+    Optimize Time Parse
+    
+    Optimize Time Parse by making Regex static and compiled
+
+commit 3066e95b48ba14addbf23215e61a0d140a4e7378
+Author: Xaver Schulz <schulz3000@gmx.de>
+Date:   Sun Dec 18 21:40:30 2016 +0100
+
+    Add Austrian Holidays
+
+commit a55c756a1d5cf8b738c4b87cb4af6795e3e86a40
+Author: Xaver Schulz <schulz3000@gmx.de>
+Date:   Sun Dec 18 21:20:12 2016 +0100
+
+    Add Holiday Names in German language
+
+commit 41cf8d5db407803fdeb39fcea4630ae98a75b405
+Author: Xaver Schulz <schulz3000@gmx.de>
+Date:   Sun Dec 18 20:56:36 2016 +0100
+
+    Fix casing of German NaturalText
+    
+    in German all of the here used words begin with an upper letter
+
+commit 60915c87b209a03ca01a091d95d11093cb58e13e
+Author: Xaver Schulz <schulz3000@gmx.de>
+Date:   Sun Dec 18 20:54:32 2016 +0100
+
+    Add Pentacost Monday to German Holidays
+
+commit ed509e9dd1009610a5901250a418179ba4a42d1c
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Wed Oct 19 09:30:05 2016 +0100
+
+    Update README.md
+
+commit b65a50c5e4da89e97ec48ea9e5727dcfa70add63
+Merge: e79c3d1 bcfb141
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Wed Aug 17 13:09:32 2016 +0100
+
+    Merge pull request #48 from tfreitasleal/master
+    
+    Solves several issues.
+
+commit bcfb141549c74a3541eb7ab129e594e46a9bfcf9
+Author: tfreitasleal <tfreitasleal@gmail.com>
+Date:   Mon Aug 15 23:25:36 2016 +0100
+
+    Fix line endings and tabs on 5 files #51
+
+commit b1461eec03a681da7a71fcc3aaf8abe04b0de00e
+Author: tfreitasleal <tfreitasleal@gmail.com>
+Date:   Mon Aug 15 23:22:35 2016 +0100
+
+    Fix for #50 Minor fixes to code documentation
+
+commit ef49a8df3be135f88c673bb21fd55b6b3dc49b79
+Author: tfreitasleal <tfreitasleal@gmail.com>
+Date:   Mon Aug 15 23:09:11 2016 +0100
+
+    Implement #49 Change test time to "3:59:58" instead of "3:59:59"
+
+commit 1e373bed9e6bc6d73d6f7f14400a962e54e9d4c7
+Author: tfreitasleal <tfreitasleal@gmail.com>
+Date:   Mon Aug 15 22:57:37 2016 +0100
+
+    Add Unit Tests for #47 Accept Time custom format string:
+    - Setup and TearDown methods
+    - can_format_24hour_time test
+    - can_format_12hour_time test
+
+commit 94a063d3547f907dc3995bb5a50cdf9d01042199
+Author: tfreitasleal <tfreitasleal@gmail.com>
+Date:   Mon Aug 15 22:55:11 2016 +0100
+
+    Implement #47 Accept Time custom format string
+
+commit e79c3d1eb85dde60953d43db1055518aec5ad511
+Author: Joao Matos Silva <j.silva@mindbus.nl>
+Date:   Fri Mar 4 22:28:55 2016 +0000
+
+    force add FAKE
+
+commit 636f2fa3c0af545b941ea8b4fbbd453957115234
+Author: Joao Matos Silva <j.silva@mindbus.nl>
+Date:   Fri Mar 4 22:18:52 2016 +0000
+
+    updated FAKE
+
+commit b55000451575ac295c002108bf59c972bd807df6
+Author: João Matos Silva <j.silva@mindbus.nl>
+Date:   Fri Mar 4 17:41:27 2016 +0000
+
+    bump to version 3.9
+
+commit 97c112965187e1e5a36f92a1630c6a0d13cd2535
+Merge: 393e3ab ea68c83
+Author: João Matos Silva <j.silva@mindbus.nl>
+Date:   Fri Mar 4 17:37:36 2016 +0000
+
+    Merge branch 'cuongtranba-master'
+
+commit ea68c83985797372dc6188785ca028f7305b7588
+Merge: 393e3ab 0668987
+Author: João Matos Silva <j.silva@mindbus.nl>
+Date:   Fri Mar 4 17:35:59 2016 +0000
+
+    Fixed conflits from cuongtranba-master
+
+commit 06689875dc255912323ce3834d416d421462849c
+Author: herrylove72 <bacuongtr@gmail.com>
+Date:   Fri Feb 26 00:11:13 2016 +0700
+
+    add resource and test for cultureinfo viet nam
+    
+    add strategy class for vi-vn cultureinfo
+    
+    - add test for viet nam holiday
+    - implement function to calculate viet nam holyday
+    
+    add unit test for viet nam holidays translate
+    
+    add test for vietnam holiday
+    
+    add more test
+
+commit 393e3ab7259016a419cb42d25c83864864e5528e
+Author: Joao Matos Silva <j.silva@mindbus.nl>
+Date:   Sun Feb 28 23:02:24 2016 +0000
+
+    cahanged code analisys rules
+
+commit 29fbd917d1754ae4716d8e04fd27859406fce27e
+Author: Joao Matos Silva <j.silva@mindbus.nl>
+Date:   Sun Feb 28 22:59:56 2016 +0000
+
+    fixed tests
+
+commit 22cd63cb56fd45ee46c44b667c38a798052f8978
+Author: Joao Matos Silva <j.silva@mindbus.nl>
+Date:   Sun Feb 28 22:42:12 2016 +0000
+
+    Added Chinese Holidays and bumped version
+
+commit ed9d40d6def133b4ba7dad88e0dbd00c1bb43cd4
+Author: Joao Matos Silva <j.silva@mindbus.nl>
+Date:   Sun Feb 28 22:27:15 2016 +0000
+
+    Refactor - Moved New Year from Chritian to Global holidays
+
+commit c03af125bb2cf2690254e6dc5d2b07f070016dde
+Author: Joao Matos Silva <j.silva@mindbus.nl>
+Date:   Wed Feb 24 23:31:45 2016 +0000
+
+    Fixed en-ZA and es-AR not generating holidays in 2016
+
+commit d82033055649826a23819c7c9a1ff0fe1f1ead52
+Author: Joao Matos Silva <j.silva@mindbus.nl>
+Date:   Wed Feb 24 22:55:20 2016 +0000
+
+    restoring holidays in pt-PT from 2016 on
+
+commit a5fa1a9376aabb7c1cc28f5079cc884e6aafa681
+Author: Joao Matos Silva <j.silva@mindbus.nl>
+Date:   Wed Feb 24 22:54:16 2016 +0000
+
+    fixin ar-sa
+
+commit dce83f7260c476fdde3b9a50a79e1e90f8b0c21d
+Merge: 254b45c c71747e
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Fri Jan 15 00:22:03 2016 +0000
+
+    Merge pull request #43 from kappy/release
+    
+    Release
+
+commit c71747ec2761b6b16ba5efebb4f60c8ab57acc37
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Fri Jan 15 00:20:35 2016 +0000
+
+    re-fixed Canada holidays
+
+commit 0edf149e5f7d60476700becbcebaa8aebc9bb103
+Merge: 0047dc1 254b45c
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Fri Jan 15 00:09:47 2016 +0000
+
+    Merge remote-tracking branch 'refs/remotes/origin/master' into release
+
+commit 254b45cff1568f4274e7901d3fe93c0218477ce3
+Merge: 9f2f27d 5d6207d
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Fri Jan 15 00:09:26 2016 +0000
+
+    Merge branch 'master' of https://github.com/kappy/DateTimeExtensions
+
+commit 9f2f27d01c9325501dc96bf18101aade7d29fc7b
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Fri Jan 15 00:09:15 2016 +0000
+
+    updated readme
+
+commit 7881e001e625c6ce22c6b0f0ff4f51414edb7c02
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Fri Jan 15 00:02:24 2016 +0000
+
+    Fixed #42
+
+commit 5d6207dfffdcca2e779e980634dc0e4909006f61
+Merge: 383972f e3785b7
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Mon Dec 14 09:16:36 2015 +0000
+
+    Merge pull request #41 from TonyZhu2015/master
+    
+    Fixed bugs with Australian public holiday calculation
+
+commit e3785b72304cfca91a0c8173633826ddae5ab65d
+Author: Tony Zhu <tony@readysell.com.au>
+Date:   Fri Dec 4 14:57:23 2015 +1100
+
+    Fixed bugs with Australian public holiday calculation
+
+commit 383972fc9386deebdc5d966627dcdb40736ec7c8
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Sat Nov 28 23:46:12 2015 +0000
+
+    Fixed tests
+
+commit 96c1d235bdb970f6d38766c598b3611cacdf6823
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Sat Nov 28 22:36:22 2015 +0000
+
+    Added FxCop teamcity Import
+
+commit 2ef16b7a9724b19726d5dd90cdb4f0c010d87346
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Sat Nov 28 16:15:05 2015 +0000
+
+    Added RunCodeAnalysis
+
+commit 7129e3b1f78861a221b115abf8ce4a3a19b312a4
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Sat Mar 21 10:34:35 2015 +0000
+
+    Update README.md
+
+commit 0047dc15a589fecadc1e29cac4bcac44c2588fc4
+Merge: c9e72a6 9dccd36
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Sat Feb 7 16:15:06 2015 +0000
+
+    Merge remote-tracking branch 'origin/master' into release
+
+commit 9dccd368ce873f68d792063400186789528013ea
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Sat Feb 7 16:14:15 2015 +0000
+
+    Fix build
+
+commit c9e72a67356e21a2e76607c89b63664b18206529
+Merge: 66b1f8e 5a2cd5f
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Sat Feb 7 15:36:06 2015 +0000
+
+    Merge remote-tracking branch 'origin/master' into release
+
+commit e3e5a1ece7961ebddbe87eb45ec652735559b114
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Sat Feb 7 15:35:38 2015 +0000
+
+    Bump Versions
+
+commit 5a2cd5fb7bc4838b83c380f8249378a61a9f1295
+Merge: 3b7d233 252e841
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Thu Feb 5 15:20:44 2015 +0000
+
+    Merge pull request #40 from jaeseonc/master
+    
+    Korean holidays added
+
+commit 252e841e2fc3a076c5eb3b47b34b2ebc31c39a37
+Author: jaeseonc <jschoi@softconsult.co.kr>
+Date:   Thu Feb 5 16:42:08 2015 +0900
+
+    Holiday names translation and tests
+
+commit cd1fe9bdeb53cefb35bb94b612a7df7d94fec486
+Author: jaeseonc <jschoi@softconsult.co.kr>
+Date:   Thu Feb 5 15:25:47 2015 +0900
+
+    Korean holiday strategy and tests
+
+commit 66b1f8ea041656d530696296d56d11e5de6c0da9
+Author: Jake A. Stevenson <jake.stevenson@gmail.com>
+Date:   Tue Sep 2 12:44:10 2014 -0500
+
+    Mapping caused duplicate Independence Day holidays
+
+commit 05897618d967da176770c55ad5fbfc7ee5670177
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Mon May 26 11:03:33 2014 +0100
+
+    Added TeamCity build status
+
+commit 3b7d2332ca3ae3c6d3c6d8fd513bb01dc051d73c
+Merge: 59feee1 95f4574
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Wed Sep 3 11:03:54 2014 +0100
+
+    Merge pull request #39 from JakeStevenson/bug/CannotGetUSYearHolidaysIn2015
+    
+    Mapping caused duplicate Independence Day holidays
+
+commit 95f45742aff733cb22fe636819c1986fd45948db
+Author: Jake A. Stevenson <jake.stevenson@gmail.com>
+Date:   Tue Sep 2 12:44:10 2014 -0500
+
+    Mapping caused duplicate Independence Day holidays
+
+commit 59feee1ee92ab494c5492ad73ef8837681f8546b
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Mon May 26 11:03:33 2014 +0100
+
+    Added TeamCity build status
+
+commit fa437a3a75fd422a544637297340f83883cf28ab
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Thu May 22 12:49:14 2014 +0100
+
+    bumped version to 3.6
+
+commit 9d20b9b33e9afb3fa911e841dd64be19154e800a
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Thu May 22 12:46:02 2014 +0100
+
+    Added Ireland locale
+
+commit 8a2a6f00d6a5ebfe32954f5f29a74f2a7e82afa9
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Thu May 22 12:45:46 2014 +0100
+
+    Removed St.Patricks day on en-GB (thanks @ConspiringWithTheDamned) fixes #37
+
+commit 6c6677a06d4639ce259b4bf8f456b63588d8fa27
+Merge: 3e2de3b 2fbf801
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Thu May 8 16:37:31 2014 +0100
+
+    Merge pull request #36 from kappy/FixedHolidayDefered
+    
+    Defered year resolve on FixedHoliday to allow custom expressions
+
+commit 2fbf801f1e2e1c5d757211e032c3864294db4fde
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Thu May 8 16:21:35 2014 +0100
+
+    Defered year resolve on FixedHoliday to allow custom expressions
+
+commit 3e2de3b3e5a920595f93128558db0e7d1e969318
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Thu May 8 16:12:26 2014 +0100
+
+    uncommented unit tests
+
+commit 013cbd48415cbd0d802a633627e0de574eed1ed5
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Thu May 8 10:29:58 2014 +0100
+
+    push to 3.5
+
+commit fcc1fefccaf4735151687d1be6cada3f46c4d7b5
+Merge: 68e8b1c 4a4611b
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Thu May 8 09:42:48 2014 +0100
+
+    Merge pull request #34 from kappy/reformat
+    
+    reformated entire solution to become BSD Style (Allman).
+
+commit 4a4611b36377e55ea7772601ec6b442a7336b011
+Merge: 68e8b1c b1c2e6f
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Thu May 8 09:32:13 2014 +0100
+
+    Merge branch 'reformat' of https://github.com/kappy/DateTimeExtensions
+
+commit 68e8b1c0e086f593e00c520bfb3b9a2bccd855cf
+Merge: ebfd803 99a207d
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Thu May 8 09:22:04 2014 +0100
+
+    Merge pull request #35 from kappy/newBuildTargets
+    
+    new targets and dependencies on build sript for teamcity
+
+commit 99a207d01b1b79d8cdbb1e45e759df35d96e32f6
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Thu May 8 09:20:27 2014 +0100
+
+    new targets and dependencies on build sript for teamcity
+
+commit b1c2e6f5d8f42eb45b9a4570687fd0dbc38fe411
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Thu May 8 09:14:10 2014 +0100
+
+    reformated entire solution to become BSD Style (Allman).
+    changed also spacing from tabs to spaces
+
+commit ebfd8037af38f2c3a614c59e619bad55428d3a4c
+Merge: be4b3f0 fad7b2e
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Thu May 8 09:04:18 2014 +0100
+
+    Merge pull request #33 from rickbeerendonk/master
+    
+    Added Kingsday for The Netherlands.
+
+commit fad7b2ef1cf9d4794f7fff3d012a333170ec9fd5
+Author: Rick Beerendonk <rick.beerendonk@evision-software.com>
+Date:   Thu May 1 11:38:14 2014 +0200
+
+    Added Kingsday for The Netherlands.
+
+commit be4b3f07136b9281418a3d74c5b25c9d46ed9968
+Merge: 36ff8cc d7e869d
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Thu Apr 10 12:22:18 2014 +0100
+
+    Merge pull request #32 from kappy/newPullsTests
+    
+    added pull requests build
+
+commit d7e869d1847ee5f5a7e4dc5c06f5295019b574d0
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Thu Apr 10 12:11:16 2014 +0100
+
+    added pull requests build
+
+commit 36ff8ccc1718a8444adf710c92bf623306160af0
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Fri Jan 3 21:43:13 2014 +0000
+
+    removed teamcity failing tests
+
+commit 591f517a1f4fcfe444438ec5ae1fec37d8c4c5e2
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Tue Dec 31 23:16:47 2013 +0000
+
+    updated build script
+
+commit 67a81ccaa60e7ce3249fe718fd58080136734f08
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Tue Dec 31 23:12:20 2013 +0000
+
+    fake updated
+
+commit bce30e9c938ef1dac4fffc8d9281c4283472aadb
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Mon Dec 23 17:06:07 2013 +0000
+
+    tools updated
+
+commit b93b0381ad5a34a5f90b0c128ab95164082d09a0
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Mon Dec 23 16:04:42 2013 +0000
+
+    testing setUiCulture
+
+commit 679c6101dcca7dc148d683222265bd33732fce28
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Mon Dec 23 15:51:49 2013 +0000
+
+    removed setting the currentculture and testing working dir on nunit
+
+commit abdcbb1449d8e880cee99c1d2e3d666433a21cc9
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Mon Dec 23 15:20:09 2013 +0000
+
+    testing setting also current culture
+
+commit b82572d970d91a19e7c2174a674c248b6bf870cb
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Mon Dec 23 15:15:31 2013 +0000
+
+    testing nunit with shadow copy
+
+commit 8e50e19c824ccd6d703ab5fde4ef2b0b036482c1
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Mon Dec 23 14:48:53 2013 +0000
+
+    changed order of unit tests
+
+commit 3f62ceebd41348a29e9849b7844bb0a68a50a61c
+Merge: 1f401cb b07bd2b
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Mon Dec 23 04:29:02 2013 -0800
+
+    Merge pull request #31 from kappy/localizableHolidays
+    
+    Localizable holidays
+
+commit b07bd2b89d31170697c356c44999dec2a85c2514
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Mon Dec 23 12:28:11 2013 +0000
+
+    Bump Version to 3.4
+
+commit d5d31e65312ba1978ab96d1dbd44c5dc6cac7983
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Mon Dec 23 11:56:47 2013 +0000
+
+    Added Spanish holidays translations
+
+commit 5fb1e6a355e39b7002260630c15211682574b715
+Merge: 643a8cf 1f401cb
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Mon Dec 23 10:51:38 2013 +0000
+
+    Merge remote-tracking branch 'origin/master' into localizableHolidays
+
+commit 1f401cbff80b68bda6d0993a9436a70d903bde05
+Merge: 53a9597 b541fb5
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Mon Dec 23 02:45:08 2013 -0800
+
+    Merge pull request #30 from kappy/fakeBuild
+    
+    Added new build script based on FAKE
+
+commit b541fb5a047ea2ba4b5cad0a0cfb2298e6d9d698
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Mon Dec 23 10:42:33 2013 +0000
+
+    fixed projects relative paths
+
+commit 53a9597b5d1ef89a549e5739aa11dc73aa6f532f
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Sun Dec 8 22:44:30 2013 +0000
+
+    bump version
+
+commit 1ca7d3c1190024cab06e732d0c5f76d5b156df84
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Sun Dec 8 22:36:22 2013 +0000
+
+    Formating...
+
+commit 7176322f0680272c2a34c31d1b403be43c4501d2
+Merge: 1bb438c a131b53
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Fri Dec 6 14:31:42 2013 -0800
+
+    Merge pull request #29 from jbasinger/master
+    
+    Added Ceiling, Floor and Round functions
+
+commit a131b5354bf05faea23819adce7b746901d831d9
+Author: Justin Basinger <justin.m.basinger@gmail.com>
+Date:   Thu Dec 5 23:16:39 2013 -0500
+
+    Added Ceiling, Floor and Round functions
+    
+    These functions allow users to ceiling, floor or round the DateTime
+    object by specific time intervals.
+
+commit 651e369365188378062f17a98b55661d8da8611f
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Fri Nov 8 23:16:52 2013 +0000
+
+    Added FAKE and base build script
+
+commit 3ee46fa4eba0d5d585d53aba830ffc97ded6152c
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Fri Nov 8 23:15:55 2013 +0000
+
+    Added Fake and base build script
+
+commit 643a8cf537b9243642e7db305607717411da06ed
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Fri Nov 8 22:44:53 2013 +0000
+
+    Added pt-BR holidays localization
+
+commit 465053d7ab4a8dad6836271ee33676678e258c38
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Thu Oct 10 21:24:16 2013 +0100
+
+    Restyle corrections on Translation tests
+
+commit fd2cfa88e02ea078c2224989b5fe7e4d3ff911bc
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Thu Oct 10 21:20:33 2013 +0100
+
+    fixed some typos
+
+commit b7bf0e0b7e250f12f6b17bc2143fda9fd767d56b
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Fri Aug 30 22:52:38 2013 +0100
+
+    Finishing localization of portuguese holidays
+
+commit f42db23cf68baefd4f09c5613fa60e0a7d1520a3
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Tue Aug 27 08:43:45 2013 +0100
+
+    Added Portuguese translation of global and christian holidays WIP.
+
+commit 41590a3a4311883b4c4ea056451ee2a56a93033b
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Mon Aug 26 16:42:33 2013 +0100
+
+    Added base features for supporting localizable holiday names
+
+commit 1bb438c13aa5138a38d2cd01c6a114d0d5183877
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Wed Jul 31 08:47:51 2013 +0100
+
+    v3.2.1
+    - fixed ar-SA non working days of the week (now friday and saturday, thanks @falsair)
+
+commit 0873dc7048b6fc85afa2420282428390b49ec4ba
+Author: Joao Matos Silva <joao@kspace.pt>
+Date:   Sun Jul 14 19:35:42 2013 +0100
+
+    Update README.md
+
+commit 77962a29a51bd232cde4d771a528edf389e3d2e7
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Sun Feb 24 00:35:35 2013 +0000
+
+    updated readme
+
+commit c10f9390a8cd591feab59d37880eedde05dbd09b
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Sun Feb 24 00:34:11 2013 +0000
+
+    updated readme
+
+commit 4a5c25ea15f8cfd0b223dac26e7e2a391c5054ab
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Sun Feb 24 00:29:50 2013 +0000
+
+    renamed readme
+
+commit df02f9a1e08aa0563624e13b4484fbc523c3c43c
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Sun Feb 24 00:28:48 2013 +0000
+
+    Changed Readme to markdown
+
+commit dc1dca761c1ecd276f4eed3a61988aeedff0144a
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Sun Feb 24 00:19:50 2013 +0000
+
+    Create READEME.md
+
+commit 329ee9b44cff1d80e971b7fbcb723aa1d15283db
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Fri Nov 2 16:32:24 2012 +0000
+
+    bump version with the added holidays strategies
+
+commit 444216c1c5ea43072d8589df5d5436255a1bd3e0
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Fri Nov 2 16:29:15 2012 +0000
+
+    Added Scotland holiday strategy
+
+commit 2ebe059d8ceec3181ac3376e6ea9a147a174b232
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Fri Nov 2 16:13:48 2012 +0000
+
+    Added Ireland holiday strategy
+
+commit 089cfc32621d45a9d636568f86b29622cfbc61be
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Fri Nov 2 16:00:13 2012 +0000
+
+    Added Slovenia Holiday Stategy
+
+commit f910f700d65bde5a8d73dd7cf85e4226f8654a6c
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Fri Nov 2 15:19:56 2012 +0000
+
+    bump version
+
+commit 875db63fc7066e7beeef4570bcfc19fb0c5de49a
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Fri Nov 2 15:17:14 2012 +0000
+
+    fixed Portuguese holidays that were abolished from the government
+
+commit 78d43d42ff03f55701b6befedfc7841c8ff1f77d
+Merge: 1df07bf 70177b5
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Fri Oct 12 09:19:48 2012 -0700
+
+    Merge pull request #27 from sihugh/master
+    
+    Readme
+
+commit 70177b598a7fade378336db7f830cb5d0d677ced
+Author: Simon <si.hughesdon@gmail.com>
+Date:   Fri Oct 12 17:35:14 2012 +0200
+
+    Spelling and grammar
+    
+    Corrected some spelling and fiddled with some grammar to reflect better idiomatic English.
+
+commit 1df07bf0b4566bfe0d51e3ac9e68a7e3cc3a8224
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Wed Oct 10 23:56:47 2012 +0100
+
+    test fix
+
+commit eee177385a40482de9d9e4ac555ca413e3e4985d
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Wed Oct 10 23:41:49 2012 +0100
+
+    fixed a bug that was causing the abolished holidays still holidays
+
+commit f636f4c901c878db32d00afefc2eb0fe374c89e9
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Wed Oct 10 22:18:24 2012 +0100
+
+    updated psake
+
+commit f35aba347627e649997a89716834532109af32a7
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Wed Oct 10 20:15:48 2012 +0100
+
+    fixed some tests
+
+commit 199e5236c7132bb20aed36df75291887e66ec198
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Wed Oct 10 20:01:00 2012 +0100
+
+    fixed some tests
+
+commit f9eed9d788e8172e0992946fde4a6922e3fb5a4f
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Wed Oct 10 19:52:47 2012 +0100
+
+    bumb version
+
+commit 7e4710b7d84daec1b453e96e671c0ad5ba3c49ff
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Wed Oct 10 19:50:16 2012 +0100
+
+    Re-removed the holidays that are abolish by the PT government.
+
+commit 02e160969737bf6f0ff18061f81c8f66caedf5df
+Merge: ff5d177 05601eb
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Wed Oct 10 19:42:04 2012 +0100
+
+    Merge branch 'master' of https://github.com/snoopydo/DateTimeExtensions.git
+    
+    Conflicts:
+            DateTimeExtensions/DateTimeExtensions.csproj
+
+commit 05601eb13fada65532faaf606ef9b4da40c27866
+Author: David Smith <db.ka.smith@xtra.co.nz>
+Date:   Fri Oct 5 20:43:33 2012 +1300
+
+    added fixed en-NZ holidays and tests
+
+commit ff5d177d70a3394d478bd1e4a38f7702b156c46d
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Tue Sep 4 14:31:04 2012 +0100
+
+    updated teamcity integration
+
+commit 3a723155ada4e8c9f86205148f2a0b5e3ecef137
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Tue Sep 4 14:27:40 2012 +0100
+
+    added teamcity integration to the CI build script
+
+commit b91c0fc885db3b837bf949e854d1f5692a1989b4
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Tue Sep 4 12:39:10 2012 +0100
+
+    trying to fix CI
+
+commit 4aea7c2c96d3e99eb65892f192f8ae9be02affe3
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Tue Sep 4 12:35:51 2012 +0100
+
+    trying to fix the CI
+
+commit a84b6593937d4d02fd8c45ef0b4fe9f7864377ab
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Tue Sep 4 12:23:58 2012 +0100
+
+    Added psake library on the repository for compatibility with codebetter team city CI
+
+commit 410dc9d4c31a31bb9725f796335a684809cca5a0
+Merge: e452f28 a0e9eac
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Fri Aug 24 14:27:56 2012 +0100
+
+    Merge branch 'master' of https://github.com/kappy/DateTimeExtensions.git
+
+commit e452f28452c663a097357d0d6bb6a49a0bae86b9
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Fri Aug 24 14:25:47 2012 +0100
+
+    updated readme
+
+commit a0e9eacbc02dcdd7a9afcff0eb6f42450e59075c
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Mon Aug 20 20:12:43 2012 +0100
+
+    Added default psake build script and nunit console runner
+
+commit cf29739c81f3daa714b8d8375b0d99407dc73702
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Mon Aug 13 22:26:06 2012 +0100
+
+    Added Apache 2.0 License
+
+commit 1eeaddf6ed1da2f55893fe9581482f47a9165683
+Author: David Smith <db.ka.smtih@xtra.co.nz>
+Date:   Fri Aug 3 15:12:11 2012 +1200
+
+    en-NZ holidays
+
+commit db1258c3072b72a9c8c64485bc7edd79449ac2c5
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Fri Jun 29 12:53:13 2012 +0100
+
+    bump version
+
+commit a97e5a0518f875e25342b71df68f6343056779c6
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Fri Jun 29 12:49:29 2012 +0100
+
+    Added safe type discovery from assemblies
+
+commit eac5727b33693fc209bdf059bedea615dcc8bd7d
+Merge: f1ba7f4 d6c36ac
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Thu Jun 7 04:32:00 2012 -0700
+
+    Merge pull request #23 from kappy/v3
+    
+    V3
+
+commit d6c36ac64faf5e4ac699b9efa9824389aca4c7ec
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Thu Jun 7 12:30:49 2012 +0100
+
+    BuildObservancesMap should be proteced instead of public
+
+commit 35276d459380fc08104bd323de197eefc83a0244
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Thu Jun 7 12:30:20 2012 +0100
+
+    updated readme
+
+commit 012496ae38d7533fa749908a7da7aa9a3a7e7dfa
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Thu Jun 7 12:23:00 2012 +0100
+
+    bump major version and added description
+
+commit df31fe83a7912a58adab825e3dc351a30e083a6f
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Thu Jun 7 12:07:32 2012 +0100
+
+    Updates from the master reabase
+
+commit 392f01c0a22fda882e7d51b2d2d8f915d9faf3f8
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Thu Jun 7 11:36:30 2012 +0100
+
+    Added Time class and extensions to represent an instant on a day
+
+commit 571aceddeb9fe411f08e3a3ca62094344976c999
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Mon May 14 23:21:58 2012 +0100
+
+    Removed the Locator Classes By Name since they're responsability don't make sence anymore
+
+commit c86a995bd43f675320facfa6e5f602de8c30784f
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Mon May 14 00:29:18 2012 +0100
+
+    updated some tests
+
+commit 51cfc2c175fc0d0ea508fea504c77470c4780952
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Mon May 14 00:28:41 2012 +0100
+
+    Removed unused classes due to the changes on the strategies location
+
+commit 3171b65ae9e159916a662d8dde567b0512aa9cda
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Mon May 14 00:21:11 2012 +0100
+
+    Continuation of the last commit for the Natural Text Strategies
+
+commit ec01f90f2d9c39e2d48d7e5ec3fc9fe8cbebdd9a
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Mon May 14 00:15:34 2012 +0100
+
+    Changed the strategies locator to be more dynamic using reflection instead composing the strategy name
+
+commit 36c8369fee36daadcc2c73f78d4b6e886f27922c
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Sat May 5 21:31:44 2012 +0100
+
+    Removed old empty folder
+
+commit b670cc4584efe172473f2f9f15e247e16bd3e3f4
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Sat May 5 21:30:23 2012 +0100
+
+    updated tests for the new refactoring
+
+commit ce411957d4086be89abbbec42723d3ed44ae8ada
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Sat May 5 21:22:35 2012 +0100
+
+    Second part of the features split up refactoring.
+    Created a specific namespace for Natural Text feature
+
+commit cbb7351052819d734b8c4c42a2ec048b9ceac202
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Sat May 5 19:04:37 2012 +0100
+
+    Started the features split up refactoring.
+    Added WorkingDays Namespace for everything related to working days
+
+commit f1ba7f4426ad3ac8a43790cb510f28ea03a4169d
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Wed Jun 6 09:02:53 2012 +0100
+
+    bump version
+
+commit 467cdc0e6ac5f591c6cf3f6272e27e6babc7b5ea
+Merge: 2c91e5c 06d2760
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Wed Jun 6 00:48:33 2012 -0700
+
+    Merge pull request #22 from frankgeerlings/dutch-l10n
+    
+    Dutch localization for natural time
+
+commit 06d2760871d814e2be1bc97c3df74490f092a3eb
+Author: Frank Geerlings <frank@frankgeerlings.com>
+Date:   Tue Jun 5 21:57:41 2012 +0200
+
+    Ascension day is also a holiday in NL, bugfix for same-day holidays
+    
+    After adding ascension day as a national public holiday for the Netherlands,
+    it turned out that in 2005, ascension day was on the same day as liberation day.
+    This commit introduces a general fix for the exception that occurred in that
+    situation by picking one of the holidays, if both are observed on the same day.
+    
+    Please also see commit fc6e331 in the multipleObservances branch which is kind of
+    related, but different (in NL we don't get to reuse a double holiday on some
+    other day).
+    
+    Perhaps the BuildObservancesMap should be overridden in the concrete class should be
+    overrided instead of the change to the base class, but I felt this was an issue
+    that is more general than just the dutch case.
+
+commit c94d07d232a0fa0cea858a454479b39b1d0b9465
+Author: Frank Geerlings <frank@frankgeerlings.com>
+Date:   Tue Jun 5 20:40:11 2012 +0200
+
+    Dutch localization for natural time
+    
+    This commit provides a localized version of the natural time base class for
+    both the nl-NL and nl-BE locale. In general, I think there is some room for
+    grouping region-specific variants. For instance, fr-BE can probably be identical
+    to fr-FR and fr-CA as far as time is concerned, and nl-BE and fr-BE should
+    share public holidays.
+
+commit 2c91e5c8b01c0ab8a7f3ce61580208b4b04b5633
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Thu May 3 00:14:29 2012 +0100
+
+    updated readme and version bump
+
+commit 79267d8450b751455f62b7e7ac72765c2cd21e25
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Thu May 3 00:14:16 2012 +0100
+
+    bugfix: holidays on weekends weren't considered as holidays
+
+commit 0f8bce09a4f247e6fa06c4af8582b09fbf93675a
+Merge: 6842d39 6eb1f93
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Wed May 2 15:51:09 2012 -0700
+
+    Merge pull request #21 from kappy/multipleObservances
+
+commit 6eb1f930a1d3f9de0fb7a8890576f5dc23e26b84
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Wed May 2 23:50:12 2012 +0100
+
+    bump version and updated readme
+
+commit fc6e33127f2855bb09ec1d180e00b69c9182abf8
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Wed May 2 23:47:51 2012 +0100
+
+    fix a bug on Autralian holidays strategy when moving easter holidays to next monday that was already an holiday
+
+commit 8359533154a0138142714a10a2393c418fede765
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Wed May 2 20:05:40 2012 +0100
+
+    fixed some mobile holidays on Argentina (es-AR)
+
+commit a5068c755560713069f5e1194b9696a4bb662c33
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Wed May 2 19:56:04 2012 +0100
+
+    fixed Laborday on Canada (en-CA and fr-CA)
+
+commit 6842d39ceea9d693b8cc4dd253d181202b1eb35f
+Merge: b9d9802 b59faf0
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Wed May 2 11:45:02 2012 -0700
+
+    Merge pull request #20 from kappy/multipleObservances
+
+commit b59faf01ede012a15f384871f19cbfac1696feb1
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Wed May 2 19:43:42 2012 +0100
+
+    bump versions
+
+commit a7cb8eb22f8a63c1eac40ef1c82c67da27fc21b6
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Wed May 2 19:29:28 2012 +0100
+
+    Added a new extension IsHoliday. This is extension should be similar to IsWorkingDay but disregarding the day of the week.
+
+commit 4993971259c1fa5c39f4ecc8edb7a1c12450d6c7
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Sat Apr 28 19:21:16 2012 +0100
+
+    Updated the ar-SA and es-AR holidays cultures to the new refactoring of holidays strategies
+
+commit 5595f598ea636e04a7973d02555ddee5f6d07d3f
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Fri Apr 27 13:29:03 2012 +0100
+
+    Refactoring of Holiday Strategies continued
+
+commit afd95dc6d35113f59f0f379d078b15d3636dc36d
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Fri Apr 27 13:16:23 2012 +0100
+
+    Holiday Strategies Refactored to allow holidays with multiple observances
+
+commit b9d9802c06cb4a5043af66312db32189a08b8b90
+Merge: 19a3dee 3843f33
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Fri Apr 27 04:44:07 2012 -0700
+
+    Merge pull request #19 from kappy/g20
+
+commit 3843f3395e5f228871539b86635f2b69778c7912
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Fri Apr 27 12:43:23 2012 +0100
+
+    fix: fixed a bug on Moveables holidays from argentina
+
+commit 29aa20506b72368f32950127c1572a027b4bef5a
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Fri Apr 27 12:36:10 2012 +0100
+
+    updated readme and version bump
+
+commit 51a1036385fbad1cf8189a4e3ef82c69b5688dca
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Thu Apr 26 19:40:16 2012 +0100
+
+    Added Italian (it-IT) holiday culture
+
+commit 9b1c5a43db3ed0aefd62f242488be6cd41490718
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Thu Apr 26 19:34:52 2012 +0100
+
+    Added Mexico (es-MX) holiday culture
+
+commit 3f1440c6328a2867b3d3b4453f1d37eaebb3fc04
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Wed Apr 25 19:35:51 2012 +0100
+
+    Added an initial version of Argentina (es-AR) holiday strategy.
+    Some confirmations are still needed
+
+commit 9382deb47d86a7f1ca6afd16d1d9ae942795ab54
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Wed Apr 25 17:38:14 2012 +0100
+
+    Added South Africa Holiday Strategy (en-ZA)
+
+commit 31ac1564975a9a5c5663903940f18d80c5a3915c
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Thu Apr 19 14:46:19 2012 +0100
+
+    Added Saudi Arabia (ar-SA) culture
+
+commit ee0cbc1e52b452e70f73f6d2d96bd6d70fe16751
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Thu Apr 19 14:45:45 2012 +0100
+
+    bugfix: the construtor of FixedHoliday wich could take a calendar instance was not passing that calendar instance to the day
+
+commit c156b6b93c8117b9b589fe862818e28adea62337
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Thu Apr 19 14:17:55 2012 +0100
+
+    bugfix: LocateDayOfWeekStrategyForName wasn't able to locate strategies
+
+commit 0b5729a5dc12d9364efe7e51a2bbf109c4c26c99
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Thu Apr 19 12:12:06 2012 +0100
+
+    added some tests to the fr-ca holiday culture
+
+commit e8a8a8eac59445c82e2a3e9ae918ed58ecb732b3
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Thu Apr 19 11:59:04 2012 +0100
+
+    fixed the fr-CA Victoria Day
+
+commit 7259bae7d060f743762af61213d84321705badc9
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Thu Apr 19 11:42:54 2012 +0100
+
+    Added fr-CA and en-CA holidays cultures
+
+commit b5bbc72fc56bedef654d023e42f07dac23aed1d2
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Thu Apr 19 10:51:13 2012 +0100
+
+    added australia holiday culture
+
+commit 19a3dee93ceb39af8ffbf03b69d70d5bfd99010c
+Merge: 47f372b 2a8f0ca
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Thu Apr 19 02:01:08 2012 -0700
+
+    Merge pull request #18 from kappy/MultipleCalendars
+    
+    Multiple calendars
+
+commit 2a8f0ca55e00c07070c62e959620c87242e98dfe
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Thu Apr 19 09:57:36 2012 +0100
+
+    bumb version and updated readme
+
+commit a08600174f8cd513b935198479e658566beb4b90
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Tue Apr 10 15:35:10 2012 +0100
+
+    Added Some Jewish Holidays and their tests for matching the ocourring dates on the gregorian calendar
+
+commit 0edd55ec290f4efd4158f92aa7ae0aafe1048126
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Tue Apr 10 15:33:36 2012 +0100
+
+    Added the Calendar component to FixedHoliday and DayInYear to make them Calendar independent.
+    The Responsability check the year ocurrence and instance was been delegated to DayInYear
+
+commit 47f372bbadb0e3635567396d36f4a6f46bc70777
+Merge: 8785d09 40005fc
+Author: João Matos Silva <kappy@acydburne.com.pt>
+Date:   Sat Apr 7 08:54:41 2012 -0700
+
+    Merge pull request #16 from kappy/ExportHOL
+    
+    header and date format corrected
+
+commit 40005fc2a4744ae5446cee60fd3e4eb9548c021a
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Sat Apr 7 16:27:48 2012 +0100
+
+    header and date format corrected
+
+commit 8785d09dcb41b30e7f40c8eb14764d6156b823ed
+Merge: 11f1eea ba21e2c
+Author: João Matos Silva <kappy@acydburne.com.pt>
+Date:   Wed Apr 4 10:34:54 2012 -0700
+
+    Merge pull request #14 from kappy/ExportHOL
+    
+    Export hol
+
+commit ba21e2c89ac1c31bdf874eb5e8e52e6196708d6c
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Wed Apr 4 18:32:37 2012 +0100
+
+    added another test
+
+commit 4f0cbb22ecf7605a2c2cd215ace79afb347851bf
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Wed Apr 4 18:27:58 2012 +0100
+
+    bump minor verion and updated README
+
+commit 6775cfa19d7d44a0e523dcd06a7866926d746560
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Wed Apr 4 18:19:57 2012 +0100
+
+    Added simple test check
+
+commit bbe0246c22bd56d6ddfe92df53d569667ed1efaf
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Wed Apr 4 18:19:45 2012 +0100
+
+    Changed IExportHolidaysFormat interface
+
+commit b9fddf089f27e09bfc7726c9dcf0be1d53446952
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Wed Apr 4 18:19:22 2012 +0100
+
+    Added Locator to Export Format.
+
+commit 3bee3b306dc0c4b9e76469e5a10e8cef2b885a9c
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Wed Apr 4 17:41:05 2012 +0100
+
+    Added Interface for exporting formats and basic Office Holidays File Format
+
+commit 11f1eeab10388849536b63a93fb1d599bf4082e7
+Merge: ceca255 cef5850
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Wed Apr 4 17:00:30 2012 +0100
+
+    Merge branch 'master' of git@github.com:kappy/DateTimeExtensions.git
+
+commit ceca255bc59e894a9f0744fda55dcb87559aab99
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Wed Apr 4 16:58:07 2012 +0100
+
+    missing README update
+
+commit cef5850f38640209cb3cc81f9feb5ddcbd5f7beb
+Merge: b214e11 ff5c688
+Author: João Matos Silva <kappy@acydburne.com.pt>
+Date:   Wed Apr 4 08:52:19 2012 -0700
+
+    Merge pull request #13 from kappy/HolidayStrategyiesSuperClassed
+    
+    Holiday strategyies super classed
+
+commit ff5c6882632d7a5b87006446ab78e53f3e356e23
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Wed Apr 4 13:39:45 2012 +0100
+
+    bump version
+
+commit 988dfc016578fd5f9f6518c46332d6106522b8e2
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Wed Apr 4 13:38:56 2012 +0100
+
+    fixed Issue #11 - Should have a way to access all holidays from DateTimeCultureInfo
+
+commit e447cfe1cf456fe7611f8fe8fc5ac4e5caeff484
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Wed Apr 4 13:37:41 2012 +0100
+
+    Added a SuperClass to base all HolidaysStrategies.
+
+commit b214e110b42b8f8b94238b4dff050ab3a7231ede
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Wed Apr 4 13:42:06 2012 +0100
+
+    updated readme
+
+commit bd9968fbdc7309335f5e82ed1e1b63d0e4376483
+Merge: a1adda2 4adecb8
+Author: João Matos Silva <kappy@acydburne.com.pt>
+Date:   Wed Apr 4 04:33:55 2012 -0700
+
+    Merge pull request #12 from kappy/DateDiffImprovement
+    
+    Date diff improvement
+
+commit 4adecb8a2e581e339ecb84cba2b4ba13a909c5c7
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Wed Apr 4 12:30:51 2012 +0100
+
+    bump version
+
+commit 3194a28611c9a2b8331c638fa13320c5b721c15e
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Fri Mar 30 00:39:14 2012 +0100
+
+    fixed up some unit testing
+
+commit a0f15f172a2a722ae7f55dbe4358e09d132d81eb
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Fri Mar 30 00:38:56 2012 +0100
+
+    Added Issue #5 - DateDiff should have startDate and endDate Constructor
+
+commit a1adda25014a70defc981fc53f2d6d8425e2df33
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Tue Mar 27 15:52:39 2012 +0100
+
+    bump Build Number and updated readme
+
+commit 69bef4561370dd28f53d19a32ae5ca9750317b46
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Tue Mar 27 15:50:08 2012 +0100
+
+    fixed issue #10 - fi-FI Holidays enumeration is throwing a Argument Out Of Range Exception
+
+commit 471040156555c03a4477e90f129fa44e634bbd9c
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Tue Mar 27 15:35:20 2012 +0100
+
+    fixed issue #9 - da-DK holiday Strategy is missnamed
+
+commit 25a1ffd849d84e94038260a2759e4cf2bcbb94b9
+Author: Joao Matos Silva <kappy@acydburne.com.pt>
+Date:   Tue Mar 27 15:33:20 2012 +0100
+
+    Fixed issue #8 - is-IS SeamensDay is returning Commerce Day
+
+commit a64fca490bc3cd3ce399ae2cf3dcca843d7fc386
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Sat Mar 24 15:11:49 2012 +0000
+
+    Updated REadme to reference the sample project
+
+commit 6c5c50693624992ce15bb4b22290f6826abb8f18
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Tue Mar 20 09:57:44 2012 +0000
+
+    missing update from last file rename
+
+commit 255681789c3547b11cc015dd10a86b4e5999b54a
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Tue Mar 20 09:54:50 2012 +0000
+
+    updated readme and nuspec
+
+commit 5b5cfad6e15fc29ce98514b4e99320dba8e4179b
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Tue Mar 20 09:52:04 2012 +0000
+
+    Updated readme. Bump version
+
+commit 27ea11a41c417e796623ebea2389666a15009e6c
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Tue Mar 20 09:51:49 2012 +0000
+
+    Renamed NthDayOfWeekAfterHolidayHoliday to NthDayOfWeekAfterDayHoliday
+
+commit 79cecec3fe68d335669bb2d632b0299a34677f13
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Tue Mar 20 09:48:05 2012 +0000
+
+    updated readme
+
+commit 9eb3384b0c80e1ff018348e792757a291f7a6a07
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Sat Mar 17 19:19:50 2012 +0000
+
+    added documentation comments
+
+commit 0482999a02879002f5169adf85c54591a145f272
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Sat Mar 17 18:45:26 2012 +0000
+
+    Added some contract definition to NthDayOfWeekAfterHolidayHoliday constructor
+
+commit 59a3c3ad837e9087acb12d1bd3ef6e91f35b800a
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Sat Mar 17 18:40:10 2012 +0000
+
+    improved christian mobile holidays tests
+
+commit d022445c348e510679194090243c56fd9648f9fd
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Sat Mar 17 18:10:20 2012 +0000
+
+    added is-IS holidays. this concludes the nordic countries
+
+commit 21fca084dfdee19e9f1fbd29f300f5c6e65122ff
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Sat Mar 17 18:09:54 2012 +0000
+
+    Added PalmSunday as a christian holiday
+
+commit d48b45f9796ab790dfe769add134e03e4d3a5f96
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Sat Mar 17 18:09:15 2012 +0000
+
+    Bugfixes:
+    -NthDayOfWeekAfterHoliday should not count the current day.
+    -NthDayOfWeekAfterHoliday should handle proper negative counts
+
+commit 7cf9b058b3786ae856512845de0363dbbe14bacd
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Sat Mar 17 17:10:59 2012 +0000
+
+    Added nb-NO holidays
+
+commit 64a99367206d5f5d891896412c6d55d14ce2f2a9
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Sat Mar 17 15:36:41 2012 +0000
+
+    Added sv-SE holidays
+
+commit 1836945ad8e2e46e3ca0db3056e3c05be6ac3a44
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Sat Mar 17 15:36:28 2012 +0000
+
+    Moved Midsummer holidays to global holidays since more regions share the same holiday
+
+commit 48c3f8b4b6e839a480d9e9e566fdefe8d3015c98
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Sat Mar 17 15:12:09 2012 +0000
+
+    Changed Pentecost to a more logical composition holiday
+
+commit 3378d3d2b11a0e8f5055838be1244257835dd0aa
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Sat Mar 17 15:05:15 2012 +0000
+
+    added da-DK holidays
+
+commit 6bdd49582a01ffba9a951800dccfb445b00ca5d1
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Sat Mar 17 15:04:49 2012 +0000
+
+    Changed FirstDayOfWeekAfterDay to a more generic NthDayOfWeekAfterHolidayHoliday
+
+commit 33f8b275195ede83d83eeb492afa6d3c548903b5
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Sat Mar 17 14:27:36 2012 +0000
+
+    Added Maundy Thursday to the list of chirstian holidays
+
+commit 50cae559b1caafba32ee72ed23111d90aa419375
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Sat Mar 17 14:23:44 2012 +0000
+
+    Added some more validation to easter based holidays
+
+commit a840f595e4daea05693106662ee2c457177c5cfc
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Sat Mar 17 14:11:42 2012 +0000
+
+    Added some more tests that were used to debug Pentecost
+
+commit 60c8ec6ca55eed79091908f70c25e554f836dba0
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Sat Mar 17 14:11:15 2012 +0000
+
+    Added nl-NL holidays
+
+commit 0cec0226f7af46e1b05688a9ea8616707a778ef6
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Sat Mar 17 14:11:00 2012 +0000
+
+    Added fi-FI holidays
+
+commit 842ba98bb9a752344cc5401931efa37ec2845e92
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Sat Mar 17 14:10:27 2012 +0000
+
+    Added new type of holiday. Used to calculate the first ocourrence of a specific day of week after certain date
+
+commit f0423f55e57bae46df7a40de5422d80591be5423
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Sat Mar 17 14:07:26 2012 +0000
+
+    Added some more common holidays
+
+commit e6b4593e101205082f80685eafac14bd931be7f0
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Sat Mar 17 14:07:02 2012 +0000
+
+    Moved common (to other regions) holidays to Global and Christian classes
+
+commit 7b56c9ba067ea6bf3d7e807975dfc52e3a13bd12
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Sat Mar 17 13:59:27 2012 +0000
+
+    bugfix: according to wikipedia, pentecost is 50 days after easter, inclusive!!!
+
+commit e929995c81eb5f4dc9f3f07d037b1b7bc9542b3a
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Wed Feb 29 22:51:07 2012 +0000
+
+    updated readme
+
+commit 633530196596d0fe19e2ceb0fb3b71afeddb53a2
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Wed Feb 29 22:49:07 2012 +0000
+
+    incremented versions due to the bug fixed from Issues #1 and #3
+
+commit 7c54f0aedbf57c69151f500bf77f3757481e2f36
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Wed Feb 29 22:46:28 2012 +0000
+
+    Update Nunit to 2.6
+
+commit 8509475b8e60d3c755d90d711afaf11c17e356ff
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Wed Feb 29 22:24:39 2012 +0000
+
+    added more holidays basic tests
+
+commit ab9ea4ce5beb5938db188c9498dcf0a0715ac19f
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Wed Feb 29 22:24:25 2012 +0000
+
+    updated solution missing from update to nuget 1.6
+
+commit 736ce3ccade598f23818b92890c882fe08a01974
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Wed Feb 29 22:06:53 2012 +0000
+
+    update solution to nuget 1.6 - auto update packages on build
+
+commit b94c857c2bbcd56b142629337dab44610c1ba000
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Wed Feb 29 22:01:51 2012 +0000
+
+    Added Tests for ensuring Issue #1 - Nth Day of week in month holiday calculation
+
+commit 705b46fe3137dfe20eb64f77577f3d77cb028dff
+Merge: 74bdd1c a331c23
+Author: João Silva <kappy@acydburne.com.pt>
+Date:   Wed Feb 29 02:26:18 2012 -0800
+
+    Merge pull request #3 from martin308/master
+    
+    Fixed Nunit hint paths and removed the additional if statement
+
+commit a331c234740c8c8f62f82bf04be86d8f6c1eba84
+Author: Martin Holman <martin308@gmail.com>
+Date:   Wed Feb 29 23:20:29 2012 +1300
+
+    removed additional if statement that could cause issues
+
+commit 5b5bd4d9a5dc0a11d953d86bfbbdf4352670b85a
+Author: Martin Holman <martin308@gmail.com>
+Date:   Wed Feb 29 23:18:23 2012 +1300
+
+    updated hint path to the NUnit assemblies
+
+commit 74bdd1c2736336c9c28fbe9eed9f737d1a94b4fc
+Merge: e75071b 82039cd
+Author: João Silva <kappy@acydburne.com.pt>
+Date:   Wed Feb 29 01:52:05 2012 -0800
+
+    Merge pull request #1 from martin308/master
+    
+    Issue with Nth Day of week in month holiday calculation
+
+commit 82039cd45cf59e32ceb41e7fe59fd75a6699939f
+Author: Martin Holman <martin308@gmail.com>
+Date:   Wed Feb 29 12:29:25 2012 +1300
+
+    Remove check on first day of week as this breaks when a holiday is on say the 3rd monday and the first day of the month is monday. eg. 1/1/2018 in EN-US calculates martin luther king jr day to be 1/1/2018 which is incorrect
+
+commit e75071b4316179ac94162a9e6a79514d4d2fc087
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Sat Feb 18 17:40:39 2012 +0000
+
+    updated nuspec
+
+commit 75af77d90e5d334bbc85ac5ee55f64dab987090f
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Sat Feb 18 17:34:51 2012 +0000
+
+    Changed proposal version 1.3 to 2.0 since we're introducing a major breaking change and added features
+
+commit caeda1ca02dcb88905586a1e77121b279ea2fe8d
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Sat Feb 18 17:34:08 2012 +0000
+
+    Updated Readme
+
+commit a960bab5baa3d53cdd43f3346126819d67ba7c2a
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Thu Feb 16 16:57:58 2012 +0000
+
+    Added fr-FR locale tests and corrections
+
+commit 0a8d87983856fc0d93c7ebe9c0c99a5dd00df980
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Thu Feb 16 00:20:38 2012 +0000
+
+    updated assembyInfo
+
+commit 4282839262fe1ed2a564f418903b3d16f25e8339
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Thu Feb 16 00:17:26 2012 +0000
+
+    updated readme
+
+commit c8b66477d73f6f97a225c249c3c2d4cec97f1c4c
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Wed Feb 15 23:57:29 2012 +0000
+
+    Added base cultures to natural time
+
+commit a7493b919410a17470a22a75767c1e5ec7739297
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Wed Feb 15 23:35:35 2012 +0000
+
+    Added round time feature and tests
+
+commit 81b85c861901841cd343eb6466da0f3725926fc1
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Wed Feb 15 23:34:55 2012 +0000
+
+    Changed some API parameters
+
+commit 43ece07048ec3bcebe996a3f4b0dda95553b1bb6
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Sat Feb 4 21:45:27 2012 +0000
+
+    Added tests and bug fixes
+
+commit 5478e568c81880dcfad88566f22498236b38969b
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Sat Feb 4 21:02:49 2012 +0000
+
+    Added the extension points on DateTime type
+
+commit e026abff08b23db7f428c882434c72752c433d70
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Sat Feb 4 19:57:02 2012 +0000
+
+    Implemented the Natural Time base strategy, satragey locator and also the PT_pt culture and default (en_us)
+
+commit 37cdb097f9f2cfd5c59118bbaefcf5c8526f5ab4
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Sat Feb 4 19:56:04 2012 +0000
+
+    Added DateDiff struct to represent a date diference
+
+commit 7b29aa487665b149c7795535958ab5bef6a18501
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Sat Feb 4 18:31:47 2012 +0000
+
+    removed gitignore file from solution items
+
+commit c0cb8bb2842c7dde2f8d93595ad22b4a2ee394f5
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Sat Feb 4 18:30:07 2012 +0000
+
+    Renamed WorkingDayCultureInfo to DateTimeCultureInfo
+    Added Interfaces of Natural Text Calculations and Strategies for cultures
+
+commit ec49bb255ec7a796d426f9749a2baff020fd9579
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Sat Feb 4 17:57:33 2012 +0000
+
+    updated gitignore
+
+commit b294639c41dbfe17806c29b9e3a8594e1d3c4333
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Sat Jan 28 13:25:06 2012 +0000
+
+    v1.2.1
+    - Reverted the holidays abolishment on pt-PT culture since 2012 introduced on v1.2 cause it's still being discussed on the parlament
+
+commit 92fbed2ed506a7a9aab7b1e6d0399b12d222f56d
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Wed Jan 25 00:24:32 2012 +0000
+
+    version 1.2
+    - Changed pt-PT culture to reflect the holidays abolishment since 2012
+    - Added the year depedent holiday (holidays that where created since, removed since, or only verified on certain years)
+    - breaking changes:
+            - Holiday.GetInstance(int year) now returns DateTime? instead of DateTime
+            - IHolidayStrategy.GetHolidaysOfYear(int year) was created to replace the property Holidays to be year independant
+            - IHolidayStrategy.Holidays now return only the holidays of the current year
+
+commit a11b250aa837fe031348b76f3a2bffe23909a6f8
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Tue Aug 30 14:15:54 2011 +0100
+
+    Added some more example tests
+
+commit 8b468c9fef72d4ebb164709edffd6ef125d285c5
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Mon Aug 29 17:25:43 2011 +0100
+
+    Updated nuspec file
+
+commit 9210d982193381caa83ab4d435e8bcb1b83badcc
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Mon Aug 29 17:20:39 2011 +0100
+
+    Incremented the minor version number cause of the added functionality
+
+commit ca6c34bfddc66fd7843a50375eeb2966f06516ea
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Mon Aug 29 17:19:52 2011 +0100
+
+    Added the functionality to get all holidays from a year
+
+commit 751a1c41d2f8df993fcfad39d508453b6c3f8df5
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Mon Aug 29 17:19:20 2011 +0100
+
+    Fixed some bugs
+
+commit 506d52033f1baebd81d88ad1fa25c4f17c341018
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Mon Aug 29 16:33:43 2011 +0100
+
+    Continued the design changes on the holiday strategies
+
+commit 694f51356ce2e4bfef91dc8e3363e334eec6a220
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Mon Aug 29 13:48:58 2011 +0100
+
+    Design Changes on the way HolidayStrategies hold they're holidays
+
+commit c35e13b512214dcddc0bbbdfb52e3cfa9b317dd6
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Fri Aug 26 19:12:51 2011 +0100
+
+    Updated Readme.
+    Increase Build number
+
+commit f26cde01c96c220845f5f5dbe87ee042a742a29a
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Fri Aug 26 18:51:35 2011 +0100
+
+    Added some more christian holidays
+    Added support for de-DE
+    Added support for es-US
+    added support fot fr-FR
+
+commit a70c11c48dde62f8b05fe69237cae9f034982a4c
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Fri Aug 26 15:53:57 2011 +0100
+
+    Added Holidays for cultures: en-GB, es-ES, pt-BR
+
+commit 8d7f49d316fca73a6ddc308e2d2b3aea0dcca28b
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Fri Aug 26 15:53:13 2011 +0100
+
+    Changed the way Christian holidays are enumerated
+
+commit 3b673b2b40f0755c01fa17521aeb6fb04be3be0c
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Fri Aug 26 15:52:28 2011 +0100
+
+    Added more extensions to Calculate the next DayOfWeek or the last DayOfWeek.
+    Added more extensions to Calculate the first DayOfWeek of the month or the last DayOfWeek of the month.
+
+commit cd7ab685c584a3130c97af0bc691d05d5d6f0fe2
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Fri Aug 26 12:42:07 2011 +0100
+
+    Some descriptions updated
+
+commit 9eb3933eceea63f55e27d7bea6402658832fd799
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Thu Aug 25 18:03:37 2011 +0100
+
+    Changed some comments
+
+commit 827d4016765accd8e2b3ed12c1d20ca50ce9cb4b
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Thu Aug 25 18:01:23 2011 +0100
+
+    Some changes to project file
+
+commit 5e528ddbc410cb794040e292b5e2b9136d1c869a
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Tue Aug 23 10:07:46 2011 +0100
+
+    Added the first versions of the ReadMe
+
+commit 19ff31107ae1e1e54c54d36aa2ddfa8cf83ff739
+Author: Joao Silva <kappy@acydburne.com.pt>
+Date:   Mon Aug 22 12:00:30 2011 +0100
+
+    Inital Commit

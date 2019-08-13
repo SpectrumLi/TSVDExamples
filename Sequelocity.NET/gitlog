@@ -1,0 +1,385 @@
+commit 103633773e91e61055f9855e6b654cdae9559647
+Merge: 419ff49 5039f8f
+Author: Randy Burden <randyburden@gmail.com>
+Date:   Mon Nov 21 17:22:19 2016 -0600
+
+    Merge pull request #26 from KMASubhani/patch-1
+    
+    Update README.md
+
+commit 5039f8fc95be15534335ce3d8965b6022477e00a
+Author: Khaja Mashood Ahmed Subhani <asubhani@gmail.com>
+Date:   Fri Nov 18 10:47:30 2016 -0600
+
+    Update README.md
+    
+    fixed wrong word
+
+commit 419ff49aa71c6a73e1f68349ba4f05523d3f2fa4
+Author: Randy Burden <randyburden@gmail.com>
+Date:   Thu Jul 7 12:50:51 2016 -0500
+
+    Removed nonworking NuGet download count badge
+
+commit 0fea6a56cc63a69edc4e93d251983f5e0b9223ec
+Author: Jordan Beacham <jordanbeacham@gmail.com>
+Date:   Wed May 25 13:13:47 2016 -0500
+
+    Update CHANGELOG.md
+
+commit 8c25f7d68f985c6ddec53a2f045194c5b3f720bd
+Author: Jordan Beacham <jordanbeacham@gmail.com>
+Date:   Wed May 25 13:12:18 2016 -0500
+
+    Update CHANGELOG.md
+
+commit 98052c69af58d279b268493847c045fe5d619661
+Author: Jordan Beacham <jordanbeacham@gmail.com>
+Date:   Wed May 25 13:07:40 2016 -0500
+
+    Update AUTHORS.txt
+
+commit 2c391b6047c9eb671d0804e7525359c1021d9fe2
+Author: Jordan Beacham <JBeacham@AMBITENERGY.COM>
+Date:   Wed May 25 13:05:20 2016 -0500
+
+     v0.6.0 Release - Add Async Support and PostgreSQL support. Bug fixes and enhancements.
+
+commit 6de0b94e0fb5e9b15c1c9358bea4cd7dc47328c5
+Merge: 3d5e480 f73aaf4
+Author: Jordan Beacham <jordanbeacham@gmail.com>
+Date:   Wed May 25 11:57:06 2016 -0500
+
+    Merge pull request #11 from mrudduck/master
+    
+    handle null parameter values correctly
+
+commit 3d5e48021f9160c31973411566993b533003bbb8
+Merge: f16fc97 606eaf0
+Author: Jack Farrington <jack.farrington@gmail.com>
+Date:   Mon May 23 12:49:19 2016 -0500
+
+    Merge pull request #24 from jackfarrington/typecacher
+    
+    Minor changes to the TypeCacher.
+
+commit 606eaf02ebe532beab6e3b36afe3c9521987fd15
+Author: Jack Farrington <jack.farrington@gmail.com>
+Date:   Mon May 23 12:13:32 2016 -0500
+
+    Minor changes to the TypeCacher.
+
+commit f16fc97cf2c780cf725a2cccdc677f61b0d08c7c
+Merge: 914a395 2855189
+Author: Jack Farrington <jack.farrington@gmail.com>
+Date:   Mon May 23 12:10:20 2016 -0500
+
+    Merge pull request #23 from mrudduck/master
+    
+    Race condition on TypeCacher
+
+commit 914a3956adef662535cb834fc40d86d89ad94fa0
+Author: dwhitlark <david.whitlark@gmail.com>
+Date:   Thu Apr 28 12:12:50 2016 -0500
+
+    added support for mapping result sets to ExpandoObject type (#22)
+
+commit 28551892e2ab9048251b95f32c56ac7f95392899
+Author: Michael Rudduck <michael@therudducks.net>
+Date:   Wed Apr 27 15:41:53 2016 -0500
+
+    Update SequelocityDotNet.cs
+    
+    prevent race condition by using concurrent dictionary
+
+commit ce2863c8e1e0988d2238744310404bf8be265477
+Author: Taylor Wolfe <wolfester@users.noreply.github.com>
+Date:   Thu Apr 7 14:57:29 2016 -0500
+
+    PostgreSQL support and Tests (#21)
+    
+    * PostgreSQL support and Tests
+    
+    Duplicated all MySql tests for PostgreSQL testing.  Added necessary
+    functions to SequelocityDotNet.cs. Added Async tests for PostgreSQL.
+
+commit e3b24b29bdbb159274e2d65f20001525730459aa
+Merge: df38fbb 2de76df
+Author: Jack Farrington <jack.farrington@gmail.com>
+Date:   Mon Mar 21 16:58:00 2016 -0500
+
+    Merge pull request #19 from jackfarrington/async-support
+    
+    Added Async versions of most Execute extension methods.
+
+commit 2de76df4927a3e6113982233dc27a638c3a40eaa
+Author: Jack Farrington <jack.farrington@gmail.com>
+Date:   Fri Jan 29 16:39:48 2016 -0600
+
+    Added support for Async methods and corresponding tests. This change requires .NET 4.5.
+
+commit df38fbbfdf0696d92d37a6b78245b08d2ba1937a
+Merge: c15a4b8 d22dd43
+Author: Jack Farrington <jack.farrington@gmail.com>
+Date:   Wed Feb 17 00:26:58 2016 -0600
+
+    Merge pull request #14 from jackfarrington/execute-iterator
+    
+    Added generic ExecuteReader extension method and unit tests.
+
+commit d22dd43696b8e1be895fa2d6dc63bff91f826feb
+Author: Jack Farrington <jack.farrington@gmail.com>
+Date:   Thu Nov 12 15:52:08 2015 -0600
+
+    Added generic ExecuteReader extension method and unit tests.
+
+commit f73aaf41f25ffa757851919c14edc9d149cc422b
+Author: mrudduck <michael@therudducks.net>
+Date:   Tue Aug 4 15:59:13 2015 -0500
+
+    remove old unit tests add one new unit test
+
+commit 4a858d2df568107d19cb56694693182c29f8adea
+Author: mrudduck <michael@therudducks.net>
+Date:   Tue Aug 4 14:16:34 2015 -0500
+
+    handle null parameter values correctly
+
+commit c15a4b817a5e5a3f4c25c5cdc0c7bbdc986c19a5
+Author: Randy Burden <randy_burden@hotmail.com>
+Date:   Mon Jul 13 12:09:18 2015 -0500
+
+    Added Event Handler Examples
+
+commit b22c81c8513cd5b124f5ee9741dd06cab93d6dea
+Author: Randy Burden <randy_burden@hotmail.com>
+Date:   Fri Jun 19 14:40:07 2015 -0500
+
+    Added link to latest CI build
+
+commit 4c970f75a6dd194cd9e1131a892b4e353648753d
+Author: Randy Burden <randy_burden@hotmail.com>
+Date:   Fri Jun 19 12:51:02 2015 -0500
+
+    Version 0.5 release
+
+commit 09b8fa9663128954ca3a8ea3df2429589084d59a
+Merge: d88da57 577e447
+Author: Randy Burden <randy_burden@hotmail.com>
+Date:   Fri Jun 19 12:18:40 2015 -0500
+
+    Merge pull request #9 from AmbitEnergyLabs/nullable-parameters
+    
+    Adding feature to use nullable parameters
+
+commit 577e44744e38c9db2d9ec92e540e8bc2d4450ea8
+Author: Rahul Rumalla <rahulrumalla@gmail.com>
+Date:   Sun May 31 21:25:51 2015 -0500
+
+    Adding feature to use nullable parameters
+
+commit d88da577ff7831300de182f81e4eb2cb0cfa3b4c
+Author: Randy Burden <randy_burden@hotmail.com>
+Date:   Fri May 29 02:23:13 2015 -0500
+
+    Updated Readme
+
+commit 95375923be9f57ead77bb43057edaddbdf8d8eae
+Author: Randy Burden <randy_burden@hotmail.com>
+Date:   Fri May 29 02:13:07 2015 -0500
+
+    Add CI build status to Readme
+
+commit 2079356699c829e0a1854740854b5315f162f79c
+Author: Randy Burden <randy_burden@hotmail.com>
+Date:   Fri May 29 01:44:29 2015 -0500
+
+    Adding SQLite.Interop dlss to the test project
+
+commit b412822de173d91cb5b7de9c9e906f28191595c3
+Author: Randy Burden <randy_burden@hotmail.com>
+Date:   Fri May 29 01:33:13 2015 -0500
+
+    Added SQLite.Interop dlls to the test project
+
+commit c921c11c308f65e0742e6404c8e0b390957784b2
+Author: Randy Burden <randy_burden@hotmail.com>
+Date:   Fri May 29 01:03:27 2015 -0500
+
+    Set SQLite test project to x86 for CI server
+
+commit 57f4ed8e35e4f0d043dcc94a2d52211b541662a7
+Author: Randy Burden <randy_burden@hotmail.com>
+Date:   Fri May 29 01:02:56 2015 -0500
+
+    Add NuGet nuspec file
+
+commit 82f451d4f71e8b479cf24425e55642d36b7cd2be
+Author: Randy Burden <randy_burden@hotmail.com>
+Date:   Tue May 26 03:03:09 2015 -0500
+
+    Updated Readme
+
+commit 1a1aa3822b09ff08d55bddc8ee4582fbd898abce
+Author: Randy Burden <randy_burden@hotmail.com>
+Date:   Tue May 26 03:01:25 2015 -0500
+
+    Updated Changelog
+
+commit b4fc1869ef3c22fa2dc6fde0711de503333d5ba2
+Author: Randy Burden <randy_burden@hotmail.com>
+Date:   Tue May 26 02:56:37 2015 -0500
+
+    v0.4.0 - Added app name injection for SQL Server.
+    
+    - Added application name injection for SQL Server
+    - Reworked unit test connection string name/value pair handling to be
+    either an environment variable ( preferred and will be used by CI Server
+    ) or app.config value.
+
+commit fd8900a9e4832392bb804f8492d9c79ee4936625
+Author: Randy Burden <randy_burden@hotmail.com>
+Date:   Tue May 26 02:35:42 2015 -0500
+
+    Added Nuget download badge to Readme
+
+commit b077091ecb76971c6c80a378e36cb1a6d624dfb0
+Author: Randy Burden <randy_burden@hotmail.com>
+Date:   Mon Mar 23 01:28:03 2015 -0500
+
+    Modified MySQL connection string name and usage
+
+commit 79be1fae361267dd02934aa1921f665f91b79811
+Author: Randy Burden <randy_burden@hotmail.com>
+Date:   Sat Mar 21 00:24:48 2015 -0500
+
+    Enabled NuGet Package Restore
+
+commit fbe7cf5647c3cc1fb2672b0cb9c451e6d8edc91c
+Author: Randy Burden <randy_burden@hotmail.com>
+Date:   Sat Mar 21 00:06:18 2015 -0500
+
+    Added NuGet Current Version Badge to ReadMe
+
+commit b294262bac2cec4ee9ec2d1c55a691659c83de28
+Author: Randy Burden <randy_burden@hotmail.com>
+Date:   Fri Mar 20 22:44:15 2015 -0500
+
+    Updated ReadMe
+
+commit b3597c4744571704e18649eb468faaa29cb95dda
+Author: Randy Burden <randy_burden@hotmail.com>
+Date:   Fri Mar 20 22:44:05 2015 -0500
+
+    Updated NuSpec File
+
+commit c96ca434bd8a5a4739639113670bfd3c97a2ab41
+Author: Randy Burden <randy_burden@hotmail.com>
+Date:   Fri Mar 20 21:57:54 2015 -0500
+
+    Updated Changelog
+
+commit 9c39bb3e20246ab9c0586b0e078288ccabcaed75
+Author: Randy Burden <randy_burden@hotmail.com>
+Date:   Fri Mar 20 21:55:17 2015 -0500
+
+    v0.3.0 release - Added MySQL Support
+    
+    1. Added MySQL Support and associated tests
+    2. Added NuSpec file to publish NuGet package
+
+commit 39f49266ba6814f683c00d69a1553792d5841229
+Author: Randy Burden <randy_burden@hotmail.com>
+Date:   Fri Mar 13 11:40:27 2015 -0500
+
+    Added TransactionScope example and unit tests
+
+commit f6deb57160d5b2dbeaf40d5a5e969220fea8615a
+Author: Randy Burden <randy_burden@hotmail.com>
+Date:   Wed Mar 11 00:24:49 2015 -0500
+
+    Initial MySql test project commit
+
+commit aaf1154421984be8673e6d70b20ad1880c940c73
+Author: Randy Burden <randy_burden@hotmail.com>
+Date:   Wed Mar 11 00:23:37 2015 -0500
+
+    Updated ReadMe with new test count
+
+commit 173db47e1619767d64c5d5ed98c13ae7ec31fe57
+Author: Randy Burden <randy_burden@hotmail.com>
+Date:   Wed Mar 11 00:23:04 2015 -0500
+
+    Added BeginTransaction Feature
+    
+    1. Added BeginTransaction extension methods to the DatabaseCommand and
+    DbCommand and associated unit tests.
+    2. Added SetTransaction unit tests.
+    3. Incremented version to 0.2.0 following Semantic Versioning
+
+commit d0f1c505bf344d9176f8332cfd12f996dc211285
+Author: Randy Burden <randy_burden@hotmail.com>
+Date:   Tue Mar 10 22:18:34 2015 -0500
+
+    Incremented version to 0.1.2
+
+commit fbe0aaf3d9bd7ce8a22d47aebd99e21d94574cd6
+Author: Randy Burden <randy_burden@hotmail.com>
+Date:   Tue Mar 10 22:13:27 2015 -0500
+
+    Fixes #5 - Fixed trailing comma issue in generated SQL command
+    
+    1. Converted HashTable to OrderedDictionary to get a more deterministic
+    list of property and field info values when enumerating them.
+    2. Simplified the trailing comma logic by just trimming the last comma
+    rather than keeping track of iterations and if/else logic.
+    3. Added unit tests to cover the bugs.
+    4. Added additional null and argument validations to the
+    GenerateInsertCommand method and associated unit tests.
+
+commit 9dbee0446038268f88918df2241d439e8ce46a38
+Author: Randy Burden <randy_burden@hotmail.com>
+Date:   Mon Jan 19 00:39:22 2015 -0600
+
+    v0.1.1 release - .NET 4.0 compatible
+    
+    1. Removed .NET 4.5 method for retrieving the DbProviderFactory and
+    instead we are retrieving it via reflection for .NET 4.0 compatibility.
+    2. Modified the project to be compiled under .NET 4.0
+    3. Incremented assembly version to 0.1.1
+
+commit 252b9800b2693a3ee17b20c254bc6bff0cacdf4a
+Author: Randy Burden <randy_burden@hotmail.com>
+Date:   Mon Jan 19 00:35:24 2015 -0600
+
+    Adding examples used in the Examples wiki page
+
+commit defaff38fad2441485e4aa2407735b9884dd6821
+Author: Randy Burden <randy_burden@hotmail.com>
+Date:   Sat Jan 10 21:41:11 2015 -0600
+
+    Added some style
+
+commit f1aac9d0aa9d85e0f317d0acaab4469dce873eaa
+Author: Randy Burden <randy_burden@hotmail.com>
+Date:   Sat Jan 10 21:38:34 2015 -0600
+
+    Added direct link to the single file drop in file
+
+commit c0e1d2b9a6a373e6b0b14f4124ad308a2b14c388
+Author: Randy Burden <randy_burden@hotmail.com>
+Date:   Sat Jan 10 21:35:51 2015 -0600
+
+    Reworded README
+
+commit a8a26820807b38ec3ab5e45efb8c0eed27b02d4b
+Author: Randy Burden <randy_burden@hotmail.com>
+Date:   Mon Jan 5 23:16:06 2015 -0600
+
+    Initial commit
+
+commit 9db756422065ac805379259f02514a7c685aebce
+Author: Randy Burden <randy_burden@hotmail.com>
+Date:   Mon Jan 5 18:01:30 2015 -0600
+
+    Initial commit

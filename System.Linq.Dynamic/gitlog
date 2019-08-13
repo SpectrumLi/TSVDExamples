@@ -1,0 +1,480 @@
+commit b465322c05d1adada7825fb2eb012ac2f240c7c1
+Author: Ryan Gates <Ryan_Gates@ultimatesoftware.com>
+Date:   Sat Oct 15 20:49:04 2016 -0400
+
+    Issue #61
+    
+    Updated the release Notes to show which issues had been fixed
+
+commit 66a2097973741c74539ca4b8d48773c38d5ef7f5
+Author: Ryan Gates <Ryan_Gates@ultimatesoftware.com>
+Date:   Sat Oct 15 20:39:53 2016 -0400
+
+    Issue #61
+    
+    Update the nuget spec/package version to 1.07 and added the nuget spec to the solution files
+
+commit d1cfa48813a81665ded417a94a91a10d28e940d7
+Author: Ryan Gates <ryanvgates@gmail.com>
+Date:   Fri Apr 1 13:41:04 2016 -0400
+
+    Fix Issue #51 by adding testmethod attribute
+    
+    Added testresults folder to git ignore
+
+commit 67d7bc547897b96926bf9fa2fc9336d36a5dda67
+Merge: 8087e2a 94c9055
+Author: Ryan Gates <ryanvgates@gmail.com>
+Date:   Tue Mar 29 14:01:32 2016 -0400
+
+    Merge pull request #48 from mobilebilly/master
+    
+    Fix the multi-threading issue at ClassFactory.GetDynamicClass
+
+commit 94c9055abe0b1ad008655f65b76e9e25c1536b62
+Merge: 9438e8f 8087e2a
+Author: Billy Ho <billyho@thisisnoble.com>
+Date:   Fri Mar 25 09:43:10 2016 +0800
+
+    Merge from upstream
+
+commit 9438e8fa0304fc8cc8022c0d29241504185b9bcb
+Author: Billy Ho <billyho@thisisnoble.com>
+Date:   Fri Mar 25 09:27:30 2016 +0800
+
+    Add unit test case CreateClass_ThreadSafe to verify the fix of the multiple threading issue in ClassFactory.GetDynamicClass
+
+commit 8087e2a82b35b347b4afe4879561263c7ca03abb
+Merge: 6df6a07 5c148d6
+Author: Ryan Gates <ryanvgates@gmail.com>
+Date:   Thu Mar 24 13:56:10 2016 -0400
+
+    Merge pull request #46 from glopesdev/issue-43
+    
+    Fixed #43. Added Parse overload accepting expression tree parameters.
+
+commit 6df6a07668da77f5fb1c6993fd577b884a7113f8
+Merge: 3765573 f2c02ce
+Author: Ryan Gates <ryanvgates@gmail.com>
+Date:   Thu Mar 24 13:51:20 2016 -0400
+
+    Merge branch 'issue-42' of https://github.com/glopesdev/System.Linq.Dynamic into glopesdev-issue-42
+    
+    # Conflicts:
+    #       Src/System.Linq.Dynamic.Test/DynamicExpressionTests.cs
+
+commit 37655736bee334727d9e048e3000d3b3f6106169
+Merge: 425a383 6ee95c6
+Author: Ryan Gates <ryanvgates@gmail.com>
+Date:   Tue Mar 8 01:52:43 2016 -0500
+
+    Merge pull request #45 from glopesdev/issue-44
+    
+    Fixed #44. Removed unnecessary return type check from member method access.
+    
+    Unit test and code change look good.
+
+commit 6b9ef94959654de59f184a5386cefa4e639cdc54
+Author: Billy Ho <billyho@thisisnoble.com>
+Date:   Fri Feb 26 10:16:51 2016 +0800
+
+    Fix the multi-threading issue at ClassFactory.GetDynamicClass
+    
+    The classes.Add(signature, type) is now placed within the writer lock, thus avoid multiple threads from updating the classes dictionary at the same time.
+
+commit f2c02ce2000cf02c2147b82b20b55d61ca7b50bb
+Author: glopesdev <goncaloclopes@gmail.com>
+Date:   Wed Feb 17 00:56:52 2016 +0000
+
+    Fixed #42. Added ParseLambda overload to allow specifying the delegate type.
+
+commit 5c148d69e3353cf09b5a9b913a17fb66f7b3ffde
+Author: glopesdev <goncaloclopes@gmail.com>
+Date:   Wed Feb 17 00:28:15 2016 +0000
+
+    Fixed #43. Added Parse overload accepting expression tree parameters.
+
+commit 6ee95c6ca2703a627210f9273ead9126c01bb7bb
+Author: glopesdev <goncaloclopes@gmail.com>
+Date:   Mon Feb 15 23:40:26 2016 +0000
+
+    Fixed #44. Removed unnecessary return type check from member method access.
+
+commit 425a383fcb62039df705a26d01e757d9c8521947
+Author: Ryan Gates <ryanvgates@gmail.com>
+Date:   Wed Dec 30 14:12:02 2015 -0500
+
+    Adding Sample Queries Readme.html file
+    
+    Adding Simple LinqToObjects example/sample
+
+commit 365719fd9493dd67932bd4f6cea5afeb2dd02060
+Author: Ryan Gates <ryanvgates@gmail.com>
+Date:   Wed Dec 30 14:05:14 2015 -0500
+
+    Cleaning up the Readme
+    
+    Added formatting to Documentation and Samples
+    
+    Added references to moving the documentation and samples into this repository
+    
+    This resolves bug #40.
+
+commit 6b2fd96fa10dc6085f83c8c47bda4c74678409d7
+Author: Ryan Gates <ryanvgates@gmail.com>
+Date:   Mon Dec 28 14:22:48 2015 -0500
+
+    Updated the Nuget package number and made the build events create the nuget package with each build
+    
+    This should resolve issue #39
+
+commit cb0ffa53033e1368934c078c191dee70564e7420
+Merge: ac1ce0d 780b74c
+Author: Ryan Gates <ryanvgates@gmail.com>
+Date:   Mon Dec 21 13:57:18 2015 -0500
+
+    Merge branch 'master' of git@github.com:kahanu/System.Linq.Dynamic.git
+
+commit ac1ce0da4bbbbdc46aa7f0d1fc4ff41e1f5fc7f6
+Author: Ryan Gates <ryanvgates@gmail.com>
+Date:   Mon Dec 21 13:56:25 2015 -0500
+
+    Resolving issue #39 Release Cycle/Nuget Release
+    
+    Incremented the version of the nuget package and the assembly
+    
+    Added more criteria to the gitignore file
+    
+    Created a build event to copy the dll to the right place for doing a nuget build
+    
+    Updated the nuget spec file
+
+commit 780b74c7f9393a38ea78195fcd5b40ac89a944b1
+Merge: adb4298 d25a40d
+Author: Ryan Gates <ryanvgates@gmail.com>
+Date:   Mon Nov 30 13:59:05 2015 -0500
+
+    Merge pull request #32 from glopesdev/issue-31
+    
+    Fixed #31. Removed predefined type check on member method access.
+    
+    The unit tests look good.
+
+commit adb4298536aab7b549438ea7ea4320e7a2f57430
+Merge: 89fb2e9 fe936ff
+Author: Ryan Gates <ryanvgates@gmail.com>
+Date:   Fri Nov 13 13:52:09 2015 -0500
+
+    Merge pull request #30 from glopesdev/issue-29
+    
+    Fixed #29. Updated ExpressionParser to parse numeric literals using invariant culture.
+
+commit fe936fff32b679dd3a5d35b9525462555430ad89
+Author: glopesdev <goncaloclopes@gmail.com>
+Date:   Tue Oct 27 19:40:41 2015 +0000
+
+    Updated culture unit tests to include value checks.
+
+commit 9dc24a348e6d74d4c001b25562ee72870a66b832
+Author: glopesdev <goncaloclopes@gmail.com>
+Date:   Wed Oct 21 12:54:56 2015 +0100
+
+    Fixed assert argument order in culture unit tests.
+
+commit d25a40d6b939d3c6c213dcde16e5e6ec69a0df00
+Merge: 5966bca 37f4241
+Author: glopesdev <goncaloclopes@gmail.com>
+Date:   Wed Oct 21 12:51:03 2015 +0100
+
+    Merge branch 'issue-31' of https://github.com/glopesdev/System.Linq.Dynamic into issue-31
+
+commit 5966bcaf26363a21817ab28980250afcb73ea2af
+Author: glopesdev <goncaloclopes@gmail.com>
+Date:   Wed Oct 21 12:50:22 2015 +0100
+
+    Added unit tests for parsing instance method calls on non-predefined types.
+
+commit 8269b0801d6f16f60371eaa0dda47b1878d6bcfd
+Author: glopesdev <goncaloclopes@gmail.com>
+Date:   Wed Sep 16 11:23:40 2015 +0100
+
+    Fixed #31. Removed predefined type check on member method access.
+
+commit 276af75ebaa69bef439606bedf659a22f08ff62c
+Merge: a24835a e415f45
+Author: glopesdev <goncaloclopes@gmail.com>
+Date:   Wed Oct 21 12:20:37 2015 +0100
+
+    Merge branch 'issue-29' of https://github.com/glopesdev/System.Linq.Dynamic into issue-29
+
+commit a24835a812de7f1dd927aca9074113e53012f874
+Author: glopesdev <goncaloclopes@gmail.com>
+Date:   Wed Oct 21 12:18:57 2015 +0100
+
+    Added missing format providers for parsing numeric literals.
+
+commit 6a3335e2bf9cbb9c406eb93be64985eabd2914c6
+Author: glopesdev <goncaloclopes@gmail.com>
+Date:   Wed Oct 21 12:17:15 2015 +0100
+
+    Added culture unit tests for parsing real literals.
+
+commit cd90e58ebb30d5d73734314f3ed1f96de2c61328
+Author: glopesdev <goncaloclopes@gmail.com>
+Date:   Wed Sep 16 09:51:46 2015 +0100
+
+    Fixed #29. Updated ExpressionParser to parse numeric literals using invariant NumberFormatInfo.
+
+commit 8add59ee9cc0d74d278afc7c991830e321715b3e
+Merge: 777a9d4 89fb2e9
+Author: glopesdev <goncaloclopes@gmail.com>
+Date:   Wed Oct 21 09:54:23 2015 +0100
+
+    Merge pull request #1 from kahanu/master
+    
+    Update from original head
+
+commit 89fb2e96566c6377dc56bf8fc34e6d1dcaf2618f
+Merge: 5b661b2 e22aa60
+Author: Ryan Gates <ryanvgates@gmail.com>
+Date:   Wed Sep 30 00:03:39 2015 -0400
+
+    Merge pull request #38 from ryanvgates/master
+    
+    Added a link to the nuget page and formatting
+
+commit e22aa605a45674aed0dc64b41e2170fec61e25f4
+Author: Ryan Gates <ryanvgates@gmail.com>
+Date:   Wed Sep 30 00:01:59 2015 -0400
+
+    Added a link to the nuget page and formatting
+
+commit 5b661b2efcbf34de72f9fd6fe6d3cc6a42fd8010
+Merge: d4129d5 5c8c83c
+Author: Ryan Gates <ryanvgates@gmail.com>
+Date:   Tue Sep 29 12:12:15 2015 -0400
+
+    Merge pull request #37 from ryanvgates/AddingSampleQueries
+    
+    Removing the Readme since it is now part of the wiki
+
+commit 5c8c83c53133fb22591412965da06683c7198791
+Author: Ryan Gates <ryanvgates@gmail.com>
+Date:   Tue Sep 29 12:11:17 2015 -0400
+
+    Removing the Readme since it is now part of the wiki
+
+commit d4129d561006bf425f5a047f1234f1fd6f98c454
+Merge: ff0e406 13ca1ef
+Author: Ryan Gates <ryanvgates@gmail.com>
+Date:   Mon Sep 28 11:53:15 2015 -0400
+
+    Merge pull request #35 from ryanvgates/AddingSampleQueries
+    
+    Adding sample queries
+
+commit 13ca1ef08d54d10fe330fe8988c6e9205975eba3
+Author: Ryan Gates <ryanvgates@gmail.com>
+Date:   Mon Sep 21 13:44:24 2015 -0400
+
+    Fixed the slashing to be the correct direction
+
+commit 362ad47bb5dbdae2fd461b0d154544530ba32f7f
+Author: Ryan Gates <ryanvgates@gmail.com>
+Date:   Mon Sep 21 13:40:16 2015 -0400
+
+    Convered the readme to markdown and removed the html one
+
+commit 31aedf15be510e895d09738b9461a9fb6e7de47e
+Author: Ryan Gates <ryanvgates@gmail.com>
+Date:   Mon Sep 21 13:28:01 2015 -0400
+
+    Added the Sample Queries project to the repository under CSharpSamples/LinqSamples
+
+commit ff0e406b5ebd68a411d876d78009eeda89e993b1
+Merge: 777a9d4 7b46780
+Author: Ryan Gates <ryanvgates@gmail.com>
+Date:   Thu Sep 17 14:51:05 2015 -0400
+
+    Merge pull request #34 from ryanvgates/master
+    
+    Added unit tests
+
+commit 7b46780c9a8745b9c33206a14a6f6487f6e7496a
+Author: Ryan Gates <ryanvgates@gmail.com>
+Date:   Thu Sep 17 13:44:51 2015 -0400
+
+    Reverting previous change with ToString for the ParseException
+
+commit dbf89c1c4156850f7f7f2357db2146a15702725a
+Author: Ryan Gates <ryanvgates@gmail.com>
+Date:   Thu Sep 17 13:42:03 2015 -0400
+
+    Created the test project and added it to the solution
+
+commit 37f424144c009e30a1890ff6cadd3b3424219371
+Author: glopesdev <goncaloclopes@gmail.com>
+Date:   Wed Sep 16 11:23:40 2015 +0100
+
+    Fixed #31. Removed predefined type check on member method access.
+
+commit e415f456a1af48626cd0911a9bbb550698dd9e39
+Author: glopesdev <goncaloclopes@gmail.com>
+Date:   Wed Sep 16 09:51:46 2015 +0100
+
+    Fixed #29. Updated ExpressionParser to parse numeric literals using invariant NumberFormatInfo.
+
+commit e175a85796787455be3e56037be2007e808f6a7c
+Author: Ryan Gates <ryanvgates@gmail.com>
+Date:   Fri Sep 11 13:50:02 2015 -0400
+
+    Fixed the code to overwrite Message rather than ToString() since ToString() should include excpetion information
+    
+    Removing bin, obj, suo
+    
+    Added a gitignore file
+
+commit 777a9d48beb1a24d1e5572deb449d8ed53966beb
+Merge: 02dfba1 1bb6680
+Author: King Wilder <info@kingwilder.com>
+Date:   Thu Dec 4 10:03:56 2014 -0800
+
+    Merge pull request #12 from programcsharp/master
+    
+    Added aggregate function support
+
+commit 1bb668099b10f2be84e8ebe9008627a2c050b168
+Author: Chris Hynes <chris@programcsharp.com>
+Date:   Wed Dec 3 07:48:11 2014 -0700
+
+    Added aggregate function support
+
+commit 02dfba10d74c068bf80726e6f3dea3dbc3097e1a
+Merge: c8c26b1 6c8337c
+Author: King Wilder <info@kingwilder.com>
+Date:   Fri Oct 10 08:47:56 2014 -0700
+
+    Merge pull request #11 from vesa-ciandt/master
+    
+    Added support for Contains clause...
+
+commit c8c26b15464d8e7cbadd246e9662726fbf0e1ec8
+Merge: b844df9 be83638
+Author: King Wilder <info@kingwilder.com>
+Date:   Fri Oct 10 08:45:40 2014 -0700
+
+    Merge pull request #9 from agiuschris/master
+    
+    Update DynamicLinq.cs
+
+commit 6c8337c154a3e255a9b433291839ddba300f1653
+Author: vesa-ciandt <vesa@ciandt.com>
+Date:   Thu Oct 9 18:39:34 2014 -0300
+
+    Added support for Contains clause...
+
+commit be83638e74c7dd1f73ea2a108052e58393f53d69
+Author: Chris Agius <agiuschris@gmail.com>
+Date:   Sun Aug 3 09:01:04 2014 +0200
+
+    Update DynamicLinq.cs
+
+commit b844df961231b4a4e23a198f1b6c4cb5459cbb4c
+Author: King Wilder <info@kingwilder.com>
+Date:   Mon Jul 28 09:58:36 2014 -0700
+
+    Added special thanks to dradovic
+
+commit 3e4b1586feedb23ba1dfeeeb6fe66cbd0097104c
+Author: King Wilder <info@kingwilder.com>
+Date:   Mon Jul 28 09:57:12 2014 -0700
+
+    Added link to documentation zip file.
+
+commit 6523646dfd66926fb74fc917b414956a4d913889
+Merge: 1f32b98 4a2ec92
+Author: King Wilder <info@kingwilder.com>
+Date:   Mon Jul 14 13:45:29 2014 -0700
+
+    Merge pull request #7 from ghost1face/master
+    
+    Added direct IEnumerable support, Added Distinct extension, added missin...
+
+commit 4a2ec9266cf69c0bb15088a855d32941675c4f54
+Author: Daniel Destouche <daniel.destouche@gmail.com>
+Date:   Sat Jul 12 11:49:07 2014 -0400
+
+    Added direct IEnumerable support, Added Distinct extension, added missing Reference
+
+commit 1f32b982148fd293bddc1457de406c659d3c1fe4
+Merge: 265f5b9 9604694
+Author: King Wilder <info@kingwilder.com>
+Date:   Mon Jul 8 14:38:57 2013 -0700
+
+    Merge pull request #5 from skideh/master
+    
+    Added support for DateTimeOffset
+
+commit 96046949216b64f3df1f714babfa7f9c7201be48
+Author: Richard Rout <rich86@gmail.com>
+Date:   Mon Jul 8 12:05:26 2013 -0600
+
+    Added support for DateTimeOffset
+    
+    DateTimeOffset types were not supported. Added into the predefinedTypes
+    and  IRelationalSignatures
+
+commit 265f5b9f2e166202a6e487b20983523a816144cf
+Merge: ef70ae2 57b27d6
+Author: King Wilder <info@kingwilder.com>
+Date:   Mon May 27 08:28:11 2013 -0700
+
+    Merge pull request #4 from Mansfield7/master
+    
+    Add EntityFunctions to predefinedTypes
+
+commit 57b27d6a877f2b911ff158353cc089dd0e8d41e1
+Author: JT <dead_beats@hotmail.com>
+Date:   Mon May 27 10:24:22 2013 -0400
+
+    Added EntityFunctions to predefinedTypes
+    
+    This change should allow easier date comparisons as per
+    http://stackoverflow.com/a/6046018/1324019
+
+commit ef70ae2af9d227792d0698160c343e836a0f8100
+Merge: 4bc0748 42597f9
+Author: King Wilder <info@kingwilder.com>
+Date:   Sun Jul 29 21:13:44 2012 -0700
+
+    Merge pull request #1 from JustinFrye/patch-1
+    
+    Update Src/System.Linq.Dynamic/DynamicLinq.cs
+
+commit 42597f9d352a19f9450f322563ba9dac18533f5b
+Author: JustinFrye <jfrye@midwest-reliance.com>
+Date:   Sun Jul 29 21:31:20 2012 -0300
+
+    Update Src/System.Linq.Dynamic/DynamicLinq.cs
+    
+    Update to allow Guid comparison.
+    
+    https://connect.microsoft.com/VisualStudio/feedback/details/333262/system-linq-dynamic-throws-an-error-when-using-guid-equality-in-where-clause
+
+commit 4bc0748b3db4aca849603b381b8db5196a5229ce
+Author: King Wilder <info@kingwilder.com>
+Date:   Mon Dec 12 11:11:03 2011 -0800
+
+    First commit of source file.
+
+commit 5f140a456b15189b7277984fd4f0ecbf53a28df1
+Author: King Wilder <info@kingwilder.com>
+Date:   Mon Dec 12 11:09:59 2011 -0800
+
+    First commit of NuGet package.
+
+commit 17e77792184f1068025cdfe7aa47eb1c72038b4e
+Author: King Wilder <info@kingwilder.com>
+Date:   Mon Dec 12 11:06:57 2011 -0800
+
+    First readme file commit.
