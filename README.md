@@ -11,7 +11,7 @@ In C#, most classes in System.Collections are thread-unsafe unless they are prot
 
 ## How to apply TSVD
 
-###Overview
+### Overview
 There are only three easy steps to adopt TSVD for your software.
 + Compile the TSVD source code. It generates a "TSVDInstrumenter.exe" in src/TSVDInstrumenter/bin/Debug.
 + Instrucment the testing binary with "TSVDInstrumenter.exe". The usage of "TSVDInstrumenter.exe" is:
@@ -19,7 +19,8 @@ There are only three easy steps to adopt TSVD for your software.
     .\TSVDInstrumenter.exe [directory to the testing binary] [path to instrument configuration] [path to runtime configuration]
 
 + Run the test as normal.
-###Example
+
+### Example
 TestApps/DataRace is an example to demonstrate how to apply TSVD:
 + Preparion. Compile the DataRace source code. It generates a DataRace.exe in DataRace/bin/Debug. 
 + Instrumentation. Under DataRace/bin/Debug, run the following command in command line:
