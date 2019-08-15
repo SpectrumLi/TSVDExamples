@@ -1,12 +1,15 @@
 # What is TSVD
+
 TSVD is a thread-safety violation detecting tool designed in the paper "Efficient and Scalable Thread-Safety Violation Detection --- Finding thousands of concurrency bugs during testing" in SOSP2019.
 
 ## What is thread-safety violation
+
 Some research results discover that it is fairly common that developers erroneously assume some concurrent accesses on different part of a data struture is thread safe. For example :
 
 even key1 is different with key2, it is still possible to lead a undetermined result.
 
 ### What kind of class is not thread-safe
+
 In C#, most classes in System.Collections are thread-unsafe unless they are protected by a specific lock.
 
 ## How to apply TSVD
@@ -35,7 +38,6 @@ TestApps/DataRace is an example to demonstrate how to apply TSVD:
 
 + Run. After observing the `Instrumentation result: OK`, run `.\DataRace.exe`. TSVD-bug file contains the detected thread-safety violation information.
     
-
 
 # Contributing
 
