@@ -14,8 +14,8 @@ In C#, most classes in System.Collections are thread-unsafe unless they are prot
 ### Overview
 There are only three easy steps to adopt TSVD for your software.
 
-+ Compile the TSVD source code. It generates a "TSVDInstrumenter.exe" in src/TSVDInstrumenter/bin/Debug.
-+ Instrucment the testing binary with "TSVDInstrumenter.exe". The usage of "TSVDInstrumenter.exe" is:
++ Compile the TSVD source code. It generates a `TSVDInstrumenter.exe` in `src/TSVDInstrumenter/bin/Debug`.
++ Instrucment the testing binary with `TSVDInstrumenter.exe`. The usage of `TSVDInstrumenter.exe` is:
 
 
     .\TSVDInstrumenter.exe [directory to the testing binary] [path to instrument configuration] [path to runtime configuration]
@@ -26,14 +26,14 @@ There are only three easy steps to adopt TSVD for your software.
 ### Example
 
 TestApps/DataRace is an example to demonstrate how to apply TSVD:
-+ Preparion. Compile the DataRace source code. It generates a DataRace.exe in DataRace/bin/Debug. 
++ Preparion. Compile the DataRace source code. It generates a DataRace.exe in `DataRace/bin/Debug`. 
 + Instrumentation. Under DataRace/bin/Debug, run the following command in command line:
 
 
     & ..\..\..\..\src\TSVDInstrumenter\bin\Debug\TSVDInstrumenter.exe . .\Configurations\instrumentation-config.cfg .\Configurations\runtime-config.cfg
 
 
-+ Run. After observing the "Instrumentation result: OK", run ".\DataRace.exe". TSVD-bug file contains the detected thread-safety violation information.
++ Run. After observing the `Instrumentation result: OK`, run `.\DataRace.exe`. TSVD-bug file contains the detected thread-safety violation information.
     
 
 
