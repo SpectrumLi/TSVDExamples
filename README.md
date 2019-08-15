@@ -36,9 +36,9 @@ TestApps/DataRace is an example to demonstrate how to apply TSVD:
 + Preparion. Compile the DataRace source code. It generates a DataRace.exe in `DataRace/bin/Debug`. 
 + Instrumentation. Under DataRace/bin/Debug, run the following command in command line:
 
-    `& ..\..\..\..\src\TSVDInstrumenter\bin\Debug\TSVDInstrumenter.exe . .\Configurations\instrumentation-config.cfg .\Configurations\runtime-config.cfg`. It insturcments all the binaries in the current folder. Since there is only one exe/dll in the current folder, it will only instrument `DataRace.exe`.
+    `& ..\..\..\..\src\TSVDInstrumenter\bin\Debug\TSVDInstrumenter.exe . .\Configurations\instrumentation-config.cfg .\Configurations\runtime-config.cfg`. It instruments all the binaries in the current folder. Since there is only one exe/dll in the current folder, it will only instrument `DataRace.exe`.
 
-+ Run. After observing the `Instrumentation result: OK`, run `.\DataRace.exe` (the current `DataRace.exe` is already instrumented). Since the insturmented `DataRace.exe`, it writes all the detected thread-safety violation to the `TSVD-bug-*.tsvdlog` file.
++ Run. After observing the `Instrumentation result: OK` which indicates `DataRace.exe` is already instrumented, run `.\DataRace.exe`. Since running the insturmented `DataRace.exe`, it writes all the detected thread-safety violation to the `TSVD-bug-*.tsvdlog` file.
     
 
 # Contributing
