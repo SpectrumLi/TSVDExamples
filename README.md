@@ -4,9 +4,13 @@ TSVD is a thread-safety violation detecting tool designed in the paper "Efficien
 
 ## What is thread-safety violation
 
-Some research results discover that it is fairly common that developers erroneously assume some concurrent accesses on different part of a data struture is thread safe. For example :
+Some research results discover that it is fairly common that developers erroneously assume some concurrent accesses on different part of a data structure is thread safe. For example :
 
-even key1 is different with key2, it is still possible to lead a undetermined result.
+    //Dictionary dict
+    Thread1: dict.Add(key1,value);
+    Thread2: dict.ContainsKey(key2);
+    
+Even key1 is different with key2, it is still possible to lead a undetermined result.
 
 ### What kind of class is not thread-safe
 
@@ -19,7 +23,7 @@ In C#, most classes in System.Collections are thread-unsafe unless they are prot
 There are only three easy steps to adopt TSVD for your software.
 
 + Compile the TSVD source code. It generates a `TSVDInstrumenter.exe` in `src/TSVDInstrumenter/bin/Debug`.
-+ Instrucment the testing binary with `TSVDInstrumenter.exe`. The usage of `TSVDInstrumenter.exe` is:
++ Instrucment the testing binaries with `TSVDInstrumenter.exe`. The usage of `TSVDInstrumenter.exe` is:
 
     `.\TSVDInstrumenter.exe [directory to the testing binary] [path to instrument configuration] [path to runtime configuration]`
 
