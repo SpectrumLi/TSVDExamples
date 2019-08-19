@@ -1,6 +1,7 @@
 # What is TSVD
 
 TSVD is a thread-safety violation detecting tool designed in the paper "Efficient and Scalable Thread-Safety Violation Detection --- Finding thousands of concurrency bugs during testing" in SOSP2019.
+Update: TSVD is available at https://github.com/microsoft/TSVD[https://github.com/microsoft/TSVD].
 
 ## What is thread-safety violation
 
