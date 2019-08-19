@@ -1,58 +1,49 @@
-# What is TSVD
+# TSVDExample
 
-TSVD is a thread-safety violation detecting tool designed in the paper "Efficient and Scalable Thread-Safety Violation Detection --- Finding thousands of concurrency bugs during testing" in SOSP2019.
+## What is this
+This is the artifacts of part of open source projects that TSVD can automatically detect thread-safety violations. We will continue to add more example here. For more details, please check out paper "Efficient and Scalable Thread-Safety Violation Detection --- Finding thousands of concurrency bugs during testing" in SOSP2019.
 
 Update: TSVD is available at https://github.com/microsoft/TSVD!
 
-## What is thread-safety violation
+## How to evaluate
+TSVD is under open source administration process. We are sorry for the inconvenience. Please contact us (cstjygpl@uchicago.edu) for a private link of TSVD. The following instructions only help to evaluate these examples.
 
-Some research results discover that it is fairly common that developers erroneously assume some concurrent accesses on different part of a data structure is thread safe. For example :
+### System Requirement
+Visual Studio Community Edition, and .Net Framework 4.5-4.7. Because the examples rely on a specific version of .Net, we need them.
 
-    //Dictionary dict
-    Thread1: dict.Add(key1,value);
-    Thread2: dict.ContainsKey(key2);
-    
-Even key1 is different with key2, it is still possible to lead a undetermined result.
+### Prepare the binary
+Here is the list of current examples:
 
-### What kind of class is not thread-safe
++ DataTimeExtensions
++ Sequelocity
++ Linq.Dynamic
++ Thunderstruck
 
-In C#, most classes in System.Collections are thread-unsafe unless they are protected by a specific lock.
+We will add more bugs listed in the paper. But these four already demonstrate the main idea of TSVD. For every example:
 
-## How to apply TSVD
++ First, open the .sln file by visual studio then compile the project.
++ Second, rebuild the TSVD project under the .sln project.
 
-### Overview
+The TSVD project is created by us, which contains the buggy unit test. To expose the bug, we only need this unit test.
 
-There are only three easy steps to adopt TSVD for your software.
+### Instrumentation
+Suppose you can access the TSVD already, please download and compile it. The compiled result is TSVDInstrumenter.exe in the TSVDInstrumenter\bin\Debug.
+When downloading it, there is be a "Configurations" directory of default configuration. Then open a powershell:
 
-+ Compile the TSVD source code. It generates a `TSVDInstrumenter.exe` in `src/TSVDInstrumenter/bin/Debug`.
-+ Instrucment the testing binaries with `TSVDInstrumenter.exe`. The usage of `TSVDInstrumenter.exe` is:
+    & [path to TSVDInstrumenter.exe] [path to "TSVD.exe" in the buggy unit test] [path to Configurations\instrumentation-config.cfg] [path to Configurations\runtime-config.cfg]
 
-    `.\TSVDInstrumenter.exe [directory to the testing binary] [path to instrument configuration] [path to runtime configuration]`
+ins.ps1 is a template. The expect result is
 
-+ Run the test as normal.
+    Instrumentation result: OK
 
-### Example
+### Run the test
+Go to the unit test output directory ([TSVD]\bin\debug) and .\TSVD.exe. 
 
-TestApps/DataRace is an example to demonstrate how to apply TSVD:
+### Results:
+There will be several TSVD-bugs files which contains the racing accesses.
+Here are the bugs in the related examples.
 
-+ Preparion. Compile the DataRace source code. It generates a DataRace.exe in `DataRace/bin/Debug`. 
-+ Instrumentation. Under DataRace/bin/Debug, run the following command in command line:
-
-    `& ..\..\..\..\src\TSVDInstrumenter\bin\Debug\TSVDInstrumenter.exe . .\Configurations\instrumentation-config.cfg .\Configurations\runtime-config.cfg`. It instruments all the binaries in the current folder. Since there is only one exe/dll in the current folder, it will only instrument `DataRace.exe`.
-
-+ Run. After observing the `Instrumentation result: OK` which indicates `DataRace.exe` is already instrumented, run `.\DataRace.exe`. Since running the insturmented `DataRace.exe`, it writes all the detected thread-safety violation to the `TSVD-bug-*.tsvdlog` file.
-    
-
-# Contributing
-
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.opensource.microsoft.com.
-
-When you submit a pull request, a CLA bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., status check, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
-
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
++ [DataTimeExtensions](https://github.com/joaomatossilva/DateTimeExtensions/pull/86)
++ [Sequelocity](https://github.com/AmbitEnergyLabs/Sequelocity.NET/pull/23)
++ [Linq.Dynamic](https://github.com/kahanu/System.Linq.Dynamic/pull/48)
++ [Thunderstruck](https://github.com/19WAS85/Thunderstruck/issues/3)
