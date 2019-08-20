@@ -30,7 +30,7 @@ The TSVD project is created by us, which contains the buggy unit test. To expose
 Suppose you can access the TSVD already, please download and compile it. The compiled result is TSVDInstrumenter.exe in the TSVDInstrumenter\bin\Debug.
 When downloading it, there is be a "Configurations" directory of default configuration. Then open a powershell:
 
-    & [path to TSVDInstrumenter.exe] [path to "TSVD.exe" in the buggy unit test] [path to Configurations\instrumentation-config.cfg] [path to Configurations\runtime-config.cfg]
+    & [path to TSVDInstrumenter.exe] [directory that contains "TSVD.exe" in the buggy unit test] [path to Configurations\instrumentation-config.cfg] [path to Configurations\runtime-config.cfg]
 
 ins.ps1 is a template. The expect result is
 
