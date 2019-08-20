@@ -6,7 +6,7 @@ This is the artifacts of part of open source projects that TSVD can automaticall
 Update: TSVD is available at https://github.com/microsoft/TSVD!
 
 ## How to evaluate
-TSVD is under open source administration process. We are sorry for the inconvenience. Please contact us (cstjygpl@uchicago.edu) for a private link of TSVD. The following instructions only help to evaluate these examples.
+The following instructions help to evaluate these examples.
 
 ### System Requirement
 Visual Studio Community Edition, and .Net Framework 4.5-4.7. Because the examples rely on a specific version of .Net, we need them.
