@@ -40,7 +40,13 @@ ins.ps1 is a template. The expect result is
 Go to the unit test output directory ([TSVD]\bin\debug) and .\TSVD.exe. 
 
 ### Results:
-There will be several TSVD-bugs files which contains the racing accesses.
+There will be several TSVD-bugs files which contains the racing accesses. The output file explanation:
+
++ TSVD-allbug-*: Each line contains a bug (a operation pair). The TSVD-bug-* contains detailed information for the bug.
++ TSVD-bug-*: All the bug information. A bug is one an operation pair. For each operation, the location in source and stacktrace are recorded.
++ TSVD-preplan-*: The generated file to guide the detecting strategy for the next run. Sometimes we need to run the test twice to expose the bugs. 
++ TSVD-debug-*: The information for debugging TSVD. 
+
 Here are the bugs in the related examples.
 
 + [DataTimeExtensions](https://github.com/joaomatossilva/DateTimeExtensions/pull/86)
