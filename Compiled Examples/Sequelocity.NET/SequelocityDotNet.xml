@@ -1,0 +1,1477 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SequelocityDotNet</name>
+    </assembly>
+    <members>
+        <member name="T:SequelocityDotNet.Sequelocity">
+            <summary>
+            Sequelocity.NET is a simple data access library providing lightweight ADO.NET wrapper, object mapper, and helper
+            functions.
+            </summary>
+            <remarks>
+            This class provides various factory methods for instantiating new <see cref="T:SequelocityDotNet.DatabaseCommand" /> objects as well as
+            configuration settings for Sequelocity.NET.
+            </remarks>
+        </member>
+        <member name="M:SequelocityDotNet.Sequelocity.GetDatabaseCommand(System.Data.Common.DbCommand)">
+            <summary>Gets a <see cref="T:SequelocityDotNet.DatabaseCommand" /> given a <see cref="T:System.Data.Common.DbCommand" /> instance.</summary>
+            <param name="dbCommand"><see cref="T:System.Data.Common.DbCommand" /> instance.</param>
+            <returns>A new <see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.Sequelocity.GetDatabaseCommand(System.Data.Common.DbConnection)">
+            <summary>Gets a <see cref="T:SequelocityDotNet.DatabaseCommand" /> given a <see cref="T:System.Data.Common.DbConnection" /> instance.</summary>
+            <param name="dbConnection"><see cref="T:System.Data.Common.DbConnection" /> instance.</param>
+            <returns>A new <see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when the <paramref name="dbConnection" /> parameter is null.</exception>
+        </member>
+        <member name="M:SequelocityDotNet.Sequelocity.GetDatabaseCommand(System.String,System.String)">
+            <summary>Attempts to get a <see cref="T:SequelocityDotNet.DatabaseCommand" /> using several strategies.</summary>
+            <remarks>
+            This method attempts to use several strategies to locate a ConnectionString and DbProviderFactory in order to create a
+            new <see cref="T:SequelocityDotNet.DatabaseCommand" /> instance. The recommended option is to supply to this method a Connection String
+            Name where the connection string setting in the application's configuration file also contains a populated providerName
+            attribute specifying the DbProviderFactory invariant name to be used to instantiate a
+            <see cref="T:SequelocityDotNet.Sequelocity.ConfigurationSettings.Default" />. Another recommend option is to specify default values in the
+            <see cref="T:SequelocityDotNet.Sequelocity.ConfigurationSettings.Default" /> class that allows this method to be called with no parameters which
+            simplifies callers to this method.
+            </remarks>
+            <param name="connectionStringOrName">Optional connection string or connection string name.</param>
+            <param name="dbProviderFactoryInvariantName">Optional DbProviderFactory invariant name.</param>
+            <returns>A new <see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</returns>
+            <exception cref="T:System.Exception">
+            Thrown when no ConnectionString could be found. A valid ConnectionString or Connection String Name must be supplied in
+            the 'connectionStringOrName' parameter or by setting a default in either the
+            'DatabaseCommand.ConfigurationSettings.Default.ConnectionStringName' or
+            'DatabaseCommand.ConfigurationSettings.Default.ConnectionString' properties.
+            </exception>
+            <exception cref="F:SequelocityDotNet.DatabaseCommand.DbCommand">
+            Thrown when no DbProviderFactory could be found. A DbProviderFactory invariant name must be supplied in the connection
+            string settings 'providerName' attribute in the applications config file, in the 'dbProviderFactoryInvariantName'
+            parameter, or by setting a default in the
+            'DatabaseCommand.ConfigurationSettings.Default.DbProviderFactoryInvariantName' property.
+            </exception>
+            <exception cref="T:SequelocityDotNet.DatabaseCommand">
+            An unknown error occurred creating a connection as the call to DbProviderFactory.CreateConnection() returned null.
+            </exception>
+        </member>
+        <member name="M:SequelocityDotNet.Sequelocity.GetDatabaseCommandForSqlServer(System.String,System.String)">
+            <summary>Gets a <see cref="T:SequelocityDotNet.DatabaseCommand" /> that interacts with a Microsoft SQL Server database.</summary>
+            <param name="connectionStringOrName">Connection string or connection string name.</param>
+            <param name="applicationName">Optional application name to inject into the ApplicationName property of the connection string so that the application name is accessible in SQL Server via the APP_NAME() function and during tracing.</param>
+            <returns>A new <see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</returns>
+            <exception cref="T:SequelocityDotNet.Sequelocity.ConnectionStringNotFoundException">
+            Thrown when no ConnectionString could be found. A valid ConnectionString or Connection String Name must be supplied in
+            the 'connectionStringOrName' parameter or by setting a default in either the
+            'DatabaseCommand.ConfigurationSettings.Default.ConnectionStringName' or
+            'DatabaseCommand.ConfigurationSettings.Default.ConnectionString' properties.
+            </exception>
+            <exception cref="T:SequelocityDotNet.Sequelocity.DbProviderFactoryNotFoundException">
+            Thrown when no DbProviderFactory could be found. A DbProviderFactory invariant name must be supplied in the connection
+            string settings 'providerName' attribute in the applications config file, in the 'dbProviderFactoryInvariantName'
+            parameter, or by setting a default in the
+            'DatabaseCommand.ConfigurationSettings.Default.DbProviderFactoryInvariantName' property.
+            </exception>
+            <exception cref="T:System.Exception">
+            An unknown error occurred creating a connection as the call to DbProviderFactory.CreateConnection() returned null.
+            </exception>
+        </member>
+        <member name="M:SequelocityDotNet.Sequelocity.GetDatabaseCommandForSQLite(System.String)">
+            <summary>Gets a <see cref="T:SequelocityDotNet.DatabaseCommand" /> that interacts with a SQLite database.</summary>
+            <param name="connectionStringOrName">Connection string or connection string name.</param>
+            <returns>A new <see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</returns>
+            <exception cref="T:SequelocityDotNet.Sequelocity.ConnectionStringNotFoundException">
+            Thrown when no ConnectionString could be found. A valid ConnectionString or Connection String Name must be supplied in
+            the 'connectionStringOrName' parameter or by setting a default in either the
+            'DatabaseCommand.ConfigurationSettings.Default.ConnectionStringName' or
+            'DatabaseCommand.ConfigurationSettings.Default.ConnectionString' properties.
+            </exception>
+            <exception cref="T:SequelocityDotNet.Sequelocity.DbProviderFactoryNotFoundException">
+            Thrown when no DbProviderFactory could be found. A DbProviderFactory invariant name must be supplied in the connection
+            string settings 'providerName' attribute in the applications config file, in the 'dbProviderFactoryInvariantName'
+            parameter, or by setting a default in the
+            'DatabaseCommand.ConfigurationSettings.Default.DbProviderFactoryInvariantName' property.
+            </exception>
+            <exception cref="T:System.Exception">
+            An unknown error occurred creating a connection as the call to DbProviderFactory.CreateConnection() returned null.
+            </exception>
+        </member>
+        <member name="M:SequelocityDotNet.Sequelocity.GetDatabaseCommandForMySql(System.String)">
+            <summary>Gets a <see cref="T:SequelocityDotNet.DatabaseCommand" /> that interacts with a MySQL database.</summary>
+            <param name="connectionStringOrName">Connection string or connection string name.</param>
+            <returns>A new <see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</returns>
+            <exception cref="T:SequelocityDotNet.Sequelocity.ConnectionStringNotFoundException">
+            Thrown when no ConnectionString could be found. A valid ConnectionString or Connection String Name must be supplied in
+            the 'connectionStringOrName' parameter or by setting a default in either the
+            'DatabaseCommand.ConfigurationSettings.Default.ConnectionStringName' or
+            'DatabaseCommand.ConfigurationSettings.Default.ConnectionString' properties.
+            </exception>
+            <exception cref="T:SequelocityDotNet.Sequelocity.DbProviderFactoryNotFoundException">
+            Thrown when no DbProviderFactory could be found. A DbProviderFactory invariant name must be supplied in the connection
+            string settings 'providerName' attribute in the applications config file, in the 'dbProviderFactoryInvariantName'
+            parameter, or by setting a default in the
+            'DatabaseCommand.ConfigurationSettings.Default.DbProviderFactoryInvariantName' property.
+            </exception>
+            <exception cref="T:System.Exception">
+            An unknown error occurred creating a connection as the call to DbProviderFactory.CreateConnection() returned null.
+            </exception>
+        </member>
+        <member name="M:SequelocityDotNet.Sequelocity.GetDatabaseCommandForPostgreSQL(System.String)">
+            <summary>Gets a <see cref="T:SequelocityDotNet.DatabaseCommand" /> that interacts with a PostgreSQL database.</summary>
+            <param name="connectionStringOrName">Connection string or connection string name.</param>
+            <returns>A new <see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</returns>
+            <exception cref="T:SequelocityDotNet.Sequelocity.ConnectionStringNotFoundException">
+            Thrown when no ConnectionString could be found. A valid ConnectionString or Connection String Name must be supplied in
+            the 'connectionStringOrName' parameter or by setting a default in either the
+            'DatabaseCommand.ConfigurationSettings.Default.ConnectionStringName' or
+            'DatabaseCommand.ConfigurationSettings.Default.ConnectionString' properties.
+            </exception>
+            <exception cref="T:SequelocityDotNet.Sequelocity.DbProviderFactoryNotFoundException">
+            Thrown when no DbProviderFactory could be found. A DbProviderFactory invariant name must be supplied in the connection
+            string settings 'providerName' attribute in the applications config file, in the 'dbProviderFactoryInvariantName'
+            parameter, or by setting a default in the
+            'DatabaseCommand.ConfigurationSettings.Default.DbProviderFactoryInvariantName' property.
+            </exception>
+            <exception cref="T:System.Exception">
+            An unknown error occurred creating a connection as the call to DbProviderFactory.CreateConnection() returned null.
+            </exception>
+        </member>
+        <member name="M:SequelocityDotNet.Sequelocity.CreateDbConnection(System.String,System.String)">
+            <summary>Attempts to create a <see cref="T:System.Data.Common.DbConnection" /> using several strategies.</summary>
+            <remarks>
+            This method attempts to use several strategies to locate a ConnectionString and DbProviderFactory in order to create a
+            new <see cref="T:System.Data.Common.DbConnection" />. The recommended option is to supply to this method a ConnectionString Name where the
+            connection string setting in the application's configuration file also contains a populated providerName attribute
+            specifying the DbProviderFactory invariant name to be used to create a <see cref="T:System.Data.Common.DbConnection" />. Another recommend
+            option is to specify default values in the <see cref="T:SequelocityDotNet.Sequelocity.ConfigurationSettings.Default" /> class that allows this method
+            to be called with no parameters which simplifies callers to this method.
+            </remarks>
+            <param name="connectionStringOrName">Optional connection string or connection string name.</param>
+            <param name="dbProviderFactoryInvariantName">Optional DbProviderFactory invariant name.</param>
+            <returns>A new <see cref="T:System.Data.Common.DbConnection" /> instance.</returns>
+            <exception cref="T:SequelocityDotNet.Sequelocity.ConnectionStringNotFoundException">
+            Thrown when no ConnectionString could be found. A valid ConnectionString or Connection String Name must be supplied in
+            the 'connectionStringOrName' parameter or by setting a default in either the
+            'DatabaseCommand.ConfigurationSettings.Default.ConnectionStringName' or
+            'DatabaseCommand.ConfigurationSettings.Default.ConnectionString' properties.
+            </exception>
+            <exception cref="T:SequelocityDotNet.Sequelocity.DbProviderFactoryNotFoundException">
+            Thrown when no DbProviderFactory could be found. A DbProviderFactory invariant name must be supplied in the connection
+            string settings 'providerName' attribute in the applications config file, in the 'dbProviderFactoryInvariantName'
+            parameter, or by setting a default in the
+            'DatabaseCommand.ConfigurationSettings.Default.DbProviderFactoryInvariantName' property.
+            </exception>
+            <exception cref="T:System.Exception">
+            An unknown error occurred creating a connection as the call to DbProviderFactory.CreateConnection() returned null.
+            </exception>
+        </member>
+        <member name="M:SequelocityDotNet.Sequelocity.InternalCreateDbConnection(System.String,System.String)">
+            <summary>Creates a <see cref="T:System.Data.Common.DbConnection" />.</summary>
+            <param name="connectionString">Connection string.</param>
+            <param name="dbProviderFactoryInvariantName">DbProviderFactory invariant name.</param>
+            <returns>A new <see cref="T:System.Data.Common.DbConnection" /> instance.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when the <paramref name="connectionString" /> parameter is null.</exception>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when the <paramref name="dbProviderFactoryInvariantName" /> parameter is
+            null.
+            </exception>
+            <exception cref="T:System.Exception">
+            An unknown error occurred creating a connection as the call to DbProviderFactory.CreateConnection() returned null.
+            </exception>
+        </member>
+        <member name="T:SequelocityDotNet.Sequelocity.ConfigurationSettings">
+            <summary>Global <see cref="T:SequelocityDotNet.DatabaseCommand" /> configuration settings.</summary>
+        </member>
+        <member name="F:SequelocityDotNet.Sequelocity.ConfigurationSettings.GetConnectionStringByNameAccessor">
+            <summary>Gets a connection string by name.</summary>
+            <remarks>
+            This is implemented as a Func in order to facilitate library consumers to specify their own implementation if need be.
+            </remarks>
+        </member>
+        <member name="M:SequelocityDotNet.Sequelocity.ConfigurationSettings.InitializeConfigurationSettings">
+            <summary>Initializes the <see cref="T:SequelocityDotNet.Sequelocity.ConfigurationSettings" />.</summary>
+        </member>
+        <member name="T:SequelocityDotNet.Sequelocity.ConfigurationSettings.Default">
+            <summary>
+            <see cref="T:SequelocityDotNet.DatabaseCommand" /> default settings.
+            </summary>
+        </member>
+        <member name="F:SequelocityDotNet.Sequelocity.ConfigurationSettings.Default.DbProviderFactoryInvariantName">
+            <summary>Default DbProviderFactory invariant name.</summary>
+        </member>
+        <member name="F:SequelocityDotNet.Sequelocity.ConfigurationSettings.Default.ConnectionStringName">
+            <summary>Default connection string name.</summary>
+        </member>
+        <member name="F:SequelocityDotNet.Sequelocity.ConfigurationSettings.Default.ConnectionString">
+            <summary>Default connection string.</summary>
+        </member>
+        <member name="F:SequelocityDotNet.Sequelocity.ConfigurationSettings.Default.ApplicationName">
+            <summary>The current application name.</summary>
+            <remarks>Default implementation is Environment.MachineName-AppDomain.CurrentDomain.FriendlyName.</remarks>
+        </member>
+        <member name="T:SequelocityDotNet.Sequelocity.ConfigurationSettings.EventHandlers">
+            <summary>
+            <see cref="T:SequelocityDotNet.DatabaseCommand" /> event handlers.
+            </summary>
+        </member>
+        <member name="T:SequelocityDotNet.Sequelocity.ConfigurationSettings.EventHandlers.DatabaseCommandPostExecuteEventHandler">
+            <summary>Event handler called after the <see cref="T:SequelocityDotNet.DatabaseCommand" /> has been executed.</summary>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+        </member>
+        <member name="T:SequelocityDotNet.Sequelocity.ConfigurationSettings.EventHandlers.DatabaseCommandPreExecuteEventHandler">
+            <summary>Event handler called before the <see cref="T:SequelocityDotNet.DatabaseCommand" /> is executed.</summary>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+        </member>
+        <member name="T:SequelocityDotNet.Sequelocity.ConfigurationSettings.EventHandlers.DatabaseCommandUnhandledExceptionEventHandler">
+            <summary>Event handler called when an unhandled exception occurs.</summary>
+            <param name="exception">Unhandled exception.</param>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+        </member>
+        <member name="F:SequelocityDotNet.Sequelocity.ConfigurationSettings.EventHandlers.DatabaseCommandUnhandledExceptionEventHandlers">
+            <summary>Event triggered when an unhandled exception occurs.</summary>
+        </member>
+        <member name="F:SequelocityDotNet.Sequelocity.ConfigurationSettings.EventHandlers.DatabaseCommandPreExecuteEventHandlers">
+            <summary>Event triggered before the <see cref="T:SequelocityDotNet.DatabaseCommand" /> is executed.</summary>
+        </member>
+        <member name="F:SequelocityDotNet.Sequelocity.ConfigurationSettings.EventHandlers.DatabaseCommandPostExecuteEventHandlers">
+            <summary>Event triggered after the <see cref="T:SequelocityDotNet.DatabaseCommand" /> has been executed.</summary>
+        </member>
+        <member name="M:SequelocityDotNet.Sequelocity.ConfigurationSettings.EventHandlers.InvokeDatabaseCommandUnhandledExceptionEventHandlers(System.Exception,SequelocityDotNet.DatabaseCommand)">
+            <summary>Invokes the <see cref="T:SequelocityDotNet.DatabaseCommand" /> unhandled exception event handlers.</summary>
+            <param name="exception">Unhandled exception.</param>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+        </member>
+        <member name="M:SequelocityDotNet.Sequelocity.ConfigurationSettings.EventHandlers.InvokeDatabaseCommandPreExecuteEventHandlers(SequelocityDotNet.DatabaseCommand)">
+            <summary>Invokes the <see cref="T:SequelocityDotNet.DatabaseCommand" /> pre-execute event handlers.</summary>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+        </member>
+        <member name="M:SequelocityDotNet.Sequelocity.ConfigurationSettings.EventHandlers.InvokeDatabaseCommandPostExecuteEventHandlers(SequelocityDotNet.DatabaseCommand)">
+            <summary>Invokes the <see cref="T:SequelocityDotNet.DatabaseCommand" /> post-execute event handlers.</summary>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+        </member>
+        <member name="T:SequelocityDotNet.Sequelocity.ConnectionStringNotFoundException">
+            <summary>Thrown when a ConnectionString could not be found.</summary>
+        </member>
+        <member name="M:SequelocityDotNet.Sequelocity.ConnectionStringNotFoundException.#ctor(System.String)">
+            <summary>
+            Instantiates a new <see cref="T:SequelocityDotNet.Sequelocity.ConnectionStringNotFoundException" /> with a specified error message.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="T:SequelocityDotNet.Sequelocity.DbProviderFactoryNotFoundException">
+            <summary>Thrown when a DbProviderFactory could not be found.</summary>
+        </member>
+        <member name="M:SequelocityDotNet.Sequelocity.DbProviderFactoryNotFoundException.#ctor(System.String)">
+            <summary>
+            Instantiates a new <see cref="T:SequelocityDotNet.Sequelocity.DbProviderFactoryNotFoundException" /> with a specified error message.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="T:SequelocityDotNet.DatabaseCommand">
+            <summary>
+            The <see cref="T:SequelocityDotNet.DatabaseCommand" /> is a lightweight abstraction and wrapper around the <see cref="F:SequelocityDotNet.DatabaseCommand.DbCommand" /> in
+            order to provide a streamlined fluent-style data access interface.
+            </summary>
+        </member>
+        <member name="F:SequelocityDotNet.DatabaseCommand.DbCommand">
+            <summary>The underlying <see cref="F:SequelocityDotNet.DatabaseCommand.DbCommand" />.</summary>
+        </member>
+        <member name="F:SequelocityDotNet.DatabaseCommand._disposed">
+            <summary>Flag to determine if Dispose has been called.</summary>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommand.#ctor(System.Data.Common.DbCommand)">
+            <summary>Instantiates a new <see cref="T:SequelocityDotNet.DatabaseCommand" /> by supplying a <see cref="F:SequelocityDotNet.DatabaseCommand.DbCommand" />.</summary>
+            <param name="dbCommand">DbCommand.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown when the <paramref name="dbCommand" /> parameter is null.</exception>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommand.#ctor(System.Data.Common.DbConnection)">
+            <summary>Instantiates a new <see cref="T:SequelocityDotNet.DatabaseCommand" /> by supplying a <see cref="T:System.Data.Common.DbConnection" />.</summary>
+            <param name="dbConnection">DbConnection.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown when the <paramref name="dbConnection" /> parameter is null.</exception>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommand.Dispose">
+            <summary>Disposes of the underlying <see cref="F:SequelocityDotNet.DatabaseCommand.DbCommand" /> and it's <see cref="T:System.Data.Common.DbConnection" />.</summary>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommand.Dispose(System.Boolean)">
+            <summary>Disposes of the underlying <see cref="F:SequelocityDotNet.DatabaseCommand.DbCommand" />.</summary>
+            <param name="disposing">Indicates if being called from the Dispose method.</param>
+        </member>
+        <member name="T:SequelocityDotNet.DatabaseCommandExtensions">
+            <summary>
+            <see cref="T:SequelocityDotNet.DatabaseCommand" /> extensions.
+            </summary>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommandExtensions.SetCommandText(SequelocityDotNet.DatabaseCommand,System.String)">
+            <summary>Sets the text command to run against the data source.</summary>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+            <param name="commandText">The text command to run against the data source.</param>
+            <returns>The given <see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommandExtensions.AppendCommandText(SequelocityDotNet.DatabaseCommand,System.String)">
+            <summary>Appends to the text command to run against the data source.</summary>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+            <param name="commandText">Text command to append to the text command to run against the data source.</param>
+            <returns>The given <see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommandExtensions.AddParameter(SequelocityDotNet.DatabaseCommand,System.Data.Common.DbParameter)">
+            <summary>Adds a <see cref="T:System.Data.Common.DbParameter" /> to the <see cref="T:SequelocityDotNet.DatabaseCommand" />.</summary>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+            <param name="dbParameter"><see cref="T:System.Data.Common.DbParameter" /> to add.</param>
+            <returns>The given <see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommandExtensions.AddParameter(SequelocityDotNet.DatabaseCommand,System.String,System.Object)">
+            <summary>Adds a parameter to the <see cref="T:SequelocityDotNet.DatabaseCommand" />.</summary>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+            <param name="parameterName">Parameter name.</param>
+            <param name="parameterValue">Parameter value.</param>
+            <returns>The given <see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommandExtensions.AddParameter(SequelocityDotNet.DatabaseCommand,System.String,System.Object,System.Data.DbType)">
+            <summary>Adds a parameter to the <see cref="T:SequelocityDotNet.DatabaseCommand" />.</summary>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+            <param name="parameterName">Parameter name.</param>
+            <param name="parameterValue">Parameter value.</param>
+            <param name="dbType">Parameter type.</param>
+            <returns>The given <see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommandExtensions.AddNullableParameter(SequelocityDotNet.DatabaseCommand,System.String,System.Object,System.Data.DbType)">
+            <summary>Adds a parameter whose default value is <see cref="T:System.DBNull"/> when unassigned, to the <see cref="T:SequelocityDotNet.DatabaseCommand" />.</summary>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+            <param name="parameterName">Parameter name.</param>
+            <param name="parameterValue">Parameter value.</param>
+            <param name="dbType">Parameter type.</param>
+            <returns>The given <see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommandExtensions.AddParameters(SequelocityDotNet.DatabaseCommand,System.Collections.Generic.IEnumerable{System.Data.Common.DbParameter})">
+            <summary>Adds a list of <see cref="T:System.Data.Common.DbParameter" />s to the <see cref="T:SequelocityDotNet.DatabaseCommand" />.</summary>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+            <param name="dbParameters">List of database parameters.</param>
+            <returns>The given <see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommandExtensions.AddParameters(SequelocityDotNet.DatabaseCommand,System.Data.Common.DbParameter[])">
+            <summary>Adds a parameter array of <see cref="T:System.Data.Common.DbParameter" />s to the <see cref="T:SequelocityDotNet.DatabaseCommand" />.</summary>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+            <param name="dbParameters">Parameter array of database parameters.</param>
+            <returns>The given <see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommandExtensions.AddParameters(SequelocityDotNet.DatabaseCommand,System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>Adds a dictionary of parameter names and values to the <see cref="T:SequelocityDotNet.DatabaseCommand" />.</summary>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+            <param name="parameterNameAndValueDictionary">Dictionary of parameter names and values.</param>
+            <returns>The given <see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommandExtensions.AddParameters``1(SequelocityDotNet.DatabaseCommand,System.String,System.Collections.Generic.List{``0})">
+            <summary>
+            Adds the list of parameter values to the <see cref="T:SequelocityDotNet.DatabaseCommand" /> by replacing the given parameterName in the
+            CommandText with a comma delimited list of generated parameter names such as "parameterName0, parameterName1,
+            parameterName2", etc.
+            </summary>
+            <typeparam name="T">Parameter type.</typeparam>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+            <param name="parameterName">Parameter name.</param>
+            <param name="parameterValues">Parameter values.</param>
+            <returns>The given <see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when the <paramref name="parameterName" /> parameter is null.</exception>
+            <exception cref="T:System.ArgumentNullException">Thrown when the <paramref name="parameterValues" /> parameter is null.</exception>
+            <exception cref="T:System.Exception">Thrown when the <paramref name="parameterValues" /> list is empty.</exception>
+            <exception cref="T:System.Exception">Thrown when the CommandText has not been set prior to calling this method.</exception>
+            <exception cref="T:System.Exception">Thrown when the CommandText does not contain the <paramref name="parameterName" />.</exception>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommandExtensions.AddParameters``1(SequelocityDotNet.DatabaseCommand,System.String,System.Collections.Generic.List{``0},System.Data.DbType)">
+            <summary>
+            Adds the list of parameter values of the specified <see cref="T:System.Data.DbType" /> to the <see cref="T:SequelocityDotNet.DatabaseCommand" /> by
+            replacing the given parameterName in the CommandText with a comma delimited list of generated parameter names such as
+            "parameterName0, parameterName1, parameterName2", etc.
+            </summary>
+            <typeparam name="T">Parameter type.</typeparam>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+            <param name="parameterName">Parameter name.</param>
+            <param name="parameterValues">Parameter values.</param>
+            <param name="dbType">Parameter type.</param>
+            <returns>The given <see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when the <paramref name="parameterName" /> parameter is null.</exception>
+            <exception cref="T:System.ArgumentNullException">Thrown when the <paramref name="parameterValues" /> parameter is null.</exception>
+            <exception cref="T:System.Exception">Thrown when the <paramref name="parameterValues" /> list is empty.</exception>
+            <exception cref="T:System.Exception">Thrown when the CommandText has not been set prior to calling this method.</exception>
+            <exception cref="T:System.Exception">Thrown when the CommandText does not contain the <paramref name="parameterName" />.</exception>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommandExtensions.CreateParameter(SequelocityDotNet.DatabaseCommand,System.String,System.Object)">
+            <summary>Creates a <see cref="T:System.Data.Common.DbParameter" />.</summary>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+            <param name="parameterName">Parameter name.</param>
+            <param name="parameterValue">Parameter value.</param>
+            <returns><see cref="T:System.Data.Common.DbParameter" />.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommandExtensions.CreateParameter(SequelocityDotNet.DatabaseCommand,System.String,System.Object,System.Data.DbType)">
+            <summary>Creates a <see cref="T:System.Data.Common.DbParameter" /> with a given <see cref="T:System.Data.DbType" />.</summary>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+            <param name="parameterName">Parameter name.</param>
+            <param name="parameterValue">Parameter value.</param>
+            <param name="dbType">Parameter type.</param>
+            <returns><see cref="T:System.Data.Common.DbParameter" />.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommandExtensions.CreateParameter(SequelocityDotNet.DatabaseCommand,System.String,System.Object,System.Data.DbType,System.Data.ParameterDirection)">
+            <summary>
+            Creates a <see cref="T:System.Data.Common.DbParameter" /> with a given <see cref="T:System.Data.DbType" /> and <see cref="T:System.Data.ParameterDirection" />.
+            </summary>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+            <param name="parameterName">Parameter name.</param>
+            <param name="parameterValue">Parameter value.</param>
+            <param name="dbType">Parameter type.</param>
+            <param name="parameterDirection">Parameter direction.</param>
+            <returns><see cref="T:System.Data.Common.DbParameter" />.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommandExtensions.SetCommandType(SequelocityDotNet.DatabaseCommand,System.Data.CommandType)">
+            <summary>Sets the CommandType.</summary>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+            <param name="commandType">CommandType which specifies how a command string is interpreted.</param>
+            <returns>The given <see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommandExtensions.SetCommandTimeout(SequelocityDotNet.DatabaseCommand,System.Int32)">
+            <summary>
+            Sets the time in seconds to wait for the command to execute before throwing an exception. The default is 30 seconds.
+            </summary>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+            <param name="commandTimeoutSeconds">The time in seconds to wait for the command to execute. The default is 30 seconds.</param>
+            <returns>The given <see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommandExtensions.SetTransaction(SequelocityDotNet.DatabaseCommand,System.Data.Common.DbTransaction)">
+            <summary>Sets the transaction associated with the command.</summary>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+            <param name="dbTransaction">The transaction to associate with the command.</param>
+            <returns>The given <see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommandExtensions.BeginTransaction(SequelocityDotNet.DatabaseCommand)">
+            <summary>
+            Starts a database transaction and associates it with the <see cref="T:SequelocityDotNet.DatabaseCommand"/> instance.
+            </summary>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+            <returns>An object representing the new transaction.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommandExtensions.BeginTransaction(SequelocityDotNet.DatabaseCommand,System.Data.IsolationLevel)">
+            <summary>
+            Starts a database transaction with the specified isolation level and associates it with the <see cref="T:SequelocityDotNet.DatabaseCommand"/> instance.
+            </summary>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+            <param name="isolationLevel">Specifies the isolation level for the transaction.</param>
+            <returns>An object representing the new transaction.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommandExtensions.TestConnection(SequelocityDotNet.DatabaseCommand)">
+            <summary>
+            Tests the connection to a database and returns true if a connection can be successfully opened and closed.
+            </summary>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+            <returns>Returns true if a connection can be successfully opened and closed. </returns>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommandExtensions.ToDbCommand(SequelocityDotNet.DatabaseCommand)">
+            <summary>Returns the underlying <see cref="T:System.Data.Common.DbCommand" />.</summary>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+            <returns><see cref="T:System.Data.Common.DbCommand" /> instance.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when the <paramref name="databaseCommand" /> parameter is null.</exception>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommandExtensions.ToDatabaseCommand(System.Data.Common.DbCommand)">
+            <summary>Returns a new instance of a <see cref="T:SequelocityDotNet.DatabaseCommand" />.</summary>
+            <param name="dbCommand"><see cref="T:System.Data.Common.DbCommand" /> instance.</param>
+            <returns><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when the <paramref name="dbCommand" /> parameter is null.</exception>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommandExtensions.GenerateInsertForMySql(SequelocityDotNet.DatabaseCommand,System.Object,System.String)">
+            <summary>
+            Generates a parameterized MySQL INSERT statement from the given object and adds it to the
+            <see cref="T:SequelocityDotNet.DatabaseCommand" />.
+            <para>
+            Note that the generated query also selects the last inserted id using MySQL's SELECT LAST_INSERT_ID() function.
+            </para>
+            </summary>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+            <param name="obj">Object to generate the SQL INSERT statement from.</param>
+            <param name="tableName">Optional table name to insert into. If none is supplied, it will use the type name.</param>
+            <returns>The given <see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</returns>
+            <exception cref="T:System.ArgumentNullException">
+            The value of 'tableName' cannot be null when the object passed is an anonymous
+            type.
+            </exception>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommandExtensions.GenerateInsertsForMySql``1(SequelocityDotNet.DatabaseCommand,System.Collections.Generic.List{``0},System.String)">
+            <summary>
+            Generates a list of concatenated parameterized MySQL INSERT statements from the given list of objects and adds it to
+            the <see cref="T:SequelocityDotNet.DatabaseCommand" />.
+            <para>
+            Note that the generated query also selects the last inserted id using MySQL's SELECT LAST_INSERT_ID() function.
+            </para>
+            </summary>
+            <typeparam name="T">Type of the objects in the list.</typeparam>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+            <param name="listOfObjects">List of objects to generate the SQL INSERT statements from.</param>
+            <param name="tableName">
+            Optional table name to insert into. If none is supplied, it will use the type name. Note that this parameter is
+            required when passing in an anonymous object or an <see cref="T:System.ArgumentNullException" /> will be thrown.
+            </param>
+            <returns>The given <see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</returns>
+            <exception cref="T:System.ArgumentNullException">
+            The value of 'tableName' cannot be null when the object passed is an anonymous
+            type.
+            </exception>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommandExtensions.GenerateInsertForPostgreSQL(SequelocityDotNet.DatabaseCommand,System.Object,System.String)">
+            <summary>
+            Generates a parameterized PostgreSQL INSERT statement from the given object and adds it to the
+            <see cref="T:SequelocityDotNet.DatabaseCommand" />.
+            <para>
+            Note that the generated query also selects the last inserted id using PostgreSQL's LastVal() function.
+            </para>
+            </summary>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+            <param name="obj">Object to generate the SQL INSERT statement from.</param>
+            <param name="tableName">Optional table name to insert into. If none is supplied, it will use the type name.</param>
+            <returns>The given <see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</returns>
+            <exception cref="T:System.ArgumentNullException">
+            The value of 'tableName' cannot be null when the object passed is an anonymous
+            type.
+            </exception>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommandExtensions.GenerateInsertsForPostgreSQL``1(SequelocityDotNet.DatabaseCommand,System.Collections.Generic.List{``0},System.String)">
+            <summary>
+            Generates a list of concatenated parameterized PostgreSQL INSERT statements from the given list of objects and adds it to
+            the <see cref="T:SequelocityDotNet.DatabaseCommand" />.
+            <para>
+            Note that the generated query also selects the last inserted id using PostgreSQL's LastVal() function.
+            </para>
+            </summary>
+            <typeparam name="T">Type of the objects in the list.</typeparam>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+            <param name="listOfObjects">List of objects to generate the SQL INSERT statements from.</param>
+            <param name="tableName">
+            Optional table name to insert into. If none is supplied, it will use the type name. Note that this parameter is
+            required when passing in an anonymous object or an <see cref="T:System.ArgumentNullException" /> will be thrown.
+            </param>
+            <returns>The given <see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</returns>
+            <exception cref="T:System.ArgumentNullException">
+            The value of 'tableName' cannot be null when the object passed is an anonymous
+            type.
+            </exception>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommandExtensions.GenerateInsertForSQLite(SequelocityDotNet.DatabaseCommand,System.Object,System.String)">
+            <summary>
+            Generates a parameterized SQLite INSERT statement from the given object and adds it to the
+            <see cref="T:SequelocityDotNet.DatabaseCommand" />.
+            <para>
+            Note that the generated query also selects the last inserted id using SQLite's SELECT last_insert_rowid() function.
+            </para>
+            </summary>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+            <param name="obj">Object to generate the SQL INSERT statement from.</param>
+            <param name="tableName">Optional table name to insert into. If none is supplied, it will use the type name.</param>
+            <returns>The given <see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</returns>
+            <exception cref="T:System.ArgumentNullException">
+            The value of 'tableName' cannot be null when the object passed is an anonymous
+            type.
+            </exception>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommandExtensions.GenerateInsertsForSQLite``1(SequelocityDotNet.DatabaseCommand,System.Collections.Generic.List{``0},System.String)">
+            <summary>
+            Generates a list of concatenated parameterized SQLite INSERT statements from the given list of objects and adds it to
+            the <see cref="T:SequelocityDotNet.DatabaseCommand" />.
+            <para>
+            Note that the generated query also selects the last inserted id using SQLite's SELECT last_insert_rowid() function.
+            </para>
+            </summary>
+            <typeparam name="T">Type of the objects in the list.</typeparam>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+            <param name="listOfObjects">List of objects to generate the SQL INSERT statements from.</param>
+            <param name="tableName">
+            Optional table name to insert into. If none is supplied, it will use the type name. Note that this parameter is
+            required when passing in an anonymous object or an <see cref="T:System.ArgumentNullException" /> will be thrown.
+            </param>
+            <returns>The given <see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</returns>
+            <exception cref="T:System.ArgumentNullException">
+            The value of 'tableName' cannot be null when the object passed is an anonymous
+            type.
+            </exception>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommandExtensions.GenerateInsertForSqlServer(SequelocityDotNet.DatabaseCommand,System.Object,System.String)">
+            <summary>
+            Generates a parameterized SQL Server INSERT statement from the given object and adds it to the
+            <see cref="T:SequelocityDotNet.DatabaseCommand" />.
+            <para>
+            Note that the generated query also selects the last inserted id using SQL Server's SELECT SCOPE_IDENTITY() function.
+            </para>
+            </summary>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+            <param name="obj">Object to generate the SQL INSERT statement from.</param>
+            <param name="tableName">Optional table name to insert into. If none is supplied, it will use the type name.</param>
+            <returns>The given <see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommandExtensions.GenerateInsertsForSqlServer``1(SequelocityDotNet.DatabaseCommand,System.Collections.Generic.List{``0},System.String)">
+            <summary>
+            Generates a list of concatenated parameterized SQL Server INSERT statements from the given list of objects and adds it
+            to the <see cref="T:SequelocityDotNet.DatabaseCommand" />.
+            <para>
+            Note that the generated query also selects the last inserted id using SQL Server's SELECT SCOPE_IDENTITY() function.
+            </para>
+            </summary>
+            <typeparam name="T">Type of the objects in the list.</typeparam>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+            <param name="listOfObjects">List of objects to generate the SQL INSERT statements from.</param>
+            <param name="tableName">
+            Optional table name to insert into. If none is supplied, it will use the type name. Note that this parameter is
+            required when passing in an anonymous object or an <see cref="T:System.ArgumentNullException" /> will be thrown.
+            </param>
+            <returns>The given <see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</returns>
+            <exception cref="T:System.ArgumentNullException">
+            The value of 'tableName' cannot be null when the object passed is an anonymous
+            type.
+            </exception>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommandExtensions.ExecuteNonQuery(SequelocityDotNet.DatabaseCommand,System.Boolean)">
+            <summary>Executes a statement against the database and returns the number of rows affected.</summary>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+            <param name="keepConnectionOpen">Optional parameter indicating whether to keep the connection open. Default is false.</param>
+            <returns>The number of rows affected.</returns>
+            <exception cref="T:System.Exception">Unexpected exception.</exception>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommandExtensions.ExecuteNonQueryAsync(SequelocityDotNet.DatabaseCommand,System.Boolean)">
+            <summary>Executes a statement against the database asynchronously and returns the number of rows affected.</summary>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+            <param name="keepConnectionOpen">Optional parameter indicating whether to keep the connection open. Default is false.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> resulting in the number of rows affected.</returns>
+            <exception cref="T:System.Exception">Unexpected exception.</exception>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommandExtensions.ExecuteScalar(SequelocityDotNet.DatabaseCommand,System.Boolean)">
+            <summary>
+            Executes the query and returns the first column of the first row in the result set returned by the query. All other
+            columns and rows are ignored.
+            </summary>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+            <param name="keepConnectionOpen">Optional parameter indicating whether to keep the connection open. Default is false.</param>
+            <returns>The first column of the first row in the result set.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommandExtensions.ExecuteScalarAsync(SequelocityDotNet.DatabaseCommand,System.Boolean)">
+            <summary>
+            Executes the query asynchronously and returns the first column of the first row in the result set returned by the query.
+            All other columns and rows are ignored.
+            </summary>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+            <param name="keepConnectionOpen">Optional parameter indicating whether to keep the connection open. Default is false.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> resulting in the first column of the first row in the result set.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommandExtensions.ExecuteScalar``1(SequelocityDotNet.DatabaseCommand,System.Boolean)">
+            <summary>
+            Executes the query and returns the first column of the first row in the result set returned by the query. All other
+            columns and rows are ignored.
+            </summary>
+            <typeparam name="T">Type to convert the result to.</typeparam>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+            <param name="keepConnectionOpen">Optional parameter indicating whether to keep the connection open. Default is false.</param>
+            <returns>
+            The first column of the first row in the result set converted to a type of <typeparamref name="T" />.
+            </returns>
+            <exception cref="T:SequelocityDotNet.TypeConverter.TypeConversionException">
+            Thrown when an error occurs attempting to convert a value to an
+            enum.
+            </exception>
+            <exception cref="T:SequelocityDotNet.TypeConverter.TypeConversionException">
+            Thrown when an error occurs attempting to convert a value to a
+            type.
+            </exception>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommandExtensions.ExecuteScalarAsync``1(SequelocityDotNet.DatabaseCommand,System.Boolean)">
+            <summary>
+            Executes the query asynchronously and returns the first column of the first row in the result set returned by the query.
+            All other columns and rows are ignored.
+            </summary>
+            <typeparam name="T">Type to convert the result to.</typeparam>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+            <param name="keepConnectionOpen">Optional parameter indicating whether to keep the connection open. Default is false.</param>
+            <returns>
+            A <see cref="T:System.Threading.Tasks.Task`1"/> resulting in the first column of the first row in the result set converted to a type
+            of <typeparamref name="T" />.
+            </returns>
+            <exception cref="T:SequelocityDotNet.TypeConverter.TypeConversionException">
+            Thrown when an error occurs attempting to convert a value to an
+            enum.
+            </exception>
+            <exception cref="T:SequelocityDotNet.TypeConverter.TypeConversionException">
+            Thrown when an error occurs attempting to convert a value to a
+            type.
+            </exception>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommandExtensions.ExecuteReader(SequelocityDotNet.DatabaseCommand,System.Action{System.Data.IDataRecord},System.Boolean)">
+            <summary>
+            Executes a statement against the database and calls the <paramref name="dataRecordCallback" /> action for each record
+            returned.
+            </summary>
+            <remarks>
+            For safety the DbDataReader is returned as an IDataRecord to the callback so that callers cannot modify the current row
+            being read.
+            </remarks>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+            <param name="dataRecordCallback">Action called for each record returned.</param>
+            <param name="keepConnectionOpen">Optional parameter indicating whether to keep the connection open. Default is false.</param>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommandExtensions.ExecuteReader``1(SequelocityDotNet.DatabaseCommand,System.Func{System.Data.IDataRecord,``0},System.Boolean)">
+            <summary>
+            Executes a statement against the database and calls the <paramref name="selector" /> function for each record returned.
+            </summary>
+            <remarks>
+            For safety the DbDataReader is returned as an IDataRecord to the callback so that callers cannot modify the current row
+            being read.
+            </remarks>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+            <param name="selector">Function called for each record returned.</param>
+            <param name="keepConnectionOpen">Optional parameter indicating whether to keep the connection open. Default is false.</param>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommandExtensions.ExecuteReaderAsync(SequelocityDotNet.DatabaseCommand,System.Action{System.Data.IDataRecord},System.Boolean)">
+            <summary>
+            Executes a statement against the database asynchronously and calls the <paramref name="dataRecordCallback" /> action for each record
+            returned.
+            </summary>
+            <remarks>
+            For safety the DbDataReader is returned as an IDataRecord to the callback so that callers cannot modify the current row
+            being read.
+            </remarks>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+            <param name="dataRecordCallback">Action called for each record returned.</param>
+            <param name="keepConnectionOpen">Optional parameter indicating whether to keep the connection open. Default is false.</param>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommandExtensions.ExecuteToMap``1(SequelocityDotNet.DatabaseCommand,System.Func{System.Data.IDataRecord,``0},System.Boolean)">
+            <summary>
+            Executes a statement against a database and maps the results to a list of type <typeparamref name="T" /> using a given
+            mapper function supplied to the <paramref name="mapper" /> parameter.
+            </summary>
+            <typeparam name="T">The type to map the results to.</typeparam>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+            <param name="mapper">
+            A method that takes an <see cref="T:System.Data.IDataRecord" /> as an argument and returns an instance of type
+            <typeparamref name="T" />.
+            </param>
+            <param name="keepConnectionOpen">Optional parameter indicating whether to keep the connection open. Default is false.</param>
+            <returns>Results mapped to a list of type <typeparamref name="T" />.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommandExtensions.ExecuteToMapAsync``1(SequelocityDotNet.DatabaseCommand,System.Func{System.Data.IDataRecord,``0},System.Boolean)">
+            <summary>
+            Executes a statement against a database asynchronously and maps the results to a list of type <typeparamref name="T" />
+            using a given mapper function supplied to the <paramref name="mapper" /> parameter.
+            </summary>
+            <typeparam name="T">The type to map the results to.</typeparam>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+            <param name="mapper">
+            A method that takes an <see cref="T:System.Data.IDataRecord" /> as an argument and returns an instance of type
+            <typeparamref name="T" />.
+            </param>
+            <param name="keepConnectionOpen">Optional parameter indicating whether to keep the connection open. Default is false.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> resulting in the results mapped to a list of type <typeparamref name="T" />.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommandExtensions.ExecuteToList``1(SequelocityDotNet.DatabaseCommand,System.Boolean)">
+            <summary>
+            Executes a statement against a database and maps matching column names to a list of type <typeparamref name="T" />.
+            </summary>
+            <typeparam name="T">The type to map the results to.</typeparam>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+            <param name="keepConnectionOpen">Optional parameter indicating whether to keep the connection open. Default is false.</param>
+            <returns>Results mapped to a list of type <typeparamref name="T" />.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommandExtensions.ExecuteToListAsync``1(SequelocityDotNet.DatabaseCommand,System.Boolean)">
+            <summary>
+            Executes a statement against a database asynchronously and maps matching column names to a list of type <typeparamref name="T" />.
+            </summary>
+            <typeparam name="T">The type to map the results to.</typeparam>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+            <param name="keepConnectionOpen">Optional parameter indicating whether to keep the connection open. Default is false.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> resulting in the results mapped to a list of type <typeparamref name="T" />.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommandExtensions.ExecuteToObject``1(SequelocityDotNet.DatabaseCommand,System.Boolean)">
+            <summary>
+            Executes a statement against a database and maps matching column names to a type of <typeparamref name="T" />.
+            </summary>
+            <typeparam name="T">The type to map the results to.</typeparam>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+            <param name="keepConnectionOpen">Optional parameter indicating whether to keep the connection open. Default is false.</param>
+            <returns>Results mapped to a type of <typeparamref name="T" />.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommandExtensions.ExecuteToObjectAsync``1(SequelocityDotNet.DatabaseCommand,System.Boolean)">
+            <summary>
+            Executes a statement against a database asynchronously and maps matching column names to a type of <typeparamref name="T" />.
+            </summary>
+            <typeparam name="T">The type to map the results to.</typeparam>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+            <param name="keepConnectionOpen">Optional parameter indicating whether to keep the connection open. Default is false.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> resulting in the results mapped to a type of <typeparamref name="T" />.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommandExtensions.ExecuteToDynamicList(SequelocityDotNet.DatabaseCommand,System.Boolean)">
+            <summary>Executes a statement against a database and maps the results to a list of type dynamic.</summary>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+            <param name="keepConnectionOpen">Optional parameter indicating whether to keep the connection open. Default is false.</param>
+            <returns>Results mapped to a list of type dynamic.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommandExtensions.ExecuteToDynamicListAsync(SequelocityDotNet.DatabaseCommand,System.Boolean)">
+            <summary>Executes a statement against a database asynchronously and maps the results to a list of type dynamic.</summary>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+            <param name="keepConnectionOpen">Optional parameter indicating whether to keep the connection open. Default is false.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> resulting in the results mapped to a list of type dynamic.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommandExtensions.ExecuteToDynamicObject(SequelocityDotNet.DatabaseCommand,System.Boolean)">
+            <summary>Executes a statement against a database and maps the result to a dynamic object.</summary>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+            <param name="keepConnectionOpen">Optional parameter indicating whether to keep the connection open. Default is false.</param>
+            <returns>Result mapped to a dynamic object.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommandExtensions.ExecuteToDynamicObjectAsync(SequelocityDotNet.DatabaseCommand,System.Boolean)">
+            <summary>Executes a statement against a database asynchronously and maps the result to a dynamic object.</summary>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+            <param name="keepConnectionOpen">Optional parameter indicating whether to keep the connection open. Default is false.</param>
+            <returns>Result mapped to a dynamic object.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommandExtensions.ExecuteToDataSet(SequelocityDotNet.DatabaseCommand,System.Boolean)">
+            <summary>Executes a statement against a database and populates the results into a <see cref="T:System.Data.DataSet" />.</summary>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+            <param name="keepConnectionOpen">Optional parameter indicating whether to keep the connection open. Default is false.</param>
+            <returns>DataSet representing an in-memory cache of the result set.</returns>
+            <exception cref="T:System.Exception">An unexpected null was returned from a call to DbProviderFactory.CreateDataAdapter().</exception>
+        </member>
+        <member name="M:SequelocityDotNet.DatabaseCommandExtensions.ExecuteToDataTable(SequelocityDotNet.DatabaseCommand,System.Boolean)">
+            <summary>
+            Executes a statement against a database and returns the first table populated in the <see cref="T:System.Data.DataSet" />.
+            </summary>
+            <param name="databaseCommand"><see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</param>
+            <param name="keepConnectionOpen">Optional parameter indicating whether to keep the connection open. Default is false.</param>
+            <returns>
+            DataTable representing an in-memory cache of the first <see cref="T:System.Data.DataTable" /> result set from the returned
+            <see cref="T:System.Data.DataSet" />.
+            </returns>
+        </member>
+        <member name="T:SequelocityDotNet.TypeCacher">
+            <summary>Provides methods for accessing and caching <see cref="T:System.Type" /> metadata.</summary>
+        </member>
+        <member name="F:SequelocityDotNet.TypeCacher.PropertiesAndFieldsCache">
+            <summary>
+            Cache that stores types as the key and the type's PropertyInfo and FieldInfo in a <see cref="T:System.Collections.Specialized.OrderedDictionary"/> as the value.
+            </summary>
+        </member>
+        <member name="M:SequelocityDotNet.TypeCacher.GetPropertiesAndFields(System.Type)">
+            <summary>Gets the types properties and fields and caches the results.</summary>
+            <param name="type">Type.</param>
+            <returns><see cref="T:System.Collections.Specialized.OrderedDictionary"/> of lowercase member names and PropertyInfo or FieldInfo as the values.</returns>
+        </member>
+        <member name="T:SequelocityDotNet.DbConnectionExtensions">
+            <summary>
+            <see cref="T:System.Data.Common.DbConnection"/> extensions.
+            </summary>
+        </member>
+        <member name="M:SequelocityDotNet.DbConnectionExtensions.GetDbProviderFactory(System.Data.Common.DbConnection)">
+            <summary>
+            Gets the database provider factory for the given <see cref="T:System.Data.Common.DbConnection"/>.
+            </summary>
+            <param name="dbConnection">The database connection.</param>
+            <returns><see cref="T:System.Data.Common.DbProviderFactory"/>.</returns>
+        </member>
+        <member name="T:SequelocityDotNet.TypeExtensions">
+            <summary>
+            <see cref="T:System.Type" /> extensions.
+            </summary>
+        </member>
+        <member name="F:SequelocityDotNet.TypeExtensions.GetDefaultValueCache">
+            <summary>
+            Cache that stores the default value for value types to reduce unnecessary redundant Activator.CreateInstance calls.
+            </summary>
+        </member>
+        <member name="M:SequelocityDotNet.TypeExtensions.GetDefaultValue(System.Type)">
+            <summary>Gets the default value for the given type.</summary>
+            <param name="type">Type to get the default value for.</param>
+            <returns>Default value of the given type.</returns>
+        </member>
+        <member name="T:SequelocityDotNet.ObjectExtensions">
+            <summary>
+            <see cref="T:System.Object" /> extensions.
+            </summary>
+        </member>
+        <member name="M:SequelocityDotNet.ObjectExtensions.ConvertTo``1(System.Object)">
+            <summary>Converts the given object to a type of <typeparamref name="T" />.</summary>
+            <typeparam name="T">Type to convert to.</typeparam>
+            <param name="obj">Object to convert.</param>
+            <returns>Instance of type <typeparamref name="T" />.</returns>
+            <exception cref="T:SequelocityDotNet.TypeConverter.TypeConversionException">
+            Thrown when an error occurs attempting to convert a value to an
+            enum.
+            </exception>
+            <exception cref="T:SequelocityDotNet.TypeConverter.TypeConversionException">
+            Thrown when an error occurs attempting to convert a value to a
+            type.
+            </exception>
+        </member>
+        <member name="M:SequelocityDotNet.ObjectExtensions.ToInt(System.Object)">
+            <summary>Converts the given object to an <see cref="T:System.Int32" />.</summary>
+            <param name="obj">Object to convert.</param>
+            <returns>Int representation of the object.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.ObjectExtensions.ToNullableInt(System.Object)">
+            <summary>Converts the given object to an <see cref="T:System.Int32" />.</summary>
+            <param name="obj">Object to convert.</param>
+            <returns>Int representation of the object.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.ObjectExtensions.ToLong(System.Object)">
+            <summary>Converts the given object to an <see cref="T:System.Int64" />.</summary>
+            <param name="obj">Object to convert.</param>
+            <returns>Long representation of the object.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.ObjectExtensions.ToNullableLong(System.Object)">
+            <summary>Converts the given object to an <see cref="T:System.Int64" />.</summary>
+            <param name="obj">Object to convert.</param>
+            <returns>Long representation of the object.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.ObjectExtensions.ToDouble(System.Object)">
+            <summary>Converts the given object to an <see cref="T:System.Double" />.</summary>
+            <param name="obj">Object to convert.</param>
+            <returns>Double representation of the object.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.ObjectExtensions.ToNullableDouble(System.Object)">
+            <summary>Converts the given object to an <see cref="T:System.Double" />.</summary>
+            <param name="obj">Object to convert.</param>
+            <returns>Double representation of the object.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.ObjectExtensions.ToDecimal(System.Object)">
+            <summary>Converts the given object to an <see cref="T:System.Decimal" />.</summary>
+            <param name="obj">Object to convert.</param>
+            <returns>Decimal representation of the object.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.ObjectExtensions.ToNullableDecimal(System.Object)">
+            <summary>Converts the given object to an <see cref="T:System.Decimal" />.</summary>
+            <param name="obj">Object to convert.</param>
+            <returns>Decimal representation of the object.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.ObjectExtensions.ToDateTime(System.Object)">
+            <summary>Converts the given object to an <see cref="T:System.DateTime" />.</summary>
+            <param name="obj">Object to convert.</param>
+            <returns>DateTime representation of the object.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.ObjectExtensions.ToNullableDateTime(System.Object)">
+            <summary>Converts the given object to an <see cref="T:System.DateTime" />.</summary>
+            <param name="obj">Object to convert.</param>
+            <returns>DateTime representation of the object.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.ObjectExtensions.ToBool(System.Object)">
+            <summary>Converts the given object to an <see cref="T:System.Boolean" />.</summary>
+            <param name="obj">Object to convert.</param>
+            <returns>Bool representation of the object.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.ObjectExtensions.ToNullableBool(System.Object)">
+            <summary>Converts the given object to an <see cref="T:System.Boolean" />.</summary>
+            <param name="obj">Object to convert.</param>
+            <returns>Bool representation of the object.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.ObjectExtensions.IsAnonymousType(System.Object)">
+            <summary>Indicates if the object is an anonymous type.</summary>
+            <param name="obj">Object instance.</param>
+            <returns>Returns true if the object is an anonymous type.</returns>
+        </member>
+        <member name="T:SequelocityDotNet.TypeConverter">
+            <summary>Provides type conversion helpers.</summary>
+        </member>
+        <member name="M:SequelocityDotNet.TypeConverter.ConvertType(System.Object,System.Type)">
+            <summary>Converts the given value to the given type.</summary>
+            <param name="value">Value to convert.</param>
+            <param name="type">Type to convert the given value to.</param>
+            <returns>Converted value.</returns>
+            <exception cref="T:SequelocityDotNet.TypeConverter.TypeConversionException">Thrown when an error occurs attempting to convert a value to an enum.</exception>
+            <exception cref="T:SequelocityDotNet.TypeConverter.TypeConversionException">Thrown when an error occurs attempting to convert a value to a type.</exception>
+        </member>
+        <member name="T:SequelocityDotNet.TypeConverter.TypeConversionException">
+            <summary>Thrown when an exception occurs while converting a value from one type to another.</summary>
+        </member>
+        <member name="M:SequelocityDotNet.TypeConverter.TypeConversionException.#ctor(System.String,System.Exception)">
+            <summary>Instantiates a new <see cref="T:SequelocityDotNet.TypeConverter.TypeConversionException" /> with a specified error message.</summary>
+            <param name="message">The message that describes the error.</param>
+            <param name="innerException">
+            The exception that is the cause of the current exception, or a null reference (Nothing in Visual Basic) if no inner
+            exception is specified.
+            </param>
+        </member>
+        <member name="T:SequelocityDotNet.DataRecordMapper">
+            <summary>Provides methods for mapping an <see cref="T:System.Data.IDataRecord" /> to different types.</summary>
+        </member>
+        <member name="M:SequelocityDotNet.DataRecordMapper.Map``1(System.Data.IDataRecord)">
+            <summary>Maps an <see cref="T:System.Data.IDataRecord" /> to a type of <typeparamref name="T" />.</summary>
+            <remarks>This method internally uses caching to increase performance.</remarks>
+            <typeparam name="T">The type to map to.</typeparam>
+            <param name="dataRecord">The <see cref="T:System.Data.IDataRecord" /> to map from.</param>
+            <returns>A mapped instance of <typeparamref name="T" />.</returns>
+            <exception cref="T:SequelocityDotNet.DataRecordMapper.PropertySetValueException">
+            Thrown when an error occurs when attempting to assign a value to a
+            property.
+            </exception>
+            <exception cref="T:SequelocityDotNet.DataRecordMapper.FieldSetValueException">Thrown when an error occurs when attempting to assign a value to a field.</exception>
+        </member>
+        <member name="M:SequelocityDotNet.DataRecordMapper.MapDynamic(System.Data.IDataRecord)">
+            <summary>Maps an <see cref="T:System.Data.IDataRecord" /> to a type of dynamic object.</summary>
+            <param name="dataRecord">The <see cref="T:System.Data.IDataRecord" /> to map from.</param>
+            <returns>A dynamic object.</returns>
+        </member>
+        <member name="T:SequelocityDotNet.DataRecordMapper.FieldSetValueException">
+            <summary>Exception thrown when setting a fields value.</summary>
+        </member>
+        <member name="M:SequelocityDotNet.DataRecordMapper.FieldSetValueException.#ctor(System.String,System.Exception)">
+            <summary>Instantiates a new <see cref="T:SequelocityDotNet.DataRecordMapper.FieldSetValueException" /> with a specified error message.</summary>
+            <param name="message">The message that describes the error.</param>
+            <param name="innerException">
+            The exception that is the cause of the current exception, or a null reference (Nothing in Visual Basic) if no inner
+            exception is specified.
+            </param>
+        </member>
+        <member name="T:SequelocityDotNet.DataRecordMapper.PropertySetValueException">
+            <summary>Exception thrown when setting a properties value.</summary>
+        </member>
+        <member name="M:SequelocityDotNet.DataRecordMapper.PropertySetValueException.#ctor(System.String,System.Exception)">
+            <summary>Instantiates a new <see cref="T:SequelocityDotNet.DataRecordMapper.PropertySetValueException" /> with a specified error message.</summary>
+            <param name="message">The message that describes the error.</param>
+            <param name="innerException">
+            The exception that is the cause of the current exception, or a null reference (Nothing in Visual Basic) if no inner
+            exception is specified.
+            </param>
+        </member>
+        <member name="T:SequelocityDotNet.DbCommandExtensions">
+            <summary>
+            <see cref="T:System.Data.Common.DbCommand" /> extensions.
+            </summary>
+        </member>
+        <member name="M:SequelocityDotNet.DbCommandExtensions.SetCommandText(System.Data.Common.DbCommand,System.String)">
+            <summary>Sets the text command to run against the data source.</summary>
+            <param name="dbCommand"><see cref="T:System.Data.Common.DbCommand" /> instance.</param>
+            <param name="commandText">The text command to run against the data source.</param>
+            <returns>The given <see cref="T:System.Data.Common.DbCommand" /> instance.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.DbCommandExtensions.AppendCommandText(System.Data.Common.DbCommand,System.String)">
+            <summary>Appends to the text command to run against the data source.</summary>
+            <param name="dbCommand"><see cref="T:System.Data.Common.DbCommand" /> instance.</param>
+            <param name="commandText">Text command to append to the text command to run against the data source.</param>
+            <returns>The given <see cref="T:System.Data.Common.DbCommand" /> instance.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.DbCommandExtensions.CreateParameter(System.Data.Common.DbCommand,System.String,System.Object)">
+            <summary>Creates a <see cref="T:System.Data.Common.DbParameter" />.</summary>
+            <param name="dbCommand"><see cref="T:System.Data.Common.DbCommand" /> instance.</param>
+            <param name="parameterName">Parameter name.</param>
+            <param name="parameterValue">Parameter value.</param>
+            <returns><see cref="T:System.Data.Common.DbParameter" />.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.DbCommandExtensions.CreateParameter(System.Data.Common.DbCommand,System.String,System.Object,System.Data.DbType)">
+            <summary>Creates a <see cref="T:System.Data.Common.DbParameter" /> with a given <see cref="T:System.Data.DbType" />.</summary>
+            <param name="dbCommand"><see cref="T:System.Data.Common.DbCommand" /> instance.</param>
+            <param name="parameterName">Parameter name.</param>
+            <param name="parameterValue">Parameter value.</param>
+            <param name="dbType">Parameter type.</param>
+            <returns><see cref="T:System.Data.Common.DbParameter" />.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.DbCommandExtensions.CreateParameter(System.Data.Common.DbCommand,System.String,System.Object,System.Data.DbType,System.Data.ParameterDirection)">
+            <summary>
+            Creates a <see cref="T:System.Data.Common.DbParameter" /> with a given <see cref="T:System.Data.DbType" /> and <see cref="T:System.Data.ParameterDirection" />.
+            </summary>
+            <param name="dbCommand"><see cref="T:System.Data.Common.DbCommand" /> instance.</param>
+            <param name="parameterName">Parameter name.</param>
+            <param name="parameterValue">Parameter value.</param>
+            <param name="dbType">Parameter type.</param>
+            <param name="parameterDirection">Parameter direction.</param>
+            <returns><see cref="T:System.Data.Common.DbParameter" />.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.DbCommandExtensions.AddParameter(System.Data.Common.DbCommand,System.Data.Common.DbParameter)">
+            <summary>Adds a <see cref="T:System.Data.Common.DbParameter" /> to the <see cref="T:System.Data.Common.DbCommand" />.</summary>
+            <param name="dbCommand"><see cref="T:System.Data.Common.DbCommand" /> instance.</param>
+            <param name="dbParameter"><see cref="T:System.Data.Common.DbParameter" /> to add.</param>
+            <returns>The given <see cref="T:System.Data.Common.DbCommand" /> instance.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when the <paramref name="dbParameter" /> parameter is null.</exception>
+        </member>
+        <member name="M:SequelocityDotNet.DbCommandExtensions.AddParameter(System.Data.Common.DbCommand,System.String,System.Object)">
+            <summary>Adds a parameter to the <see cref="T:System.Data.Common.DbCommand" />.</summary>
+            <param name="dbCommand"><see cref="T:System.Data.Common.DbCommand" /> instance.</param>
+            <param name="parameterName">Parameter name.</param>
+            <param name="parameterValue">Parameter value.</param>
+            <returns>The given <see cref="T:System.Data.Common.DbCommand" /> instance.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when the <paramref name="parameterName" /> parameter is null.</exception>
+        </member>
+        <member name="M:SequelocityDotNet.DbCommandExtensions.AddParameter(System.Data.Common.DbCommand,System.String,System.Object,System.Data.DbType)">
+            <summary>Adds a parameter to the <see cref="T:System.Data.Common.DbCommand" />.</summary>
+            <param name="dbCommand"><see cref="T:System.Data.Common.DbCommand" /> instance.</param>
+            <param name="parameterName">Parameter name.</param>
+            <param name="parameterValue">Parameter value.</param>
+            <param name="dbType">Parameter type.</param>
+            <returns>The given <see cref="T:System.Data.Common.DbCommand" /> instance.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when the <paramref name="parameterName" /> parameter is null.</exception>
+        </member>
+        <member name="M:SequelocityDotNet.DbCommandExtensions.AddNullableParameter(System.Data.Common.DbCommand,System.String,System.Object,System.Data.DbType)">
+            <summary>Adds a parameter whose default value is <see cref="T:System.DBNull" /> when unassigned, to the <see cref="T:System.Data.Common.DbCommand" />.</summary>
+            <param name="dbCommand"><see cref="T:System.Data.Common.DbCommand" /> instance.</param>
+            <param name="parameterName">Parameter name.</param>
+            <param name="parameterValue">Parameter value.</param>
+            <param name="dbType">Parameter type.</param>
+            <returns>The given <see cref="T:System.Data.Common.DbCommand" /> instance.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when the <paramref name="parameterName" /> parameter is null.</exception>
+        </member>
+        <member name="M:SequelocityDotNet.DbCommandExtensions.AddParameters(System.Data.Common.DbCommand,System.Collections.Generic.IEnumerable{System.Data.Common.DbParameter})">
+            <summary>Adds a list of <see cref="T:System.Data.Common.DbParameter" />s to the <see cref="T:System.Data.Common.DbCommand" />.</summary>
+            <param name="dbCommand"><see cref="T:System.Data.Common.DbCommand" /> instance.</param>
+            <param name="dbParameters">List of database parameters.</param>
+            <returns>The given <see cref="T:System.Data.Common.DbCommand" /> instance.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.DbCommandExtensions.AddParameters(System.Data.Common.DbCommand,System.Data.Common.DbParameter[])">
+            <summary>Adds a parameter array of <see cref="T:System.Data.Common.DbParameter" />s to the <see cref="T:System.Data.Common.DbCommand" />.</summary>
+            <param name="dbCommand"><see cref="T:System.Data.Common.DbCommand" /> instance.</param>
+            <param name="dbParameters">Parameter array of database parameters.</param>
+            <returns>The given <see cref="T:System.Data.Common.DbCommand" /> instance.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.DbCommandExtensions.AddParameters(System.Data.Common.DbCommand,System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>Adds a dictionary of parameter names and values to the <see cref="T:System.Data.Common.DbCommand" />.</summary>
+            <param name="dbCommand"><see cref="T:System.Data.Common.DbCommand" /> instance.</param>
+            <param name="parameterNameAndValueDictionary">Dictionary of parameter names and values.</param>
+            <returns>The given <see cref="T:System.Data.Common.DbCommand" /> instance.</returns>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when the <paramref name="parameterNameAndValueDictionary" /> parameter
+            is null.
+            </exception>
+        </member>
+        <member name="M:SequelocityDotNet.DbCommandExtensions.AddParameters``1(System.Data.Common.DbCommand,System.String,System.Collections.Generic.List{``0})">
+            <summary>
+            Adds the list of parameter values to the <see cref="T:System.Data.Common.DbCommand" /> by replacing the given parameterName in the
+            <see cref="P:System.Data.Common.DbCommand.CommandText" /> with a comma delimited list of generated parameter names such as "parameterName0,
+            parameterName1, parameterName2", etc.
+            </summary>
+            <typeparam name="T">Parameter type.</typeparam>
+            <param name="dbCommand"><see cref="T:System.Data.Common.DbCommand" /> instance.</param>
+            <param name="parameterName">Parameter name.</param>
+            <param name="parameterValues">Parameter values.</param>
+            <returns>The given <see cref="T:System.Data.Common.DbCommand" /> instance.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when the <paramref name="parameterName" /> parameter is null.</exception>
+            <exception cref="T:System.ArgumentNullException">Thrown when the <paramref name="parameterValues" /> parameter is null.</exception>
+            <exception cref="T:System.Exception">Thrown when the <paramref name="parameterValues" /> list is empty.</exception>
+            <exception cref="T:System.Exception">
+            Thrown when the <paramref name="dbCommand" /> CommandText has not been set prior to calling this method.
+            </exception>
+            <exception cref="T:System.Exception">
+            Thrown when the <paramref name="dbCommand" /> CommandText does not contain the
+            <paramref name="parameterName" />.
+            </exception>
+        </member>
+        <member name="M:SequelocityDotNet.DbCommandExtensions.AddParameters``1(System.Data.Common.DbCommand,System.String,System.Collections.Generic.List{``0},System.Data.DbType)">
+            <summary>
+            Adds the list of parameter values of the specified <see cref="T:System.Data.DbType" /> to the <see cref="T:System.Data.Common.DbCommand" /> by replacing
+            the given parameterName in the <see cref="P:System.Data.Common.DbCommand.CommandText" /> with a comma delimited list of generated parameter
+            names such as "parameterName0, parameterName1, parameterName2", etc.
+            </summary>
+            <typeparam name="T">Parameter type.</typeparam>
+            <param name="dbCommand"><see cref="T:System.Data.Common.DbCommand" /> instance.</param>
+            <param name="parameterName">Parameter name.</param>
+            <param name="parameterValues">Parameter values.</param>
+            <param name="dbType">Parameter type.</param>
+            <returns>The given <see cref="T:System.Data.Common.DbCommand" /> instance.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when the <paramref name="parameterName" /> parameter is null.</exception>
+            <exception cref="T:System.ArgumentNullException">Thrown when the <paramref name="parameterValues" /> parameter is null.</exception>
+            <exception cref="T:System.Exception">Thrown when the <paramref name="parameterValues" /> list is empty.</exception>
+            <exception cref="T:System.Exception">
+            Thrown when the <paramref name="dbCommand" /> CommandText has not been set prior to calling this method.
+            </exception>
+            <exception cref="T:System.Exception">
+            Thrown when the <paramref name="dbCommand" /> CommandText does not contain the
+            <paramref name="parameterName" />.
+            </exception>
+        </member>
+        <member name="M:SequelocityDotNet.DbCommandExtensions.SetCommandType(System.Data.Common.DbCommand,System.Data.CommandType)">
+            <summary>Sets the CommandType.</summary>
+            <param name="dbCommand"><see cref="T:System.Data.Common.DbCommand" /> instance.</param>
+            <param name="commandType">CommandType which specifies how a command string is interpreted.</param>
+            <returns>The given <see cref="T:SequelocityDotNet.DatabaseCommand" /> instance.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.DbCommandExtensions.SetCommandTimeout(System.Data.Common.DbCommand,System.Int32)">
+            <summary>
+            Sets the time in seconds to wait for the command to execute before throwing an exception. The default is 30 seconds.
+            </summary>
+            <param name="dbCommand"><see cref="T:System.Data.Common.DbCommand" /> instance.</param>
+            <param name="commandTimeoutSeconds">The time in seconds to wait for the command to execute. The default is 30 seconds.</param>
+            <returns>The given <see cref="T:System.Data.Common.DbCommand" /> instance.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.DbCommandExtensions.SetTransaction(System.Data.Common.DbCommand,System.Data.Common.DbTransaction)">
+            <summary>Sets the transaction associated with the command.</summary>
+            <param name="dbCommand"><see cref="T:System.Data.Common.DbCommand" /> instance.</param>
+            <param name="dbTransaction">The transaction to associate with the command.</param>
+            <returns>The given <see cref="T:System.Data.Common.DbCommand" /> instance.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.DbCommandExtensions.BeginTransaction(System.Data.Common.DbCommand)">
+            <summary>
+            Starts a database transaction and associates it with the <see cref="T:System.Data.Common.DbCommand"/> instance.
+            </summary>
+            <param name="dbCommand"><see cref="T:System.Data.Common.DbCommand" /> instance.</param>
+            <returns>An object representing the new transaction.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.DbCommandExtensions.BeginTransaction(System.Data.Common.DbCommand,System.Data.IsolationLevel)">
+            <summary>
+            Starts a database transaction with the specified isolation level and associates it with the <see cref="T:System.Data.Common.DbCommand"/> instance.
+            </summary>
+            <param name="dbCommand"><see cref="T:System.Data.Common.DbCommand" /> instance.</param>
+            <param name="isolationLevel">Specifies the isolation level for the transaction.</param>
+            <returns>An object representing the new transaction.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.DbCommandExtensions.OpenConnection(System.Data.Common.DbCommand)">
+            <summary>Opens a database connection.</summary>
+            <param name="dbCommand"><see cref="T:System.Data.Common.DbCommand" /> instance.</param>
+            <returns>The given <see cref="T:System.Data.Common.DbCommand" /> instance.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.DbCommandExtensions.OpenConnectionAsync(System.Data.Common.DbCommand)">
+            <summary>Opens a database connection asynchronously.</summary>
+            <param name="dbCommand"><see cref="T:System.Data.Common.DbCommand" /> instance.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> resulting in the given <see cref="T:System.Data.Common.DbCommand" /> instance.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.DbCommandExtensions.CloseAndDispose(System.Data.Common.DbCommand)">
+            <summary>
+            Closes and disposes the <see cref="P:System.Data.Common.DbCommand.Connection" /> and the <see cref="T:System.Data.Common.DbCommand" /> itself.
+            </summary>
+            <param name="dbCommand"><see cref="T:System.Data.Common.DbCommand" /> instance.</param>
+        </member>
+        <member name="M:SequelocityDotNet.DbCommandExtensions.GetParameterReplacedCommandText(System.Data.Common.DbCommand)">
+            <summary>Gets the command text with the parameters replaced with their values.</summary>
+            <param name="dbCommand"><see cref="T:System.Data.Common.DbCommand" /> instance.</param>
+            <returns>Parameter replaced command text.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.DbCommandExtensions.GetDebugCommandText(System.Data.Common.DbCommand)">
+            <summary>
+            Generates a SQL statement for debugging purposes which includes the parameter replaced command text and command and
+            connection information in SQL comments.
+            </summary>
+            <param name="dbCommand"><see cref="T:System.Data.Common.DbCommand" /> instance.</param>
+            <returns>SQL statement for debugging purposes.</returns>
+        </member>
+        <member name="M:SequelocityDotNet.DbCommandExtensions.GenerateInsertForMySql(System.Data.Common.DbCommand,System.Object,System.String)">
+            <summary>
+            Generates a parameterized MySQL INSERT statement from the given object and adds it to the <see cref="T:System.Data.Common.DbCommand" />
+            .
+            <para>
+            Note that the generated query also selects the last inserted id using MySQL's SELECT LAST_INSERT_ID() function.
+            </para>
+            </summary>
+            <param name="dbCommand"><see cref="T:System.Data.Common.DbCommand" /> instance.</param>
+            <param name="obj">Object to generate the SQL INSERT statement from.</param>
+            <param name="tableName">
+            Optional table name to insert into. If none is supplied, it will use the type name. Note that this parameter is
+            required when passing in an anonymous object or an <see cref="T:System.ArgumentNullException" /> will be thrown.
+            </param>
+            <returns>The given <see cref="T:System.Data.Common.DbCommand" /> instance.</returns>
+            <exception cref="T:System.ArgumentNullException">
+            The value of 'tableName' cannot be null when the object passed is an anonymous
+            type.
+            </exception>
+        </member>
+        <member name="M:SequelocityDotNet.DbCommandExtensions.GenerateInsertsForMySql``1(System.Data.Common.DbCommand,System.Collections.Generic.List{``0},System.String)">
+            <summary>
+            Generates a list of concatenated parameterized MySQL INSERT statements from the given list of objects and adds it to
+            the <see cref="T:System.Data.Common.DbCommand" />.
+            <para>
+            Note that the generated query also selects the last inserted id using MySQL's SELECT LAST_INSERT_ID() function.
+            </para>
+            </summary>
+            <typeparam name="T">Type of the objects in the list.</typeparam>
+            <param name="dbCommand"><see cref="T:System.Data.Common.DbCommand" /> instance.</param>
+            <param name="listOfObjects">List of objects to generate the SQL INSERT statements from.</param>
+            <param name="tableName">
+            Optional table name to insert into. If none is supplied, it will use the type name. Note that this parameter is
+            required when passing in an anonymous object or an <see cref="T:System.ArgumentNullException" /> will be thrown.
+            </param>
+            <returns>The given <see cref="T:System.Data.Common.DbCommand" /> instance.</returns>
+            <exception cref="T:System.ArgumentNullException">
+            The value of 'tableName' cannot be null when the object passed is an anonymous
+            type.
+            </exception>
+        </member>
+        <member name="M:SequelocityDotNet.DbCommandExtensions.GenerateInsertForPostgreSQL(System.Data.Common.DbCommand,System.Object,System.String)">
+            <summary>
+            Generates a parameterized PostgreSQL INSERT statement from the given object and adds it to the <see cref="T:System.Data.Common.DbCommand" />
+            .
+            <para>
+            Note that the generated query also selects the last inserted id using PostgreSQL's LastVal() function.
+            </para>
+            </summary>
+            <param name="dbCommand"><see cref="T:System.Data.Common.DbCommand" /> instance.</param>
+            <param name="obj">Object to generate the SQL INSERT statement from.</param>
+            <param name="tableName">
+            Optional table name to insert into. If none is supplied, it will use the type name. Note that this parameter is
+            required when passing in an anonymous object or an <see cref="T:System.ArgumentNullException" /> will be thrown.
+            </param>
+            <returns>The given <see cref="T:System.Data.Common.DbCommand" /> instance.</returns>
+            <exception cref="T:System.ArgumentNullException">
+            The value of 'tableName' cannot be null when the object passed is an anonymous
+            type.
+            </exception>
+        </member>
+        <member name="M:SequelocityDotNet.DbCommandExtensions.GenerateInsertsForPostgreSQL``1(System.Data.Common.DbCommand,System.Collections.Generic.List{``0},System.String)">
+            <summary>
+            Generates a list of concatenated parameterized PostgreSQL INSERT statements from the given list of objects and adds it to
+            the <see cref="T:System.Data.Common.DbCommand" />.
+            <para>
+            Note that the generated query also selects the last inserted id using PostgreSQL's LastVal() function.
+            </para>
+            </summary>
+            <typeparam name="T">Type of the objects in the list.</typeparam>
+            <param name="dbCommand"><see cref="T:System.Data.Common.DbCommand" /> instance.</param>
+            <param name="listOfObjects">List of objects to generate the SQL INSERT statements from.</param>
+            <param name="tableName">
+            Optional table name to insert into. If none is supplied, it will use the type name. Note that this parameter is
+            required when passing in an anonymous object or an <see cref="T:System.ArgumentNullException" /> will be thrown.
+            </param>
+            <returns>The given <see cref="T:System.Data.Common.DbCommand" /> instance.</returns>
+            <exception cref="T:System.ArgumentNullException">
+            The value of 'tableName' cannot be null when the object passed is an anonymous
+            type.
+            </exception>
+        </member>
+        <member name="M:SequelocityDotNet.DbCommandExtensions.GenerateInsertForSQLite(System.Data.Common.DbCommand,System.Object,System.String)">
+            <summary>
+            Generates a parameterized SQLite INSERT statement from the given object and adds it to the <see cref="T:System.Data.Common.DbCommand" />
+            .
+            <para>
+            Note that the generated query also selects the last inserted id using SQLite's SELECT last_insert_rowid() function.
+            </para>
+            </summary>
+            <param name="dbCommand"><see cref="T:System.Data.Common.DbCommand" /> instance.</param>
+            <param name="obj">Object to generate the SQL INSERT statement from.</param>
+            <param name="tableName">
+            Optional table name to insert into. If none is supplied, it will use the type name. Note that this parameter is
+            required when passing in an anonymous object or an <see cref="T:System.ArgumentNullException" /> will be thrown.
+            </param>
+            <returns>The given <see cref="T:System.Data.Common.DbCommand" /> instance.</returns>
+            <exception cref="T:System.ArgumentNullException">
+            The value of 'tableName' cannot be null when the object passed is an anonymous
+            type.
+            </exception>
+        </member>
+        <member name="M:SequelocityDotNet.DbCommandExtensions.GenerateInsertsForSQLite``1(System.Data.Common.DbCommand,System.Collections.Generic.List{``0},System.String)">
+            <summary>
+            Generates a list of concatenated parameterized SQLite INSERT statements from the given list of objects and adds it to
+            the <see cref="T:System.Data.Common.DbCommand" />.
+            <para>
+            Note that the generated query also selects the last inserted id using SQLite's SELECT last_insert_rowid() function.
+            </para>
+            </summary>
+            <typeparam name="T">Type of the objects in the list.</typeparam>
+            <param name="dbCommand"><see cref="T:System.Data.Common.DbCommand" /> instance.</param>
+            <param name="listOfObjects">List of objects to generate the SQL INSERT statements from.</param>
+            <param name="tableName">
+            Optional table name to insert into. If none is supplied, it will use the type name. Note that this parameter is
+            required when passing in an anonymous object or an <see cref="T:System.ArgumentNullException" /> will be thrown.
+            </param>
+            <returns>The given <see cref="T:System.Data.Common.DbCommand" /> instance.</returns>
+            <exception cref="T:System.ArgumentNullException">
+            The value of 'tableName' cannot be null when the object passed is an anonymous
+            type.
+            </exception>
+        </member>
+        <member name="M:SequelocityDotNet.DbCommandExtensions.GenerateInsertForSqlServer(System.Data.Common.DbCommand,System.Object,System.String)">
+            <summary>
+            Generates a parameterized SQL Server INSERT statement from the given object and adds it to the
+            <see cref="T:System.Data.Common.DbCommand" />.
+            <para>
+            Note that the generated query also selects the last inserted id using SQL Server's SELECT SCOPE_IDENTITY() function.
+            </para>
+            </summary>
+            <param name="dbCommand"><see cref="T:System.Data.Common.DbCommand" /> instance.</param>
+            <param name="obj">Object to generate the SQL INSERT statement from.</param>
+            <param name="tableName">
+            Optional table name to insert into. If none is supplied, it will use the type name. Note that this parameter is
+            required when passing in an anonymous object or an <see cref="T:System.ArgumentNullException" /> will be thrown.
+            </param>
+            <returns>The given <see cref="T:System.Data.Common.DbCommand" /> instance.</returns>
+            <exception cref="T:System.ArgumentNullException">
+            The value of 'tableName' cannot be null when the object passed is an anonymous
+            type.
+            </exception>
+        </member>
+        <member name="M:SequelocityDotNet.DbCommandExtensions.GenerateInsertsForSqlServer``1(System.Data.Common.DbCommand,System.Collections.Generic.List{``0},System.String)">
+            <summary>
+            Generates a list of concatenated parameterized SQL Server INSERT statements from the given list of objects and adds it
+            to the <see cref="T:System.Data.Common.DbCommand" />.
+            <para>
+            Note that the generated query also selects the last inserted id using SQL Server's SELECT SCOPE_IDENTITY() function.
+            </para>
+            </summary>
+            <typeparam name="T">Type of the objects in the list.</typeparam>
+            <param name="dbCommand"><see cref="T:System.Data.Common.DbCommand" /> instance.</param>
+            <param name="listOfObjects">List of objects to generate the SQL INSERT statements from.</param>
+            <param name="tableName">
+            Optional table name to insert into. If none is supplied, it will use the type name. Note that this parameter is
+            required when passing in an anonymous object or an <see cref="T:System.ArgumentNullException" /> will be thrown.
+            </param>
+            <returns>The given <see cref="T:System.Data.Common.DbCommand" /> instance.</returns>
+            <exception cref="T:System.ArgumentNullException">
+            The value of 'tableName' cannot be null when the object passed is an anonymous
+            type.
+            </exception>
+        </member>
+        <member name="T:SequelocityDotNet.DbCommandExtensions.KeywordEscapeMethod">
+            <summary>
+            The method used for escaping keywords.
+            </summary>
+        </member>
+        <member name="F:SequelocityDotNet.DbCommandExtensions.KeywordEscapeMethod.None">
+            <summary>No escape method is used.</summary>
+        </member>
+        <member name="F:SequelocityDotNet.DbCommandExtensions.KeywordEscapeMethod.SquareBracket">
+            <summary>Keywords are enclosed in square brackets. Used by SQL Server, SQLite.</summary>
+        </member>
+        <member name="F:SequelocityDotNet.DbCommandExtensions.KeywordEscapeMethod.DoubleQuote">
+            <summary>Keywords are enclosed in double quotes. Used by PostgreSQL, SQLite.</summary>
+        </member>
+        <member name="F:SequelocityDotNet.DbCommandExtensions.KeywordEscapeMethod.Backtick">
+            <summary>Keywords are enclosed in backticks aka grave accents (ASCII code 96). Used by MySQL, SQLite.</summary>
+        </member>
+        <member name="M:SequelocityDotNet.DbCommandExtensions.GenerateInsertCommand(System.Data.Common.DbCommand,System.Object,System.String,System.String,SequelocityDotNet.DbCommandExtensions.KeywordEscapeMethod)">
+            <summary>
+            Generates a parameterized SQL Server INSERT statement from the given object and adds it to the
+            <see cref="T:System.Data.Common.DbCommand" />.
+            </summary>
+            <param name="dbCommand"><see cref="T:System.Data.Common.DbCommand" /> instance.</param>
+            <param name="obj">Object to generate the SQL INSERT statement from.</param>
+            <param name="sqlInsertStatementTemplate">
+            SQL INSERT statement template where argument 0 is the table name, argument 1 is the comma delimited list of columns,
+            and argument 2 is the comma delimited list of values.
+            <para>Example: INSERT INTO {0} ({1}) VALUES({2});</para>
+            </param>
+            <param name="tableName">
+            Optional table name to insert into. If none is supplied, it will use the type name. Note that this parameter is
+            required when passing in an anonymous object or an <see cref="T:System.ArgumentNullException" /> will be thrown.
+            </param>
+            <param name="keywordEscapeMethod">The method used for escaping keywords.</param>
+            <returns>The given <see cref="T:System.Data.Common.DbCommand" /> instance.</returns>
+            <exception cref="T:System.ArgumentNullException">
+            The value of 'tableName' cannot be null when the object passed is an anonymous
+            type.
+            </exception>
+        </member>
+        <member name="M:SequelocityDotNet.DbCommandExtensions.GetPropertyAndFieldNamesAndValues(System.Object)">
+            <summary>Gets a dictionary containing the objects property and field names and values.</summary>
+            <param name="obj">Object to get names and values from.</param>
+            <returns>Dictionary containing property and field names and values.</returns>
+        </member>
+        <member name="T:SequelocityDotNet.DynamicDictionary">
+            <summary>
+            A dynamic dictionary allowing case-insensitive access and returns null when accessing non-existent properties.
+            </summary>
+            <example>
+            // Non-existent properties will return null dynamic obj = new DynamicDictionary(); var firstName = obj.FirstName;
+            Assert.Null( firstName ); // Allows case-insensitive property access dynamic obj = new DynamicDictionary();
+            obj.SuperHeroName = "Superman"; Assert.That( obj.SUPERMAN == "Superman" ); Assert.That( obj.superman == "Superman" );
+            Assert.That( obj.sUpErMaN == "Superman" );
+            </example>
+        </member>
+        <member name="T:SequelocityDotNet.DynamicDictionary.DefaultValueDictionary`2">
+            <summary>
+            A dictionary that returns the default value when accessing keys that do not exist in the dictionary.
+            </summary>
+        </member>
+        <member name="M:SequelocityDotNet.DynamicDictionary.DefaultValueDictionary`2.#ctor">
+            <summary>
+            Initializes a dictionary that returns the default value when accessing keys that do not exist in the dictionary.
+            </summary>
+        </member>
+        <member name="M:SequelocityDotNet.DynamicDictionary.DefaultValueDictionary`2.#ctor(System.Collections.Generic.IDictionary{`0,`1})">
+            <summary>Initializes with an existing dictionary.</summary>
+            <param name="dictionary"></param>
+        </member>
+        <member name="M:SequelocityDotNet.DynamicDictionary.DefaultValueDictionary`2.#ctor(System.Collections.Generic.IEqualityComparer{`0})">
+            <summary>Initializes using the given equality comparer.</summary>
+            <param name="comparer"></param>
+        </member>
+    </members>
+</doc>
