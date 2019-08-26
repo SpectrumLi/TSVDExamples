@@ -1,72 +1,55 @@
-# What is TSVD
+# TSVDExample
 
-TSVD is a thread-safety violation detection tool described in the paper "Efficient and Scalable Thread-Safety Violation Detection --- Finding thousands of concurrency bugs during testing" in SOSP 2019.
+## What is this
+This is the artifacts of part of open source projects that TSVD can automatically detect thread-safety violations. We will continue to add more example here. For more details, please check out paper "Efficient and Scalable Thread-Safety Violation Detection --- Finding thousands of concurrency bugs during testing" in SOSP2019.
 
-## What is thread-safety violation
+Update: TSVD is available at https://github.com/microsoft/TSVD!
 
-A thread-safety violation occurs when an application concurrently calls into a library/class in a way that violates its thread-safety contract. For example, in .NET, `System.Collections.Generic.Dictionary` is not thread-safe for concurrent accesses when one or both accesses are write operations. Therefore, the following two concurrent operations are not thread-safe.
+## How to evaluate
+The following instructions help to evaluate these examples.
 
-    //Dictionary dict
-    Thread1: dict.Add(key1,value);
-    Thread2: dict.ContainsKey(key2);
-    
-The above two concurrent operations can give nondeterministic results or corrupt the data structure, even if `key1` and `key2` are different.
+### System Requirement
+Visual Studio Community Edition, and .Net Framework 4.5-4.7. Because the examples rely on a specific version of .Net, we need them.
 
-### What kind of class is not thread-safe
+### Prepare the binary
+Here is the list of current examples:
 
-In C#, most classes under the `System.Collections` namespace are thread-unsafe unless they are protected by a specific lock.
++ DataTimeExtensions
++ Sequelocity
++ Linq.Dynamic
++ Thunderstruck
 
-## How to apply TSVD
+We will add more bugs listed in the paper. But these four already demonstrate the main idea of TSVD. For every example:
 
-### Overview
++ First, open the .sln file by visual studio then compile the project.
++ Second, rebuild the TSVD project under the .sln project.
 
-`TSVD` is designed for .NET applications. It works by instrumenting application binaries and running existing workloads/tests on instrumented binaries. Instrumentation is done by tool called `TSVDInstrumenter.exe`. Compiling the source code in this repo produces `TSVDInstrumenter.exe` in `src/TSVDInstrumenter/bin/Debug`.
+The TSVD project is created by us, which contains the buggy unit test. To expose the bug, we only need this unit test.
 
-As mentioned, applying `TSVD` on an application involves two steps:  
+### Instrumentation
+Suppose you can access the TSVD already, please download and compile it. The compiled result is TSVDInstrumenter.exe in the TSVDInstrumenter\bin\Debug.
+When downloading it, there is be a "Configurations" directory of default configuration. Then open a powershell:
 
-+ Instrument the testing binaries with `TSVDInstrumenter.exe`. The usage of `TSVDInstrumenter.exe` is:
+    & [path to TSVDInstrumenter.exe] [directory that contains "TSVD.exe" in the buggy unit test] [path to Configurations\instrumentation-config.cfg] [path to Configurations\runtime-config.cfg]
 
-    `.\TSVDInstrumenter.exe [directory containing applicaiton binaries] [path to instrumentation configuration] [path to runtime configuration]`
+ins.ps1 is a template. The expect result is
 
-	The instrumentation configuration file dictates `TSVD`'s instrumentation behavior (e.g., what thread-unsafe APIs are instrumented), while the runtime configuration file contains `TSVD`'s runtime behavior (e.g., what algorithm to use, where to write bug log files, etc.) 
+    Instrumentation result: OK
 
-+ Run instrumented binaries with existing workloads/tests. If any thread-safety violation is detected, `TSVD` will produce a file named `TSVD-bug-*.tsvdlog` that contains details of the violation.
+### Run the test
+Go to the unit test output directory ([TSVD]\bin\debug) and .\TSVD.exe. 
 
-### Example
+### Results:
+There will be several TSVD-bugs files which contains the racing accesses. The output file explanation:
 
-The repo contains an example application `TestApps/DataRace` that includes several thread-safety violations (concurrently sorting the same `List`). `TSVD` can be applied on `DataRace.exe` as follows:
++ TSVD-allbug: Each line contains a bug (a operation pair). The TSVD-bug-* contains detailed information for the bug.
++ TSVD-bug: All the bug information. A bug is one an operation pair. For each operation, the location in source and stacktrace are recorded.
++ TSVD-preplan: The generated file to guide the detecting strategy for the next run. Sometimes we need to run the test twice to expose the bugs. 
++ TSVD-debug: The information for debugging TSVD. 
 
-+ Instrumentation. Under DataRace/bin/Debug, run the following command in command line:
+Here are the bugs in the related examples.
 
-    `& ..\..\..\..\src\TSVDInstrumenter\bin\Debug\TSVDInstrumenter.exe . .\Configurations\instrumentation-config.cfg .\Configurations\runtime-config.cfg`. It instruments all the binaries (in this case, only `DataRace.exe`) in the current folder. It will also copy `TSVD` runtime library and runtime configuration file to the current folder.
-
-+ Run. After observing the `Instrumentation result: OK` which indicates `DataRace.exe` is already instrumented, run `.\DataRace.exe`. Since running the insturmented `DataRace.exe`, it writes all the detected thread-safety violation to the `TSVD-bug-*.tsvdlog` file.
-    
-### Configuration
-There are 7 configuration parameters that can be set in the `runtime-config.cfg`. Please refer the paper for the detailed explanation and variance of these parameters. When user does not set these parameters manual, TSVD will use the default value.
-
-+ Object tracking, default 5. For every object, TSVD tracks 5 latest operations.
-+ Nearmiss time window, default 1000s. When the physical time distance of two operations is less than 1000s, TSVD regards them as close with each other. The default value is different with the one in paper. In many usages, developers care more about bug hunting capability than the overhead. In these situations, 1000s is better.
-+ Block threshold, default 50%. If one thread does not make any progress during the 50% of an injected delay, TSVD will believe this thread is block by the delay.
-+ HB inference size, default 5. After observing a delay block a thread, TSVD will believe the next 5 operations in this thread are also blocked by this delay.
-+ Parallel inference window, default 32. To infer if the program is in parallel phase or not, TSVD tracks 32 latest operations to see if they are all from one thread.
-+ Decay factor, default 0.1. After delaying one operation, TSVD reduces the probability of this location by 0.1.
-+ Delay time, default 100ms. 
-
-
-### Feedback/Questions
-For any question about the tool, please email us at `tsvd_at_microsoft_dot_com`
-
-# Contributing
-
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.opensource.microsoft.com.
-
-When you submit a pull request, a CLA bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., status check, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
-
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
++ [DataTimeExtensions](https://github.com/joaomatossilva/DateTimeExtensions/pull/86)
++ [Sequelocity](https://github.com/AmbitEnergyLabs/Sequelocity.NET/pull/23)
++ [Linq.Dynamic](https://github.com/kahanu/System.Linq.Dynamic/pull/48)
++ [Thunderstruck](https://github.com/19WAS85/Thunderstruck/issues/3)
