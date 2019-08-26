@@ -45,13 +45,13 @@ The repo contains an example application `TestApps/DataRace` that includes sever
 ### Configuration
 There are 7 configuration parameters that can be set in the `runtime-config.cfg`. Please refer the paper for the detailed explanation and variance of these parameters. When user does not set these parameters manual, TSVD will use the default value.
 
-+ Object tracking, default 5. For every object, TSVD track 5 latest operations.
-+ Nearmiss time window, default 1000s. When the physical time distance of two operations is less than 1000s, TSVD will regard them as close with each other. The default value is different with the one in paper. In many usages, developers care more about bug hunting capability than the overhead. In these situations, 1000s is better.
-+ Block threshold, default 50%. If one thread does not make any progress in the 50% of an injected delay, TSVD will believe this thread is block by the delay.
-+ HB inference size, default 5. After observing a delay block a thread, TSVD will believe the next 5 operations in this thread is also blocked by this delay.
-+ Parallel inference window, default 32. To infer if the program is in parallel phase, TSVD tracks 32 latest operation to see if they are all from one thread.
-+ DecayFactor, default 0.1. After delaying one operation, TSVD reduces the probability of this location by 0.1.
-+ DelayTime, default 100ms. 
++ Object tracking, default 5. For every object, TSVD tracks 5 latest operations.
++ Nearmiss time window, default 1000s. When the physical time distance of two operations is less than 1000s, TSVD regards them as close with each other. The default value is different with the one in paper. In many usages, developers care more about bug hunting capability than the overhead. In these situations, 1000s is better.
++ Block threshold, default 50%. If one thread does not make any progress during the 50% of an injected delay, TSVD will believe this thread is block by the delay.
++ HB inference size, default 5. After observing a delay block a thread, TSVD will believe the next 5 operations in this thread are also blocked by this delay.
++ Parallel inference window, default 32. To infer if the program is in parallel phase or not, TSVD tracks 32 latest operations to see if they are all from one thread.
++ Decay factor, default 0.1. After delaying one operation, TSVD reduces the probability of this location by 0.1.
++ Delay time, default 100ms. 
 
 
 ### Feedback/Questions
